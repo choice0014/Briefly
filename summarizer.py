@@ -26,47 +26,49 @@ class NewsSummarizer:
 
     def summarize(self, title, content, retries=2):
         """
-        Groq Llama-3 모델을 사용하여 고품질 한국어 요약을 수행합니다.
+        Groq API를 사용하여 사족 없는 순수 불렛 포인트 요약을 수행합니다.
         """
         if not self.client:
             return "API 키가 없어 요약을 생성할 수 없습니다."
 
         if not content or len(content.strip()) < 10:
-            content = f"기사 제목 '{title}'에 대한 관련 내용을 바탕으로 핵심 뉴스를 설명해 주세요."
+            content = f"기사 제목 '{title}'"
 
-        prompt = f"""
-        당신은 한국의 베테랑 뉴스 편집자입니다. 아래 정보를 바탕으로 독자가 이해하기 쉽게 현대적인 한국어로 요약하세요.
-        
-        정보:
-        - 기사 제목: {title}
-        - 기사 본문: {content}
-        
-        [엄격한 준수 사항]
-        1. **고유명사 정확도**: 'Nintendo'는 '닌텐도', 'Microsoft'는 '마이크로소프트' 등 정확한 한국어 명칭을 사용하세요.
-        2. **한자어 제한**: '巨企' 등 일본식/중국식 한자어 대신 '빅테크', '대기업' 등 쉬운 한국어를 사용하세요.
-        3. **형식**: 반드시 3개 이내의 불렛 포인트(•)로 요약하세요.
-        4. **문체**: '...함', '...임'과 같은 명사형 종결 어미를 사용하세요.
-        5. **순수 요약**: 다른 설명 없이 오직 불렛 포인트만 출력하세요. 정보가 부족하다면 제목을 바탕으로 예상되는 핵심 내용을 작성하세요.
-        
-        요약 결과:
-        """
+        system_prompt = """[Task] 뉴스 요약 전문가
+[Constraint]
+1. 출력은 반드시 3개 이내의 불렛 포인트(•)로 구성할 것.
+2. '...함', '...임' 등의 명사형 종결 어미만 사용할 것.
+3. "요약 결과", "참고", "도움이 필요하시면" 등 모든 메타 텍스트 및 사족을 금지함.
+4. 오직 요약된 내용(불렛 포인트)만 출력할 것.
+5. 고유명사는 표준 한국어로 표기할 것(예: Nintendo -> 닌텐도).
+[Format]
+• 요약 내용 1
+• 요약 내용 2
+• 요약 내용 3"""
+
+        user_input = f"제목: {title}\n본문: {content}"
         
         for attempt in range(retries + 1):
             try:
                 completion = self.client.chat.completions.create(
                     model=self.model_name,
-                    messages=[{"role": "user", "content": prompt}],
-                    temperature=0.5,
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": user_input}
+                    ],
+                    temperature=0.1, # 일관성을 위해 온도를 낮춤
                     max_tokens=500
                 )
                 response = completion.choices[0].message.content
                 if response:
-                    return response.strip()
+                    # 혹시 모를 사족 제거 필터링
+                    lines = [line.strip() for line in response.strip().split('\n') if line.strip().startswith('•')]
+                    return '\n'.join(lines) if lines else response.strip()
             except Exception as e:
                 logger.error(f"Groq 요약 시도 {attempt+1} 실패: {e}")
                 time.sleep(1)
         
-        return "뉴스 내용을 분석하여 요약을 생성할 수 없습니다."
+        return "요약 생성 불가"
 
     def summarize_batch(self, articles):
         summaries = []
