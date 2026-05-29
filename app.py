@@ -1,0 +1,66 @@
+import os
+import logging
+from datetime import datetime
+from jinja2 import Environment, FileSystemLoader
+from crawler import NewsCrawler
+from summarizer import NewsSummarizer
+from dotenv import load_dotenv
+
+# 로깅 설정
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+load_dotenv()
+
+def main():
+    # 1. 설정 로드
+    FEEDS = {
+        'Tech': os.getenv("TECH_FEEDS", "https://techcrunch.com/feed/").split(','),
+        'Politics': os.getenv("POLITICS_FEEDS", "https://feeds.bbci.co.uk/news/politics/rss.xml").split(','),
+        'International': os.getenv("INTL_FEEDS", "https://feeds.bbci.co.uk/news/world/rss.xml").split(',')
+    }
+    
+    # GitHub Actions 환경인지 확인 (CI 환경이면 더 많은 기사 수집 가능)
+    limit = int(os.getenv("NEWS_LIMIT", 5))
+
+    # 2. 뉴스 수집
+    logger.info("뉴스 수집 시작...")
+    crawler = NewsCrawler(FEEDS)
+    raw_news = crawler.fetch_news(limit_per_feed=limit)
+
+    # 3. AI 요약 (Groq 사용)
+    logger.info("Groq AI 요약 시작...")
+    summarizer = NewsSummarizer()
+    
+    final_news_data = {}
+    for category, articles in raw_news.items():
+        if not articles:
+            final_news_data[category] = []
+            continue
+
+        logger.info(f"{category} 요약 중...")
+        summaries = summarizer.summarize_batch(articles)
+        
+        for i, article in enumerate(articles):
+            article['ai_summary'] = summaries[i] if i < len(summaries) else "요약 생성 중 오류 발생"
+            
+        final_news_data[category] = articles
+
+    # 4. HTML 대시보드 생성 (index.html로 저장하여 GitHub Pages에서 사용)
+    logger.info("index.html 생성 중...")
+    env = Environment(loader=FileSystemLoader('templates'))
+    template = env.get_template('dashboard.html')
+    
+    generated_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    output_html = template.render(
+        news_data=final_news_data,
+        generated_at=generated_at
+    )
+
+    with open('index.html', 'w', encoding='utf-8') as f:
+        f.write(output_html)
+
+    logger.info("작업 완료! index.html이 업데이트되었습니다.")
+
+if __name__ == "__main__":
+    main()
