@@ -46,7 +46,18 @@ def main():
             
         final_news_data[category] = articles
 
-    # 4. HTML 대시보드 생성 (index.html로 저장하여 GitHub Pages에서 사용)
+    # 4. HTML 대시보드 생성 및 백업 (index.html로 저장하여 GitHub Pages에서 사용)
+    if os.path.exists('index.html'):
+        import shutil
+        backup_dir = 'history'
+        os.makedirs(backup_dir, exist_ok=True)
+        mtime = os.path.getmtime('index.html')
+        mtime_dt = datetime.fromtimestamp(mtime)
+        backup_filename = f"index_{mtime_dt.strftime('%Y%m%d_%H%M%S')}.html"
+        backup_path = os.path.join(backup_dir, backup_filename)
+        shutil.copy2('index.html', backup_path)
+        logger.info(f"기존 index.html을 {backup_path}로 백업했습니다.")
+
     logger.info("index.html 생성 중...")
     env = Environment(loader=FileSystemLoader('templates'))
     template = env.get_template('dashboard.html')
