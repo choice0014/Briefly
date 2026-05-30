@@ -5,6 +5,17 @@ on:
     - cron: '0 * * * *' # 매시간 정각에 실행
   workflow_dispatch: # 수동 실행 버튼 추가
 
+# Pages 배포에 필요한 권한 정의
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# 동시 배포 제어 설정
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -35,3 +46,15 @@ jobs:
           git add index.html history/
           git commit -m "Update news dashboard [skip ci]" || echo "No changes to commit"
           git push
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
