@@ -19,9 +19,17 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+# Node.js 24 환경 강제 사용 (향후 버전 호환성 대비)
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    # 배포 환경 정의 (deploy-pages v4 필수 사항)
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
