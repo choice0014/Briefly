@@ -9,6 +9,7 @@ logger = logging.getLogger(__name__)
 
 class NewsSummarizer:
     def __init__(self, model_name="llama-3.3-70b-versatile"):
+        print("GROQ_API_KEY exists:", bool(os.getenv("GROQ_API_KEY")))
         """
         Groq API를 사용하여 무료로 고성능 요약을 수행합니다.
         GitHub Actions에서도 동작할 수 있도록 설계되었습니다.
