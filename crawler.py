@@ -25,9 +25,14 @@ class NewsCrawler:
                     articles = feed.entries[:limit_per_feed]
                     
                     for entry in articles:
+                        link = entry.get('link', '')
+                        if not link.startswith(('http://', 'https://')):
+                            logger.warning(f"Invalid URL schema ignored: {link}")
+                            continue
+
                         article = {
                             'title': entry.get('title', 'No Title'),
-                            'link': entry.get('link', ''),
+                            'link': link,
                             'summary': entry.get('summary', entry.get('description', '')),
                             'published': entry.get('published', ''),
                             'source': feed.feed.get('title', url)

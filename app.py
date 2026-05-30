@@ -1,7 +1,7 @@
 import os
 import logging
 from datetime import datetime
-from jinja2 import Environment, FileSystemLoader
+from jinja2 import Environment, FileSystemLoader, select_autoescape
 from crawler import NewsCrawler
 from summarizer import NewsSummarizer
 from dotenv import load_dotenv
@@ -59,7 +59,10 @@ def main():
         logger.info(f"기존 index.html을 {backup_path}로 백업했습니다.")
 
     logger.info("index.html 생성 중...")
-    env = Environment(loader=FileSystemLoader('templates'))
+    env = Environment(
+        loader=FileSystemLoader('templates'),
+        autoescape=select_autoescape(['html', 'xml'])
+    )
     template = env.get_template('dashboard.html')
     
     generated_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
