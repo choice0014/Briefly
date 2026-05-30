@@ -2,6 +2,7 @@ import os
 import logging
 import time
 import re
+from concurrent.futures import ThreadPoolExecutor
 from groq import Groq
 from dotenv import load_dotenv
 
@@ -79,13 +80,18 @@ Title: [번역된 제목]
         return title, "요약 생성 불가"
 
     def summarize_batch(self, articles):
-        results = []
-        for art in articles:
+        """
+        ThreadPoolExecutor를 사용하여 병렬로 요약을 수행합니다.
+        """
+        def process_article(art):
             translated_title, summary = self.summarize(art['title'], art['summary'])
-            results.append({
+            return {
                 'translated_title': translated_title,
                 'summary': summary
-            })
+            }
+
+        with ThreadPoolExecutor(max_workers=5) as executor:
+            results = list(executor.map(process_article, articles))
         return results
 
 if __name__ == "__main__":
