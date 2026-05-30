@@ -12,8 +12,14 @@ if not exist .git (
     git branch -M main
 )
 
-echo [2/5] 원격 변경사항 가져오는 중...
-git pull --rebase origin main
+:: 현재 브랜치명 동적 감지
+for /f "tokens=*" %%i in ('git branch --show-current') do set BRANCH=%%i
+if "%BRANCH%"=="" set BRANCH=develop
+
+echo 현재 작업 브랜치: %BRANCH%
+
+echo [2/5] 원격 변경사항(%BRANCH%) 가져오는 중...
+git pull --rebase origin %BRANCH%
 
 echo [3/5] 변경된 파일 추가 중...
 git add .
@@ -25,9 +31,9 @@ if "%msg%"=="" set msg=Update
 git commit -m "%msg%" || echo 커밋할 변경사항 없음
 
 echo [5/5] GitHub로 업로드 중...
-git push origin main
+git push origin %BRANCH%
 
 echo ========================================
-echo  완료
+echo  %BRANCH% 브랜치 업로드 완료
 echo ========================================
 pause
