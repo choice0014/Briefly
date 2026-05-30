@@ -1,7 +1,4 @@
-ollama
 feedparser
 jinja2
 python-dotenv
-requests
-flask
 groq
