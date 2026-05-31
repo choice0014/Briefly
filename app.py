@@ -39,25 +39,23 @@ def main():
             continue
 
         logger.info(f"{category} 요약 중...")
-        ai_results = summarizer.summarize_batch(articles)
+        summaries = summarizer.summarize_batch(articles)
         
         for i, article in enumerate(articles):
-            if i < len(ai_results):
-                article['title'] = ai_results[i]['translated_title']
-                article['ai_summary'] = ai_results[i]['summary']
-            else:
-                article['ai_summary'] = "요약 생성 중 오류 발생"
+            article['ai_summary'] = summaries[i] if i < len(summaries) else "요약 생성 중 오류 발생"
             
         final_news_data[category] = articles
 
     # 4. HTML 대시보드 생성 및 백업 (index.html로 저장하여 GitHub Pages에서 사용)
+    generated_at_dt = datetime.now()
+    generated_at = generated_at_dt.strftime("%Y-%m-%d %H:%M:%S")
+
     if os.path.exists('index.html'):
         import shutil
         backup_dir = 'history'
         os.makedirs(backup_dir, exist_ok=True)
-        mtime = os.path.getmtime('index.html')
-        mtime_dt = datetime.fromtimestamp(mtime)
-        backup_filename = f"index_{mtime_dt.strftime('%Y%m%d_%H%M%S')}.html"
+        # 기존 index.html의 실제 생성 시각을 파일명으로 활용 (더 정확한 이력 관리)
+        backup_filename = f"index_{generated_at_dt.strftime('%Y%m%d_%H%M%S')}.html"
         backup_path = os.path.join(backup_dir, backup_filename)
         shutil.copy2('index.html', backup_path)
         logger.info(f"기존 index.html을 {backup_path}로 백업했습니다.")
@@ -69,7 +67,6 @@ def main():
     )
     template = env.get_template('dashboard.html')
     
-    generated_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     output_html = template.render(
         news_data=final_news_data,
         generated_at=generated_at

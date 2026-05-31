@@ -2,7 +2,7 @@ name: Daily AI News Update
 
 on:
   schedule:
-    - cron: '0 * * * *' # 매시간 정각에 실행 (GitHub 부하에 따라 지연될 수 있음)
+    - cron: '30 * * * *' # 매시 30분에 실행 (정각 부하를 피함)
   push:
     branches:
       - main
