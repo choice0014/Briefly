@@ -1,5 +1,7 @@
 import feedparser
 import logging
+import html
+import re
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -11,6 +13,15 @@ class NewsCrawler:
         e.g., {'Tech': ['url1', 'url2'], 'Politics': ['url3']}
         """
         self.feed_urls = feed_urls
+
+    def _clean_text(self, text):
+        if not text:
+            return ""
+        # HTML 태그 제거
+        clean = re.compile('<.*?>')
+        text = re.sub(clean, '', text)
+        # HTML 엔티티 디코딩 (&amp; -> &, &quot; -> " 등)
+        return html.unescape(text).strip()
 
     def fetch_news(self, limit_per_feed=5):
         all_news = {}
@@ -31,9 +42,9 @@ class NewsCrawler:
                             continue
 
                         article = {
-                            'title': entry.get('title', 'No Title'),
+                            'title': self._clean_text(entry.get('title', 'No Title')),
                             'link': link,
-                            'summary': entry.get('summary', entry.get('description', '')),
+                            'summary': self._clean_text(entry.get('summary', entry.get('description', ''))),
                             'published': entry.get('published', ''),
                             'source': feed.feed.get('title', url)
                         }

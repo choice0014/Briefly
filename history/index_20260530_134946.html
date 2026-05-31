@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-05-30 11:25:24</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>인도 법원의 판결을 계기로 구글의 광고 사업에 대한 비판 재개함</h3>
+                    <div class="summary-content">
+                        • 인도 법원의 판결은 창립자들의 지지를 얻음
+• 판결로 인해 플랫폼들이 상표권 키워드를 처리하는 방식을 재검토할 수 있음
+• 구글의 광고 사업에 대한 비판이 재개됨
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/05/29/founders-seize-on-indian-court-ruling-to-revive-criticism-of-googles-ad-business/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>내가 가본 소위 &#39;스테로이드 올림픽&#39; - 실리콘 밸리가 펩타이드에 집착하는 이유를 알기 위해</h3>
+                    <div class="summary-content">
+                        • 실리콘 밸리의 기술 산업이 받아들이려는 새로운 비즈니스 모델이 나타날 수 있음
+• 이 새로운 모델은 성능 향상 약물이 사용되는 스포츠 대회와 관련 있음
+• 성능 향상 약물의 사용이 기술 산업의 새로운 트렌드가 될 수 있음
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/05/29/i-went-to-the-so-called-steroid-olympics-to-understand-why-silicon-valley-is-obsessed-with-peptides/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>스페이스X, 상장 전 미 공군 계약으로 645억 달러 수주함</h3>
+                    <div class="summary-content">
+                        • 스페이스X는 2025년 매출의 5분의 1을 정부 계약으로 벌임
+• 스페이스X는 상장 이전에 미 공군 계약을 수주함
+• 스페이스X의 정부 계약 수주 금액은 645억 달러임
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/05/29/spacex-awarded-6-45b-in-space-force-contracts-ahead-of-ipo/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>개발자들은 인공지능 없이 일하기를 거부함</h3>
+                    <div class="summary-content">
+                        • 개발자들은 인공지능을 사용하여 코드를 더 빠르게 생산할 수 있게 되었음
+• 그러나 연구자들은 인공지능이 더 나은 코드를 생산하는 것은 아니라고 경고함
+• 이는 개발자들에게 장기적으로 문제를 일으킬 수 있음
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/05/29/coders-are-refusing-to-work-without-ai-and-that-could-come-back-to-bite-them/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>그동안 인공 지능 용어에 대해 그냥 고개를 끄덕였던 당신; 이제 제대로 알자</h3>
+                    <div class="summary-content">
+                        • 인공 지능의 발전으로 새로운 용어와 은어가 많이 등장함
+• 이러한 용어와 은어를 정리한 용어 사전이 필요함
+• 주요 용어와 구문의 정의를 포함한 용어 사전을 제공함
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/05/29/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>토리당 대표가 블레어 전 총리에 노동당 변경 요구를 중단하라고 말함</h3>
+                    <div class="summary-content">
+                        • 토리당 대표는 노동당의 전 총리인 토니 블레어에게 공개 서한을 보냄
+• 토니 블레어는 정부에 대한 비판을 한 이후에 이 서한을 받음
+• 토리당 대표는 블레어에게 노동당의 변경을 요구하는 것은 시간 낭비임을 말함
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cglpj6eenl1o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>노동당, 파라지의 러시아인에 의한 휴대폰 해킹 의혹을 경찰에 보고함</h3>
+                    <div class="summary-content">
+                        • 노동당은 파라지의 휴대폰이 해킹되었다는 의혹을 경찰에 보고함
+• 해킹 의혹은 일요일에 노동당 소식통을 통해 신문에 보도됨
+• 파라지의 휴대폰 해킹은 러시아인에 의한 것으로 의심됨
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cj9pdy1x2plo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>스타머, 블레어의 비판에 정책 결정 방어함</h3>
+                    <div class="summary-content">
+                        • 스타머는 블레어의 비판에 대해 정책 결정 방어함
+• 전 노동당 총리 토니 블레어는 정부가 국가에 대한 일관된 계획이 없다고 비난함
+• 블레어의 비판은 정부의 정책에 대한 불만을 나타냄
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cvgzjg778jyo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>챔피언스 리그 결승전도 무료 방송 아님</h3>
+                    <div class="summary-content">
+                        • 아스널과 파리 생제르맹의 챔피언스 리그 결승전을 무료 방송으로 하지 않음
+• TNT 스포츠에서 결승전을 무료로 방송하지 않기로 결정함
+• 따라서 팬들은 결승전을 시청하려면 구독이 필요함
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/sport/football/articles/c98rnme5ly7o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>영국 최고의 요리사들, 술집과 음식점의 부가세를 10%로 낮추라고 촉구함</h3>
+                    <div class="summary-content">
+                        • 영국의 유명 요리사들이 부가세를 절반으로 낮춰 음식점과 술집의 부담을 줄여야 한다고 주장함
+• 이는 음식점과 술집이 겪는 어려움을 완화하기 위한 조치임
+• 부가세를 10%로 낮추면 음식점과 술집이 경쟁력을 회복할 수 있음
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c78kg45yx0vo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>트럼프의 이란 최종 결정 회의 후 협상 결과 발표되지 않음</h3>
+                    <div class="summary-content">
+                        • 트럼프 대통령은 이란과 미국이 협상 기본 틀에 합의했다는 확인이 있은 후 자문위원회와 회의를 가졌음
+• 회의는 이란 문제에 대한 트럼프의 최종 결정에 관한 것으로 알려짐
+• 회의 후 이란과 미국의 협상 결과는 발표되지 않음
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c0r2d40r91qo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>미국, 아시아 동맹국에 방위 강화 요구</h3>
+                    <div class="summary-content">
+                        • 미국 국방부 장관은 싱가포르에서 열린 아시아 안보 회의에서 미국의 약속에 대한 질문을 받음
+• 미국은 아시아 동맹국에 방위 능력 강화를 요구함
+• 아시아 안보 회의에서 미국의 추가 무기 거래에 대한 의문도 제기됨
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c5ye34k7yejo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>세계 곳곳에서 독극물을 판매한 &#39;독약 판매자&#39;가 자살을 도운 혐의를 인정함</h3>
+                    <div class="summary-content">
+                        • 케네스 로는 캐나다 피해자와 관련된 혐의를 인정함
+• 가족들은 케네스 로가 영국에서 79건의 사망 사건에 관여한 혐의로 기소되어야 한다고 주장함
+• 케네스 로는 온라인을 통해 전 세계에 독극물을 판매함
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c70vg7glglyo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>나토와 유럽 연합, 루마니아 주택가에 드론 충돌 후 러시아를 비난함</h3>
+                    <div class="summary-content">
+                        • 러시아의 드론이 우크라이나 상공에서 공중 방어 시스템에 의해 격추되어 비행 경로가 변경됨
+• 루마니아는 드론이 우크라이나에서 격추된 후 비행 경로가 변경되어 루마니아에 충돌한 것으로 추정함
+• 나토와 유럽 연합은 러시아의 드론 충돌 사건을 규탄함
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c93x4nxlkjeo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>라오스洪水에 빠진 동굴에서 10일 만에 네 명의 남성이 구조됨</h3>
+                    <div class="summary-content">
+                        • 라오스에서 5월 20일 금을 찾기 위해狭い 터널에 들어간 7명의 마을 주민 중 2명이 아직 실종됨
+• 구조작업이 진행 중이며,洪水에 빠진 동굴에서 네 명의 남성이 구조됨
+• 구조작업은 계속 진행 중이며, 실종된 사람들을 찾기 위해 노력함
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cn4pn4ex0ymo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
