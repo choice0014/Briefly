@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-06-02 14:36:58</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Amazon Prime Day 2026 takes place June 23-26</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;아마존 프라임 데이 2026, 6월 23-26일에 열림&#39;, &#39;summary&#39;: &#39;• 아마존 프라임 데이 2026은 6월 23일부터 26일까지 진행됨\n• 주요 할인 품목은 식료품과 생활 필수품임\n• 아마존은 이번 행사에서 다양한 상품을 할인하여 제공함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/02/amazon-prime-day-2026-takes-place-june-23-26/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Blue Origin plans to launch New Glenn again this year after explosion</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;블루 오리진, 폭발 이후 올해 내 뉴 글렌을 다시 발사할 계획임&#39;, &#39;summary&#39;: &#39;• 블루 오리진의 CEO 데이브 림프는 플로리다의 발사장의 피해가 예상보다 덜함\n• 블루 오리진은 아직 지난주 폭발의 원인을 공개하지 않음\n• 뉴 글렌의 재발사 계획은 올해 내 진행될 예정임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/02/blue-origin-plans-to-launch-new-glenn-again-this-year-after-explosion/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>ZeroDrift raises $10M to protect AI models from themselves</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;제로드리프트, AI 모델 보호를 위해 1,000만 달러 투자 유치&#39;, &#39;summary&#39;: &#39;• 제로드리프트는 AI 모델과 최종 사용자 사이에서 위치하여 규정 준수 문제가 될 수 있는 메시지를 식별하고 대체하는 새로운 AI 규정 준수 서비스를 제공함\n• 이 서비스는 AI 모델이 생성한 메시지에 대한 실시간 모니터링을 통해 규정 준수 위험을 감소시킴\n• 이를 통해 기업은 AI 모델의 잠재적인 위험을 최소화하고 규정 준수 요구 사항을 충족시키는 데 도움을 받음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/02/zerodrift-raises-10-million-to-protect-ai-models-from-themselves/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Rocket engine startup Impulse raises $500 million to hire people, not AI</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;로켓 엔진 스타트업 임펄스가 인재 채용을 위해 5억 달러 투자 유치함&#39;, &#39;summary&#39;: &#39;• 임펄스 스페이스의 에릭 로모 대통령은 물리적 시스템 엔지니어링이 여전히 인간의 재능에 의존함\n• 임펄스 스페이스는 인재 채용을 위해 5억 달러의 투자를 유치함\n• 로켓 엔진 개발에 인간의 역할이 중요함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/02/rocket-engine-startup-impulse-raises-500-million-to-hire-people-not-ai/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Pacific Fusion’s latest prototype packs 440 gigawatts into an 80-nanosecond burst</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;퍼시픽 퓨전의 최신 프로토タイプ, 80나노초 동안 440기가와트의 에너지 방출&#39;, &#39;summary&#39;: &#39;• 퍼시픽 퓨전의 소규모 프로토タイプ이巨大的 에너지 양을 순간적으로 방출함\n• 이 성과는 퍼시픽 퓨전의 시연용 발전소 구축을 위한 기반을 마련함\n• 퍼시픽 퓨전의 기술은 고에너지 출력을 극적으로 향상시킴&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/02/pacific-fusions-latest-prototype-packs-440-gigawatts-into-an-80-nanosecond-burst/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>&#39;Beleaguered and bereft&#39; - Mandelson messages reveal criticism of No 10</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;&#39;곤경에 빠지고 상실된&#39; - 맨델슨의 메시지가 노10에 대한 비판을 보여줌&#34;, &#39;summary&#39;: &#39;• 맨델슨과 장관들이 총리와 노동당 의원들에 대한 우려를 나타냄\n• 새로 공개된 문서가 맨델슨의 메시지와 장관들의 우려를 보여줌\n• 총리와 노동당 의원들에 대한 비판이 메시지에서 나타남&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cwy2431r8xdo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Five questions left unanswered by the Mandelson files</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;만델슨 파일이 남긴 다섯 가지 미답변 질문&#39;, &#39;summary&#39;: &#39;• 만델슨이 미국 대사로 임명된 것과 관련된 두 번째 파일이 공개됨\n• 공개된 파일은 만델슨의 임명 과정에 대한 추가 정보를 제공함\n• 파일은 만델슨의 임명과 관련된 의문점을 남김&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cn4p9pv13kdo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Mandelson files: What you need to know</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;만델슨 파일: 알아야 할 것&#39;, &#39;summary&#39;: &#39;• 정부는 전 미국 대사 임명에 관한 1,000 페이지가 넘는 문서를 공개함\n• 문서는 만델슨 파일로 알려짐\n• 공개된 문서는 총 1,000 페이지가 넘음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/clyp3gvvxkyo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Key messages between Mandelson and ministers</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;맨델슨과 장관들 사이의 핵심 메시지&#39;, &#39;summary&#39;: &#39;• 맨델슨과 장관들 사이에 교환된 메시지는 총 1,000 페이지에 걸쳐 있다.\n• 메시지에는 노동당 의원들과 총리대신에 대한 비판이 포함되어 있다.\n• 총리와 노동당에 대한 비판도 포함되어 있다.&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c4g819dml28o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>PM wants delayed defence investment plan published by Nato summit, MPs told</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;총리는 나토 정상회담 이전에 연기된 국방 투자 계획을 공개하기를 원함&#39;, &#39;summary&#39;: &#39;• 총리는 나토 정상회담 이전에 연기된 국방 투자 계획을 공개하기를 원함\n• 노동조합과 국방 업체들은 연기가 영국의 일자리와 기술, 국가 안보에 위협이 될 수 있다고 경고함\n• 연기된 국방 투자 계획은 영국의 국방 산업에 부정적인 영향을 미칠 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c78q0x224p9o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Ukraine rescuers pull dead from rubble after Russian strikes kill 21 people</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;우크라이나 구조대, 러시아의 공격으로 21명 사망한 후 잔해에서 시신을 꺼냄&#39;, &#39;summary&#39;: &#39;• 러시아의 공격으로 아파트 단지에 있는 건물이 파괴되어 8세 소년과 한 여성이 사망함\n• 우크라이나 당국은 총 21명이 사망한 것으로 확인함\n• 구조대가 잔해에서 시신을 꺼내는 작업을 진행 중임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c5y8nq8ljqwo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Clashes continue in Lebanon despite Israel and Hezbollah accepting US partial ceasefire plan</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이스라엘과 헤즈볼라, 미국의 부분적 휴전 계획 수용에도 레바논에서의 충돌은 계속됨&#39;, &#39;summary&#39;: &#39;• 이스라엘과 헤즈볼라 간의 휴전은 이란과의 평화 과정에서 매우 중요함\n• 미국의 부분적 휴전 계획은 이스라엘과 헤즈볼라의 충돌을 완전히 종료하지 못함\n• 레바논에서의 충돌은 여전히 지속되고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c202rxp1z15o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Two people shot dead amid Kenya protests against US Ebola quarantine centre plan</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;케냐에서 미국 에볼라 격리소 계획에 반대하는 시위 중 두 명이 총격 사망함&#39;, &#39;summary&#39;: &#39;• 케냐에서 미국의 에볼라 격리소 계획에 반대하는 시위가 발생함\n• 시위는 계획된 치료 시설 부근에서 일어남\n• 시위 중 두 명이 총격으로 사망함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cvgz7zny3pzo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Ghana&#39;s anti-LGBTQ+ bill to be scrutinised before approval, president says</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;가나의 반 LGBTQ+ 법안은 승인 전에 면밀히 검토될 것임&#39;, &#39;summary&#39;: &#39;• 가나의 대통령은 법안이 승인되기 전에 면밀히 검토될 것임\n• 법안은 의회에서 통과되었으며, LGBTQ+ 커뮤니티의 일원으로 पहच&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cp8pgrd50xko?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Maga influencer admits London Tube station assault</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;마가 인플루언서, 런던 지하철 역 폭행 인정함&#39;, &#39;summary&#39;: &#39;• 마가 인플루언서인 멜리사 린 라이블리는 폭행 혐의를 인정함\n• 폭행 혐의는 취하되었지만 그녀는 경고를 받음\n• 런던 지하철 역에서 발생한 사건과 관련이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c3v2qyp5pzro?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
