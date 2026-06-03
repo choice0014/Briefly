@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-06-03 10:20:57</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>The world’s largest privately owned laser just turned on</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;세계에서 가장 큰 개인 소유 레이저가 작동을 시작함&#39;, &#39;summary&#39;: &#39;• 세계에서 가장 큰 개인 소유 레이저가 작동을 시작함\n• 이 레이저는 퓨전 스타트업인 Xcimer에서 작동을 시작함\n• 이 레이저의 작동은 새로운 에너지 기술 개발에 기여함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/03/the-worlds-largest-privately-owned-laser-just-turned-on/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Squishmallows, dentures, and an ‘I Heart Hot Dads’ bag: Uber has found thousands of items left in robotaxis</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;우버, 로봇택시에서 수천 개의 잊어버린 물건 발견&#39;, &#39;summary&#39;: &#39;• 우버의 로봇택시에서 수천 개의 잊어버린 물건이 발견됨\n• 발견된 물건에는 스퀴시말로우, 치아 보철물, 그리고 가방 등이 포함됨\n• 우버는 이러한 잊어버린 물건들을 처리하기 위한 절차를 마련함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/02/squishmallows-dentures-and-an-i-heart-hot-dads-bag-uber-has-found-thousands-of-items-left-in-robotaxis/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Cyera eyes $12B valuation at 80x ARR multiple despite operating losses</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;사이버 보안 회사 사이에라, 120조 원 규모 평가 받을 것&#39;, &#39;summary&#39;: &#39;• 사이버 보안 회사 사이에라는 3천만 달러 규모의 투자 유치 작업을 진행 중임\n• 이 투자는 에볼루션 에퀴티 파트너스가 주도함\n• 사이에라는 현재 영업 손실을 기록하고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/02/cyera-eyes-12b-valuation-at-80x-arr-multiple-despite-operating-losses/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Cyberdecks are having a moment, rejecting big tech surveillance with style and substance</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;사이버 덱이 뜨고 있다, 스타일과 실질로 대형 기술 감시를 거부함&#39;, &#39;summary&#39;: &#39;• 최근 몇 개월 동안 DIY 하드웨어 커뮤니티가 인기를 얻으며 사람들이 소셜 미디어에서 태양 전력 게임 에뮬레이터, 손바닥 크기 전자책, 조개 껍질 가방 컴퓨터를 자랑함\n• 사이버 덱은 개인 정보 보호와 기술 자립을 추구하는 사람들에게 매력적으로 보임\n• 이 트렌드는 대형 기술 기업의 감시를 거부하고 개인화된 기술 솔루션을 찾는 사람들의 관심이 증가하고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/02/cyberdeck-tiktok-trend-reject-big-tech/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Uber caps employee AI spending after blowing through budget in 4 months</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;우버, 4개월 만에 예산 소진 후 직원 AI 지출 제한함&#39;, &#39;summary&#39;: &#39;• 우버는 직원들에게 가능한 한 많이 AI를 사용하도록 khuyến장했음\n• 이로 인해 예산이 빠르게 소진됨\n• 우버는 예산 소진 후 직원들의 AI 지출을 제한함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/02/uber-caps-employee-ai-spending-after-blowing-through-budget-in-four-months/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Henry Nowak case reignites claims of unfair policing</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;헨리 노박 사건, 불공정한 경찰링에 대한 주장을 재점화함&#39;, &#39;summary&#39;: &#39;• 18세 청년의 살인 사건으로 정치인들 사이에서 경찰의 태도에 대한 논쟁이 일어남\n• 사건은 경찰의 불공정함에 대한 주장을 다시 부각시킴\n• 정치인들은 사건을 계기로 경찰의 태도에 대한 재검토를 요구함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c9d3z7jg5j1o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Reform Makerfield candidate admits making &#39;crass&#39; comments in past</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;개혁 메이커필드 후보, 과거에 부적절한 발언을 한 적 있음&#39;, &#39;summary&#39;: &#39;• 로버트 케니언은 정치에 참여하지 않았을 때 부적절한 발언을 했다고 말함\n• 해당 발언은 선거 운동 중에 밝혀짐\n• 케니언은 그 발언이 부적절했다는 것을 인정함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cn7p30zxzydo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>US announces new tariffs over forced labour concerns</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;미국, 강제 노동 문제로 새로운 관세 발표함&#39;, &#39;summary&#39;: &#39;• 미국은 강제 노동 문제로 새로운 관세를 발표함\n• 이는 미국 대법원이 2월에 도날드 트럼프 대통령의 이전 관세를 대부분 무효로 판결한 이후 일어난 사건임\n• 새로운 관세는 강제 노동 문제에 대한 우려를 반영함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cq6pe7nvldmo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Starmer uses disappearing messages on his phone, No 10 confirms</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스타머, 휴대폰에서 사라지는 메시지 사용 확인&#39;, &#39;summary&#39;: &#39;• 스타머와 장관들, 만델슨 경 사이의 메시지 일부가 공개됨\n• 총리 메시지는 몇 개만 공개됨\n• 사라지는 메시지 사용 여부에 대한 확인이 이루어짐&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cp8pgg0108qo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Five questions left unanswered by the Mandelson files</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;만델슨 파일이 남긴 다섯 가지 미답변 질문&#39;, &#39;summary&#39;: &#39;• 만델슨이 미국 대사로 임명된 것과 관련된 두 번째 파일이 공개됨\n• 공개된 파일은 만델슨의 임명 과정에 대한 추가 정보를 제공함\n• 파일은 만델슨의 임명과 관련된 의문점을 남김&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cn4p9pv13kdo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>US and Iran launch new strikes, as Kuwait says airport hit by Iranian drones</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;미국과 이란, 새로운 공격 실시, 쿠웨이트 공항이 이란 무인기 공격으로 피해&#39;, &#39;summary&#39;: &#39;• 쿠웨이트 국제공항이 이란 무인기 공격으로 큰 피해를 입음\n• 공항의 교통이 중단됨\n• 미국과 이란의 새로운 공격이 실시됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c5yx135yg53o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Israel strikes southern Lebanon but partial truce with Hezbollah appears to hold</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이스라엘이 레바논 남부를 공격하지만 헤즈볼라와의 부분적 휴전이 유지됨&#39;, &#39;summary&#39;: &#39;• 이스라엘이 레바논 남부를 공격함\n• 미국이 발표한 협상 이후 베이루트에는 공격하지 않음\n• 부분적 휴전이 유지되는 가운데 이스라엘의 캠페인이 계속됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c936zvne0l6o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Seven killed after drone hits bus in Russia-controlled part of Ukraine</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;우크라이나 러시아 통제 지역에서 드론이 버스에 충돌해 7명 사망함&#39;, &#39;summary&#39;: &#39;• 우크라이나의 러시아 통제 지역에서 드론이 버스에 충돌하여 7명이 사망함\n• 해당 버스는 모스크바와 크림 반도 시모페롤의 사이를 운행 중이었음\n• 이 사고는 러시아가 점령하고 있는 크림 반도에서 발생함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cp3peyykxd5o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Putin remains uncompromising on Ukraine, but is public discourse on war changing in Russia?</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;푸틴은 우크라이나에 대해 양보하지 않지만 러시아의 전쟁 관련 공론은 바뀌고 있음&#39;, &#39;summary&#39;: &#39;• 러시아는 우크라이나에 대한 공격을 강화하고 있지만 4년 이상의 전쟁으로 푸틴 지지자들 사이에서도 우려가 생기고 있음\n• 러시아의 전쟁 관련 공론이 바뀌고 있는 것으로 보임\n• 푸틴은 우크라이나에 대해 양보하지 않지만 러시아 내부의 우려가 높아지고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cy82339793go?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Shell pumped oil through Nigeria pipeline for years despite pollution evidence, documents show</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;셸, 오염 증거에도 불구하고 수년 동안 나이지리아 파이프라인을 통해 원유를抽출함&#39;, &#39;summary&#39;: &#39;• 셸은 나이지리아 파이프라인을 통해 원유를抽출하면서 오염에 대한 증거를 무시함\n• 셸은 복잡한 운영 환경을 고려하지 않은 문서를 근거로 주장함\n• 셸의 운영은 나이지리아의 환경과 주민들에게 큰 피해를 끼침&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cdrp8v7407ro?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
