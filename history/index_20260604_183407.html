@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-06-04 16:01:09</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Cash App launches a wand for tap-and-pay</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;캐시 앱, 탭하여 결제하는 마법봉 출시&#39;, &#39;summary&#39;: &#39;• 캐시 앱이 탭하여 결제하는 마법봉을 출시함\n• 탭하여 결제하는 태그를 더 많이 출시할 계획임\n• 캐시 앱의 새로운 결제 방법을 제공함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/04/cash-app-launches-a-wand-for-tap-and-pay/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Waymo’s spent robotaxi batteries will be used as grid storage</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;웨이모의 사용된 로보택시 배터리는 그리드 저장으로 사용됨&#39;, &#39;summary&#39;: &#39;• 웨이모는 사용된 로보택시 배터리를 그리드 저장으로 사용하기 위해 B2U 스토리지 솔루션스와 계약함\n• 배터리 팩은 웨이모가 도로에서 제거할 때 재사용됨\n• 이 계약으로 웨이모의 배터리 재활용이 가능해짐&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/04/waymos-spent-robotaxi-batteries-will-be-used-as-grid-storage/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Ramp raises $750M at $44B valuation as investors hunger for fintechs with an AI story</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;램프, 440억 달러 평가로 7억 5천만 달러 투자 유치&#39;, &#39;summary&#39;: &#39;• 램프의 평가액이 지난 1년 동안 거의 3배 증가함\n• 투자자들이 빠르게 성장하는 램프의 일부를 차지하기 위해 경쟁함\n• 램프의 성장세가 투자자들의 관심을 끌고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/04/ramp-raises-750m-at-44b-valuation-as-investors-hunger-for-fintechs-with-an-ai-story/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Is Silicon Valley ready to put robots in people’s homes? Hello Robot is.</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;실리콘 밸리가 집에 로봇을 넣을 준비가 됐는가? 헬로 로봇은 준비가 됨&#39;, &#39;summary&#39;: &#39;• 헬로 로봇은 집에서 일하는 로봇의 4세대 버전인 스트레치를 출시함\n• 스트레치는 집안에서 다양한 일을 도와주는 로봇임\n• 헬로 로봇은 실리콘 밸리에서 로봇 기술을 개발하는 스타트업임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/04/is-silicon-valley-ready-to-put-robots-in-peoples-homes-hello-robot-is/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Chinese spies are using LinkedIn to lure Westerners into sharing sensitive information</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;중국 스파이들이 링크드인으로 서방인을 속여 기밀 정보를 공유하게 함&#39;, &#39;summary&#39;: &#39;• 중국 스파이들이 공개된 구인 플랫폼을 이용해 비공개 정보에 접근할 수 있는 사람들을 모집함\n• 이러한 활동은 서방 국가의 기밀 정보를 수집하기 위한 목적으로 진행됨\n• 중국 스파이들의 이러한 행위는 링크드인과 같은 소셜 네트워크를 통해 이루어짐&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/04/chinese-spies-are-using-linkedin-to-lure-westerners-into-sharing-sensitive-information/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Starmer accuses Musk of trying to whip up division over Henry Nowak murder</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스타머, 머스크가 헨리 노박 살인 사건으로 분열을 조장하려 한다고 비난함&#39;, &#39;summary&#39;: &#39;• 머스크는 헨리 노박 사건에서 경찰의 대응을 비판하는 글을 여러 번 게시함\n• 스타머는 머스크의 행동이 사회 분열을 조장하려는 시도라고 주장함\n• 머스크의 발언이 사건의 진상 규명을 어렵게 할 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c1e2ww900zno?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Crypto billionaires help Reform cement fundraising lead</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;암호화폐 억만장자들이 개혁당 자금 모금을 도움&#39;, &#39;summary&#39;: &#39;• 개혁당은 올해 초에 해외에 거주하는 두 명의 영국 암호화폐 억만장자로부터 700만 파운드의 자금을 받음\n• 이 자금은 개혁당의 자금 모금을 도와줌\n• 암호화폐 억만장자들의 기부는 정치계에 큰 영향을 미침&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cn4pkkpe9ppo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Missing Mandelson messages from minister Darren Jones revealed</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;맨델슨 메시지에서 사라진 대臣 다렌 존스 메시지 공개됨&#39;, &#39;summary&#39;: &#39;• 맨델슨 파일에서 사라진 메시지들이 이번 주 초에 공개된 파일에 포함될 것으로 예상되었음\n• 다렌 존스 대臣의 메시지들이 파일에서 발견되지 않음\n• 사라진 메시지의 내용과 이유가 확인되지 않음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c1w2rvn8nqyo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>NHS staff should be banned from wearing political badges, report recommends</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;NHS 직원이 정치 배지를 착용하는 것을 금지해야 함&#39;, &#39;summary&#39;: &#39;• NHS 내 반유대주의를 조사한 맨勛爵의 검토에서 정치 배지 착용 금지 권고가 나옴\n• 이 권고는 여러 가지 제안 중 하나임\n• NHS 내 정치적 중립성을 유지하기 위한 조치임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cn0plkd4wdno?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>PM backs female MP for suing xAI over bikini photo</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;총리가 여성 의원을 지지하여 xAI를 수영복 사진으로 소송함&#39;, &#39;summary&#39;: &#39;• 영국의 여성 의원 제스 아사토는 xAI의 도구인 그록이 그녀를 수영복을 입은 가짜 사진을 만들기 위해 사용되었다고 주장함\n• 총리는 여성 의원의 소송을 지지함\n• 가짜 사진은 그록이라는 도구를 사용하여 만들어짐&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c62xpv34d9do?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Hezbollah rejects renewed ceasefire agreed by Israel and Lebanon</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이스라엘과 레바논이 합의한 휴전을 헤즈볼라가 거부함&#39;, &#39;summary&#39;: &#39;• 미국은 수요일 밤에 새로운 협상을 통해 휴전 협정을 발표함\n• 이스라엘과 레바논은 새로운 휴전 협정을 합의함\n• 헤즈볼라는 이스라엘과 레바논이 합의한 휴전을 거부함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c052343r812o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Trump hits back at &#39;unpatriotic&#39; vote after House rebukes him over Iran</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;트럼프, 이란 문제로 하원에서 견책받은 후에 불충성적인 투표에 대해 반격함&#39;, &#39;summary&#39;: &#39;• 미국 하원은 추가적인 군사 행동을 중단하려는 조치를 통과시킴\n• 이 투표는 상징적인 것으로 보임\n• 트럼프는 이 투표를 불충성적인 것으로 간주함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cn0pl0wvvz0o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>&#39;Crazy&#39; phone call between Trump and Netanyahu complicates Iran talks</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;트럼프와 네타냐후의 &#39;미친&#39; 전화 통화, 이란 협상 복잡함&#34;, &#39;summary&#39;: &#39;• 트럼프와 네타냐후의 전화 통화가 이란 협상에 복잡함을 가져옴\n• 이스라엘 총리는 긴장 보고를 비웃었지만 다른 미국 대통령의 인내심을 시험함\n• 이란 협상이 더 어려워질 수 있는 상황이 발생함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cvgz21pq3g6o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Israeli strikes kill 11 people in Gaza City, medics say</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;가자 지구에서 이스라엘의 공습으로 11명 사망함&#39;, &#39;summary&#39;: &#39;• 이스라엘의 공습으로 가자 지구에서 최소 4개의 주거 건물이 파괴됨\n• 여성과 아이들을 포함한 11명이 사망함\n• 여러 지역에서 공습이 발생함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cg5prr9gr1ro?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Missing Sherpa guide found on Mount Everest after &#39;miracle&#39; self-rescue</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;에베레스트 산에서 실종된 셰르파 가이드가 &#39;기적&#39;적으로 구조됨&#34;, &#39;summary&#39;: &#39;• 에베레스트 산에서 실종된 셰르파 가이드 다와 셰르파가 기적적으로 구조됨\n• 다와 셰르파는 베이스 캠프로 기어오르던 중 청소 작업을 하는 사람들에 의해 발견됨\n• 실종 후 6일 만에 다와 셰르파가 발견됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cvgz2yjl4y3o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
