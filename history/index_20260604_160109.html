@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-06-04 12:27:57</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Oura Ring 5 review: Thinner, lighter, better</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;우리아 링 5 리뷰: 더 얇고 더 가볍고 더 나음&#39;, &#39;summary&#39;: &#39;• 우리아 링 5는 전 thế代보다 40% 더 작아졌음\n• 우리아 링 5는 세계에서 가장 작은 스마트 링으로 불림\n• 우리아 링 5의 가격은 399달러부터 시작함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/04/oura-ring-5-review-thinner-lighter-better/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Benchmark raises its first-ever growth fund as part of $2B capital raise</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;벤치마크, 20년 전통의 펀드 규모 확대&#39;, &#39;summary&#39;: &#39;• 벤치마크가 20년 이상 지속해 온 약 425만 달러의 펀드 규모를 확대함\n• 벤치마크의 펀드 규모 확대는 20억 달러의 자금 조성을 위한 첫 번째 성장 펀드임\n• 벤치마크의 이 펀드 확대는 기존의 전통을 깨는 것으로 평가됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/03/benchmark-raises-its-first-ever-growth-fund-as-part-of-2b-capital-raise/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Quick commerce FirstClub doubles valuation to $255M in nine months</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;퀵 커머스 퍼스트클럽, 9개월 만에 기업 가치 2.55억 달러로 두 배 증가함&#39;, &#39;summary&#39;: &#39;• 퍼스트클럽은 설립 후 1년 만에 100만 건의 주문과 5,000만 달러의 연간 매출을 달성함\n• 이 성과는 퀵 커머스 시장의 성장과 퍼스트클럽의 경쟁력 강화를 보여줌\n• 퍼스트클럽의 기업 가치는 9개월 만에 두 배로 증가하여 2.55억 달러에 달함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/03/firstclub-doubles-valuation-to-255m-in-nine-months-on-quality-first-grocery-bet/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Lovable signs multiyear deal with Google Cloud to up usage 5x, source says</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;러블러블, 구글 클라우드와 다년간 계약 체결하여 사용량 5배 확대&#39;, &#39;summary&#39;: &#39;• 러블러블과 구글이 다년간 계약을 체결함\n• 계약으로 인해 구글 클라우드 사용량이 5배로 확대됨\n• 안트로픽 클라우드에 대한 접근 권한이 확대됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/03/lovable-signs-multi-year-deal-with-google-cloud-to-up-usage-5x-source-says/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Defense tech is flooded with money, but who’s built to last?</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;국방 기술에 돈이 몰려들고 있지만 누가 오래 갈 수 있을까&#39;, &#39;summary&#39;: &#39;• 안두릴과 맥 인더스트리 등의 국방 기술 기업들이 가치를 두 배 및 네 배로 증가시킴\n• 미국 정부가 국방 예산을 40% 증가시키는 것을 제안함\n• 많은 신생 기업들이 정부 계약을 추구하지만 대부분이 개발 단계에서 어려움을 겪을 것임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/video/defense-tech-is-flooded-with-money-but-whos-built-to-last/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Starmer accuses Musk of trying to whip up division over Henry Nowak murder</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스타머, 머스크가 헨리 노박 살인 사건으로 분열을 조장하려 한다고 비난함&#39;, &#39;summary&#39;: &#39;• 머스크는 헨리 노박 사건에서 경찰의 대응을 비판하는 글을 여러 번 올림\n• 스타머는 머스크의 행동이 분열을 조장하려는 시도라고 비난함\n• 머스크의 발언이 사건을 정치적으로 이용하려는 시도라는 의견이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c1e2ww900zno?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Missing Mandelson messages from minister Darren Jones revealed</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;맨델슨 메시지에서 사라진 대臣 다렌 존스 메시지 공개됨&#39;, &#39;summary&#39;: &#39;• 맨델슨 파일에서 사라진 메시지들이 이번 주 초에 공개된 파일에 포함될 것으로 예상되었음\n• 다렌 존스 대臣의 메시지들이 사라진 것으로 밝혀짐\n• 사라진 메시지의 내용은 아직 공개되지 않음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c1w2rvn8nqyo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>NHS staff should be banned from wearing pro-Palestinian badges, report recommends</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;NHS 직원이 팔레스타인 지지 배지를 착용하는 것을 금지해야 함&#39;, &#39;summary&#39;: &#39;• NHS 내 반유대주의를 조사한 리뷰에서 로드 만이 여러 추천 사항을 제시함\n• 팔레스타인 지지 배지를 착용하는 것을 금지하는 것이 추천 사항 중 하나임\n• 이 추천은 NHS 내 반유대주의를 줄이기 위한 노력의 일부임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cn0plkd4wdno?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>PM accuses Farage of exploiting Nowak case and denies &#39;two-tier policing&#39; claim</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;총리, 파라지의 노와크 사건 이용 및 2단계 경찰 주장 부인함&#39;, &#39;summary&#39;: &#39;• 총리는 파라지의 발언이 노와크 사건을 이용하여 경찰을 비난하는 것임\n• 파라지는 경찰의 행동에 대해 대중이 냉정한 분노로 반응해야 한다고 주장함\n• 총리는 2단계 경찰 주장을 부인하며 경찰의 행동을 옹호함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cvgz23p8117o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>By-election is win-win for me, says Reform candidate</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;보궐선거는 나에게 이익임&#39;, &#39;summary&#39;: &#39;• 로버트 케년은 보궐선거에서 패하더라도 기성 세력에 도전함\n• 그는 선거에서 패할 경우에도 기성 세력을 거스름\n• 케년은 선거 결과에 관계없이 자신의 의견을 표명함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/ce3p963rgn9o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Israel and Lebanon agree to implement ceasefire if Hezbollah stops attacks</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이스라엘과 레바논, 헤즈볼라가 공격을 중단하면 정전을 시행하기로 합의함&#39;, &#39;summary&#39;: &#39;• 이스라엘과 레바논은 헤즈볼라의 공격이 중단되면 정전을 시행하기로 합의함\n• 미국은 이스라엘과 레바논이 레바논의 미래를 인질로 잡으려는 모든 시도를 거부함\n• 미국은 이스라엘과 레바논의 합의를 지지하며 평화적 해결을 촉구함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c5y01pdqvkgo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>US House delivers rebuke to Trump as it votes to halt Iran war</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;미국 하원, 이란 전쟁 중지 결의안 통과하여 트럼프에 경고함&#39;, &#39;summary&#39;: &#39;• 미국 하원은 이란 전쟁을 중지하기 위한 결의안을 통과시킴\n• 이 결의안은 상징적인 의미가 크며 215-208의 투표 결과로 통과됨\n• 4명의 공화당 의원들이 민주당과 함께 결의안을 지지함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cj6pldg39deo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>&#39;Crazy&#39; phone call between Trump and Netanyahu complicates Iran talks</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;트럼프와 네타냐후의 &#39;미친&#39; 전화 통화, 이란 협상 복잡함&#34;, &#39;summary&#39;: &#39;• 트럼프와 네타냐후의 전화 통화가 이란 협상을 복잡하게 만들고 있음\n• 이스라엘 총리는 긴장 보고를 비웃었지만 다른 미국 대통령의 인내심을 시험해 왔음\n• 이란 협상이 더 어려워질 수 있는 상황이 연출되고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cvgz21pq3g6o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Grab what you can while you can: The new reality in the South China Sea</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;잡을 수 있는 것을 잡아라: 남중국해의 새로운 현실&#39;, &#39;summary&#39;: &#39;• 남중국해에서 중국이 광범위한 영유권을 주장하며 땅을 만들던 것을 다른 나라들도 따라하고 있음\n• 중국의 행동이 다른 나라들에게도 영향을 미쳐 새로운 영유권 분쟁이 발생할 가능성이 있음\n• 남중국해의 상황이 더욱 복잡해지고 불안정해질 것으로 예상됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cy823n3ln29o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Missing Sherpa guide found on Mount Everest after &#39;miracle&#39; self-rescue</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;에베레스트 산에서 실종된 셰르파 가이드가 &#39;기적&#39;적으로 구조됨&#34;, &#39;summary&#39;: &#39;• 에베레스트 산에서 실종된 셰르파 가이드 다와 셰르파가 기적적으로 구조됨\n• 다와 셰르파는 베이스 캠프로 기어오르던 중 청소 작업을 하는 사람들에게 발견됨\n• 다와 셰르파는 실종된 지 6일 만에 발견됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cvgz2yjl4y3o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
