@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-06-09 16:18:01</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>It’s not FAANG anymore. It’s MANGOS.</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;FAANG이 아니고 MANGOS임&#39;, &#39;summary&#39;: &#39;• 스페이스X, 앤트로픽, 오픈AI가 대규모 공공 데뷔를 준비하면서 기술 산업은 새로운 기업 지배자와 새로운 약자를 가지게 될 것임\n• FAANG 대신 MANGOS가 새로운 약자로 등장함\n• 새로운 기업 지배자들은 기술 산업을 주도할 것임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/09/its-not-faang-anymore-its-mangos/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Apple says it may remove some apps from the App Store if they don’t attract users</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;애플, 이용자 유치에 실패한 앱을 앱스토어에서 삭제할 수 있음&#39;, &#39;summary&#39;: &#39;• 애플은 이용자 유치에 실패한 앱을 앱스토어에서 삭제할 수 있음\n• 애플은 오래된 앱이나 가치가 없는 앱을 삭제 대상으로 삼을 수 있음\n• 앱스토어의 품질을 높이기 위해 이러한 조치를 취할 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/09/apple-says-it-may-remove-apps-from-the-app-store-if-they-dont-attract-users/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>iOS 27 features we didn’t see onstage</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;iOS 27에서 무대 위에서 보지 못한 기능들&#39;, &#39;summary&#39;: &#39;• iOS 27은 큰 변화는 없지만 일상 사용을 개선할 수 있는 많은 작은 기능들을 가지고 있음\n• 이러한 기능들은 아이폰 사용자들에게 편의를 제공함\n• iOS 27의 작은 기능들은 사용자 경험을 향상시킴&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/09/ios-27-features-we-didnt-see-on-stage/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Apple brings streaming-style subscription bundles to the App Store</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;애플, 앱스토어에 스트리밍 스타일의 구독 번들 제공&#39;, &#39;summary&#39;: &#39;• 애플이 앱 번들 기능을 확장하여 개발자가 할인된 구독 패키지에 대해 협력할 수 있도록 함\n• 개발자들이 함께 구독 번들을 제공하여 사용자에게 더 많은 혜택을 제공할 수 있음\n• 애플의 이 움직임은 앱스토어의 구독 서비스를 강화하는 데 도움이 될 것임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/09/apple-brings-streaming-style-subscription-bundles-to-the-app-store/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Apple’s App Store rolls out personalized recommendations</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;애플 앱 스토어가 개인화된 추천 기능을 시작함&#39;, &#39;summary&#39;: &#39;• 애플이 사용자의 다운로드 기록과 행동을 바탕으로 앱을 추천함\n• 사용자에게 적합한 앱을 찾는 것을 도와줌\n• 앱 스토어에서 사용자 경험을 개선함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/09/apples-app-store-rolls-out-personalized-recommendations/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Scrap legal equality duty for public services, says Badenoch</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;공공 서비스의 법적 평등 의무 폐지해야 한다, 베이든노흐는 말함&#39;, &#39;summary&#39;: &#39;• 보수당 지도자는 규칙이 공공 기관이 제도적으로 무능력해지도록 만들었음\n• 베이든노흐는 공공 서비스의 법적 평등 의무 폐지를 주장함\n• 규칙 폐지가 공공 기관의 효율성을 높일 수 있을 것임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cy5vyqykpx5o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Iranian group could be labelled national threat under proposed new law</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이란계 단체가 제안된 새로운 법안에 따라 국가적 위협으로 분류될 수 있음&#39;, &#39;summary&#39;: &#39;• 새로운 법안인 국가 안보(국가 위협) 법이 몇 주 내에 법이 될 수 있음\n• 이란계 단체가 국가적 위협으로 분류될 가능성이 있음\n• 법안이 통과되면 국가 안보에 대한 새로운 기준이 마련될 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cgqj8xzkqqyo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>British firms to be favoured in defence spending</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;영국 국방 예산에서 영국 기업 우대&#39;, &#39;summary&#39;: &#39;• 영국 국방부 장관은 계약을 수여할 때 영국을 위한 접근 방식을 취할 것임\n• 이 접근 방식은 영국 기업을 우대하는 방향으로 나갈 것임\n• 영국 국방 예산은 영국 기업을 지원하는 데 사용될 것임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c932p0d5jydo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Hidden camera found in government building</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;정부 건물에서 감시 카메라 발견됨&#39;, &#39;summary&#39;: &#39;• 정부 건물에서 감시 카메라가 발견됨\n• 해당 건물은 주택 및 지역 사회부와 내무부가 공유함\n• 건물 내부에서 감시 카메라의 존재가 확인됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c802r4xnkrxo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Starmer tells Apple and Google to ban nude images on children&#39;s phones</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스타머, 애플과 구글에 아동용 폰에서 누드 이미지 금지 요구함&#39;, &#39;summary&#39;: &#39;• 애플과 구글은 아동용 폰에서 성적으로露화된 이미지에 접근하지 못하도록 내장된 기능을 활성화할 것임\n• 이는 아동들이 성적으로露화된 이미지에 노출되지 않도록 하기 위한 조치임\n• 관련 기능은 아동용 폰의 기본 설정에서 활성화될 예정임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cly752ydjw6o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Israeli air strikes hit Lebanese city of Tyre despite Iranian warning to stop attacks</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이스라엘의 공습이 레바논 티르 시를 공격함&#39;, &#39;summary&#39;: &#39;• 이스라엘의 공습이 레바논의 티르 시를 공격함\n• 이란은 이스라엘에 헤즈볼라를 공격하지 말라고 경고함\n• 이란은 헤즈볼라 공격이 멈추지 않으면 다시 공격할 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c36y16nkr5no?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Sea drone rescues US army helicopter crew near Strait of Hormuz</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;호르무즈 해협 근처에서 해상 드론, 미군 헬리콥터 승무원 구조함&#39;, &#39;summary&#39;: &#39;• 미군 아파치 헬리콥터가 추락하면서 승무원 2명이 구조 대상이 됨\n• 구조 작업은 무인 해상 드론에 의하여 수행됨\n• 구조된 승무원은 호르무즈 해협 근처에서 구조됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cwy0l44ex5wo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Hundreds of aftershocks jolt Philippines as officials say death toll could rise</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;필리핀에서 수백 회의 여진이 발생하며 사망자 수가 증가할 수 있음&#39;, &#39;summary&#39;: &#39;• 필리핀 남부에서 지진이 발생하여 수십 명이 사망하고 수백 명이 부상함\n• 지진으로 인한 피해가 계속 증가하고 있음\n• 필리핀 당국이 추가적인 여진에 대비하고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/ckg50pypn2eo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>300 migrants bound for UK kidnapped and threatened with kidney removal</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;영국행 300명 이상의 이민자들이 납치되고 신장 제거를 위협받음&#39;, &#39;summary&#39;: &#39;• 영국으로 향하던 300명 이상의 이민자들이 무장 단체에 납치됨\n• 납치된 이민자들은 인질로 잡혀 총 150만 달러의 몸값을 요구받음\n• 무장 단체는 몸값을 지불하지 않으면 신장을 제거하겠다고 위협함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c8xwxdgvx8lo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>ICC suspends top prosecutor after investigating misconduct allegations</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;국제형사재판소, 고위 검사에 대한 부적절한 행위 의혹 조사 후 직무 정지 처분함&#39;, &#39;summary&#39;: &#39;• 국제형사재판소는 고위 검사 카림 칸에 대한 성적 부적절한 행위 의혹을 조사한 후 직무 정지 처분함\n• 카림 칸은 모든 성적 부적절한 행위 의혹을 부정함\n• 그의 변호인들은 그가 이 결정에 대해 강력하게 반대함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c77yx53015no?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
