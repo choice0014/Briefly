@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-06-10 06:49:04</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Top Lucid Motors executive departs amid new CEO’s leadership shakeup</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;루시드 모터스 최고 경영진이 새 대표이사의 리더십 개편 중에 떠남&#39;, &#39;summary&#39;: &#39;• 루시드 모터스의 최고 경영진인 에마드 딜라라가 엔지니어링 및 디지털 부사장으로 승진한 지 몇 개월 만에 떠났음\n• 에마드 딜라라의 출가는 새 대표이사의 리더십 개편의 일부임\n• 이 출가는 루시드 모터스의 경영진 구성에 변화가 있음을 나타냄&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/09/top-lucid-motors-executive-departs-amid-new-ceos-leadership-shakeup/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Google just fired a warning shot in the AI subscription price wars</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;구글, AI 구독 가격 전쟁에 경고 사격을 감행함&#39;, &#39;summary&#39;: &#39;• 구글이 예산 AI 구독 계층을 이용하는 것을 훨씬 더 저렴하게 함\n• 구글의 이 조치는 AI 구독 가격 전쟁에 영향을 미침\n• 구글의 가격 인하가 경쟁사에 미치는 영향이 주목됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/09/google-just-fired-a-warning-shot-in-the-ai-subscription-price-wars/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>How Justin Ernest invested nearly $500M into hot startups without a traditional VC fund</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;전통적인 벤처 캐피탈 펀드 없이 5억 달러를热한 스타트업에 투자한 저스틴 어네스트의 방법&#39;, &#39;summary&#39;: &#39;• 저스틴 어네스트는 정식 벤처 펀드를 조성하기 위해 1년을 소요하지 않고, 사버투스 벤처 캐피탈의 창립자를 통해 자체 네트워크를 구축함\n• 그는 이 네트워크를 통해 안트로픽, 앤듀릴, 스페이스 엑스와 같은 스타트업에 투자함\n• 이러한 투자 방식은 전통적인 벤처 캐피탈 펀드 없이도 많은 자금을 투자할 수 있는 새로운 방법임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/09/how-justin-ernest-invested-nearly-500m-into-hot-startups-without-a-traditional-vc-fund/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>GM joins race to build batteries for AI data centers and the grid</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;GM, 인공지능 데이터 센터와 전력망용 배터리 개발 경쟁에 참여함&#39;, &#39;summary&#39;: &#39;• GM은 데이터 센터부터 자체 공장까지 사용할 수 있는 전혀 새로운 소듐 이온 배터리 화학을 개발중임\n• 이 기술은 인공지능 데이터 센터의 에너지 효율성을 높임\n• 또한 전력망의 안정성을 강화하는 데 기여할 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/09/gm-bets-big-on-energy-storage-for-data-centers-and-the-grid/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Hey, Siri, here’s what I actually want from AI</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;헤이 시리, 내가 실제로 AI에게 원하는 것&#39;, &#39;summary&#39;: &#39;• 개인용 AI 보조가 필요함\n• 스마트폰의 친절한 로봇 목소리에 의존하지 않도록 노력함\n• 스마트폰 없이도 일상 생활을 원활하게 할 수 있어야 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/09/hey-siri-heres-what-i-actually-want-from-ai/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Scrap legal equality duty for public services, says Badenoch</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;공공 서비스의 법적 평등 의무 폐지해야 한다, 베이든노치 말함&#39;, &#39;summary&#39;: &#39;• 베이든노치는 공공 서비스의 법적 평등 의무가 공공 기관이 기능적으로 무능력해지도록 만들었다고 말함\n• 이러한 규칙이 공공 기관의 능률을 떨어뜨리고 있다고 주장함\n• 공공 서비스의 법적 평등 의무 폐지를 통해 공공 기관의 능력을 높일 수 있을 것임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cy5vyqykpx5o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Iranian group could be labelled national threat under proposed new law</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이란계 단체가 제안된 새로운 법안에 따라 국가적 위협으로 분류될 수 있음&#39;, &#39;summary&#39;: &#39;• 새로운 법안인 국가 안보(국가 위협) 법안이 몇 주 내에 법이 될 수 있음\n• 이란계 단체가 국가적 위협으로 분류될 가능성이 있음\n• 법안이 통과되면 국가 안보에 대한 새로운 기준이 마련될 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cgqj8xzkqqyo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Unions snub Farage&#39;s invite to join Reform UK</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;노조가 파라지의 개혁 영국 참여 제의를 거부함&#39;, &#39;summary&#39;: &#39;• 파라지 당 대표는 자신의 문이 열려 있다고 말함\n• 유나이트 노조는 파라지에게 노동자의 친구가 아니라고 말함\n• 파라지의 제의는 노동자들의 지지를 얻기 위한 시도임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cevlyvkm4ymo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>British firms to be favoured in defence spending</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;영국 국방 예산에서 영국 기업 우대&#39;, &#39;summary&#39;: &#39;• 영국 국방부 장관은 계약을 수여할 때 명백하게 영국을 우대하는 접근 방식을 취하고 있음\n• 이 접근 방식은 영국 기업을 우대하여 영국 경제에 도움이 되도록 함\n• 영국 국방 예산은 영국 기업을 지원하고 영국의 국방 산업을 강화하기 위해 사용됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c932p0d5jydo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Hidden camera found in government building</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;정부 건물에서 감시 카메라 발견됨&#39;, &#39;summary&#39;: &#39;• 정부 건물에서 감시 카메라가 발견됨\n• 해당 건물은 주택 및 지역 사회부와 내무부가 사용함\n• 건물 내부에서 감시 카메라 설치 사실이 확인됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c802r4xnkrxo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Inside Myanmar, rebels are losing ground as military forces men into army</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;미얀마 내부에서 반군이 지면을 잃고 군대가 강화됨&#39;, &#39;summary&#39;: &#39;• 미얀마의 반군은 군대와의 전투에서 지면을 잃고 있음\n• BBC는 반군과 함께 전선으로 이동하여 전쟁의 상황을 보도함\n• 미얀마의 군대는 강화되고 반군은 약화되는 추세임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c20y6966xqzo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>US strikes Iran in response to downing of military helicopter</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;미국, 호르무즈 해협에서 군용 헬리콥터 격추에 대한 대응으로 이란에 공격함&#39;, &#39;summary&#39;: &#39;• 미국 대통령 도널드 트럼프는 이란이 호르무즈 해협에서 미국 군용 헬리콥터를 격추했다고 비난함\n• 트럼프는 이에 대한 대응을 약속함\n• 미국은 이란에 대한 공격을 감행함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cze9359gglyo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Model who alleges Kanye West choked her tells BBC she felt &#39;suffocated and scared&#39;</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;카니예 웨스트가 자신을 목을 조른다는 모델이 BBC에 말함. 그녀는 자신이 질식감과 두려움을 느꼈음.&#39;, &#39;summary&#39;: &#39;• 카니예 웨스트는 음악 비디오 세트에서 일어난 사건이 도발적인 연극적 공연의 일부였다고 주장함.\n• 모델은 카니예 웨스트의 행동으로 인해 질식감과 두려움을 느꼈음.\n• 사건은 음악 비디오 세트에서 일어났음.&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c0q2jgkwk0no?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Twelve killed in mass shooting in Johannesburg, police say</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;요하네스버그에서 대규모 총격 사건으로 12명 사망&#39;, &#39;summary&#39;: &#39;• 요하네스버그의 클리블랜드 지역에서 불법 거주지에서 총격 사건이 발생함\n• 사건으로 12명이 사망하고 9명이 부상함\n• 사건은 화요일 밤에 발생함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c79yzqw0z0wo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>World&#39;s largest chipmaker does not rule out price rises as costs increase</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;세계 최대 반도체 제조업체, 비용 증가로 인한 가격 상승 가능성 배제하지 않음&#39;, &#39;summary&#39;: &#39;• 세계 최대 반도체 제조업체의 고위 간부가 인공지능 붐과 반도체의 지경학, 그리고 전자제품 가격에 대한 영향을 논의함\n• 반도체 산업은 지속적인 기술 발전과 글로벌 수요 증가로 인해 비용이 증가하고 있음\n• 이러한 비용 증가로 인해 전자제품 가격이 상승할 가능성이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/ce3ez4zzzlvo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
