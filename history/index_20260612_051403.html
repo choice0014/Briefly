@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-06-12 00:01:34</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>SpaceX officially prices shares at $135 in the largest IPO ever</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스페이스X, 공식적으로 주식 가격을 135달러로 정함으로써 역대 최대 규모의 IPO 시작&#39;, &#39;summary&#39;: &#39;• 스페이스X의 공식적인 주식 가격 발표로 IPO가 시작됨\n• 주식 가격은 135달러로 정함\n• 이는 역대 최대 규모의 IPO임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/11/spacex-officially-prices-shares-at-135-in-the-largest-ipo-ever/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Oracle warns of security bug that hackers abused to breach 100+ companies</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;오라클, 100개 이상의 회사 침해에 악용된 보안 버그 경고함&#39;, &#39;summary&#39;: &#39;• 오라클은 사이버 범죄 집단이 대규모 해킹 캠페인的一部として 악용한다고 말하는 보안 결함에 대해 경고함\n• 구글은 잠재적으로 취약한 서버를 가진 100개 이상의 조직에 통보함\n• 사이버 범죄 집단의 해킹 캠페인으로 많은 회사들이 침해를 받음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/11/oracle-warns-of-security-bug-that-hackers-abused-to-breach-100-companies/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>SpaceX SPV investors won’t know their true holdings until post-IPO lock-ups lift</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스페이스X의 상장 후 투자자들은 잠금 해제까지 실제 보유량을 알 수 없음&#39;, &#39;summary&#39;: &#39;• 스페이스X 상장 이후 하위 투자자들은 숨겨진 수수료에 직면함\n• 투자자들은 지불 지연과 같은 문제에 직면할 수 있음\n• 투자자들은 사기 등의 위험에 노출될 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/11/spacex-spv-investors-wont-know-their-true-holdings-until-post-ipo-lock-ups-lift/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Bluesky launches group chats, as company shifts focus to community features</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;블루스카이, 그룹 채팅 기능 출시하며 커뮤니티 기능에 중점 둠&#39;, &#39;summary&#39;: &#39;• 블루스카이는 그룹 채팅 기능을 출시함\n• 이 기능은 작은 커뮤니티를 위한 기능 개발에 중점을 둔 가운데 출시됨\n• 블루스카이는 커뮤니티 기능에 중점을 두고 발전함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/11/bluesky-launches-group-chats-as-company-shifts-focus-to-community-features/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Meta’s Edits app is getting an AI assistant and a desktop version</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;메타의 에딧스 앱에 AI 보조기능과 데스크톱 버전이 추가됨&#39;, &#39;summary&#39;: &#39;• 메타는 에딧스 앱에 AI 보조기기를 통합하여 인스타그램에서 콘텐츠 제작자를 유지하려고 함\n• 이는 틱톡과 유튜브와의 경쟁에서 콘텐츠 제작자의 관심을 끌기 위한 시도임\n• 에딧스 앱의 데스크톱 버전이 추가되어 사용자들이 다양한 플랫폼에서 콘텐츠를 편집할 수 있게 됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/11/metas-edits-app-is-getting-an-ai-assistant-and-a-desktop-version/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Armed forces minister quits after Healey exit as defence funding row deepens</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;국방부 장관이 사임함&#39;, &#39;summary&#39;: &#39;• 국방 장관이 사임한 이유는 국방 예산 문제임\n• 알 카恩스는 군대가 충분히 자금을 지원받지 못하고 있다고 말함\n• 댄 자비스가 새로운 국방 장관이 됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c4gyp8n7g3go?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Healey quits as defence secretary in row over military spending</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;헤일리 국방장관, 군사 지출 논란으로 사임함&#39;, &#39;summary&#39;: &#39;• 헤일리 국방장관은 군사 자금 지원 계획이 부족하다고 비판함\n• 헤일리는 계획이 군사 지출 목표에 크게 못 미침\n• 스타머는 영국의 안전을 유지할 것임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c9w2lkd29l8o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Chris Mason: Healey&#39;s resignation is a devastating critique of Starmer&#39;s government</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;크리스 메이슨: 힐리의 사임은 스타머 정부에 대한 엄청난 비판임&#39;, &#39;summary&#39;: &#39;• 힐리의 사임은 스타머 정부에 대한 비판임\n• 힐리의 사임으로 이미 정치적으로 약해진 총리는 더욱 약해짐\n• 힐리의 사임은 스타머 정부의 약점을 드러냄&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cm20vznj2p2o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Asylum appeal backlog at record high, new figures show</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;피난처 신청 거절에 대한 항소 대기 목록이 역대 최고치에 달함&#39;, &#39;summary&#39;: &#39;• 정부는 결정 대기 중인 사례의 대기열을 줄였음\n• 항소 건수는 증가함\n• 대기 목록의 현황은 기록적인 수준임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cwyld5rnw9vo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Facing a seismic by-election, the people of Makerfield tell us what matters to them</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;지진 같은 보궐선거를 앞둔 메이커필드 주민들이 말하는 그들에게 중요한 것&#39;, &#39;summary&#39;: &#39;• 메이커필드 주민들과 사업주, 운동가들과의 대화에서 혼합된 기분이 발견됨\n• 주민들은 보궐선거에서 중요한 문제에 대해 다양한 의견을 제시함\n• 지역 경제와 사회 문제가 주민들의 관심을 끌고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/ckg4dywykjeo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>El Niño under way and threatens weather extremes, scientists say</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;엘니뇨 현상이 시작되어 기상 이상 현상을 일으킬 수 있음&#39;, &#39;summary&#39;: &#39;• 엘니뇨 현상이 공식적으로 시작됨\n• 극단적인 기상 현상과 더 높은 기온이 발생할 가능성이 있음\n• 미국 과학자들이 엘니뇨 현상의 시작을 확인함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c75ylx7g00xo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Deadly Sudan drone strike targets funeral procession</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;수단에서 드론 공격이 장례 행렬을 표적으로 함&#39;, &#39;summary&#39;: &#39;• 수단의 도시 엘오베이드에서 민간人が 드론 공격으로 사망함\n• 인권 단체는 민간인 사살에 대해 준군사 조직 RSF를 비난함\n• 엘오베이드는 내전의 전선에 위치함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c70yeee2jvqo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>World Cup kicks off in Mexico with Shakira, dancing, and protests</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;멕시코에서 샤키라와 함께 월드컵이 시작되며 춤과 시위가 열림&#39;, &#39;summary&#39;: &#39;• 멕시코에서 월드컵이 시작되며 샤키라의 공연이 열림\n• 아스테카 경기장 주변에서 경찰과 시위대 간의 소규모 충돌이 발생함\n• 개막식에는 많은 유명 인사가 참석함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c2ly928xz8go?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Nigeria evacuates citizens from South Africa as anti-migrant sentiment rises</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;나이지리아, 반이민 정서 상승으로 남아프리카 공화국에서 시민들을 철수시킴&#39;, &#39;summary&#39;: &#39;• 나이지리아는 아프리카에서 외국인에 대한 공격이 보고된 이후 시민들을 본국으로 돌려보내는 국가임\n• 나이지리아는 남아프리카 공화국에서 발생한 외국인에 대한 공격으로 인해 시민들을 철수시킴\n• 나이지리아의 이 조치는 반이민 정서가 상승하는 상황에서 이루어짐&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cq512vgyzl9o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>The furious dispute over what caused Air India flight 171 to crash</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;에어 인디아 171편 추락 원인에 대한 격렬한 논쟁&#39;, &#39;summary&#39;: &#39;• 에어 인디아 171편 추락 사고에 대한 조사 결과가 아직 발표되지 않음\n• 조사 결과는 가까운 시일 내에 공개될 가능성이 있음\n• 추락 사고의 원인은 아직 명확하지 않음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cwyk9exxp2qo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
