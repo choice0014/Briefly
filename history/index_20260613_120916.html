@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-06-13 10:14:38</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>I have a duty to stay on, says PM as he justifies defence spending decisions</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;총리가 국방 지출 결정을 정당화하며 남아있을 의무가 있다고 말함&#39;, &#39;summary&#39;: &#39;• 총리는 국방 비용에 대한 논란으로 국방 장관이 사임한 다음 날에 어려운 결정을 내렸음을 주장함\n• 총리는 국방 지출에 대한 결정을 정당화하며 남아있을 의무가 있다고 말함\n• 총리의 발언은 국방 비용에 대한 논란이 계속되는 가운데 나옴&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c621wr1zg97o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Defence row exposes tensions over how to keep UK safe</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;국방 논란, 영국 안전을 위한 대책 마련에 대한 긴장 고조됨&#39;, &#39;summary&#39;: &#39;• 영국의 전 국방 장관 존 힐리는 국방 투자 계획이 필요한 것보다 현저히 부족하다고 말함\n• 영국의 안전을 유지하기 위한 대책 마련에 대한 의견 차이가 노출됨\n• 국방 투자 계획에 대한 논란이 영국의 안보에 대한 우려를 고조시키고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c8d2q84y1gno?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>What&#39;s happened to UK defence spending?</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;영국 국방 예산에 무슨 일이 일어났는가&#39;, &#39;summary&#39;: &#39;• 영국 국방 예산에 대한 비판이 제기됨\n• 영국 군대의 규모가 줄어들고 있음\n• 정부의 국방 예산 결정에 대한 논란이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c6244zqnk16o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>PM needs to make &#39;bold&#39; decisions on defence spending, says Carns</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;국방 예산에 대한 대담한 결정을 내릴 필요가 있다&#39;, &#39;summary&#39;: &#39;• 알 카恩스는 국방 예산을 둘러싼 논란으로 무장군 장관직을 사임함\n• 존 힐리는 국방 장관직을 사임함\n• 국방 예산 문제로 정부 내에서 논란이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c20ynklervyo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>UK economy contracts as Iran war impact felt</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;영국 경제는 이란 전쟁의 영향으로 축소됨&#39;, &#39;summary&#39;: &#39;• 영국 경제는 이란 전쟁의 영향으로 축소됨\n• 4월에 경제가 약간 축소된 것으로 나타남\n• 이란 전쟁이 기업에 영향을 미치기 시작함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c77y47248k4o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Deal to end fighting would lead to Hormuz reopening, Iran says</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;호르무즈 재개에 대한 협상이 끝나면 충돌이 종료될 것이라고 이란은 말함&#39;, &#39;summary&#39;: &#39;• 미국과 이란, 그리고 중재자로서의 파키스탄은 충돌을 끝내는 길을 열어줄 협상이 거의 마무리됨\n• 이란은 호르무즈의 재개에 대한 협상을 통해 충돌이 종료될 것이라고 말함\n• 미국과 이란, 파키스탄은 협상이 거의 완료되어 곧 호르무즈가 재개될 것이라고 예상함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c39y02x98k8o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Switzerland to vote on plan to cap population at 10 million</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스위스가 1,000만 명으로 인구를 제한하는 계획에 대한 투표를 함&#39;, &#39;summary&#39;: &#39;• 스위스 인민당은 이 계획을 지속 가능성 계획이라고 함\n• 반대자들은 이 계획이 혼란을 초래하는 요인임\n• 계획은 인구 제한을 두는 내용을 포함함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cx23kz7e76po?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Married at First Sight Australia stars not told partners had drug and violence convictions</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;호주 버전 결혼 처음 본 순간 출연자들, 파트너의 마약 및 폭력 전과不知&#39;, &#39;summary&#39;: &#39;• 호주 버전 결혼 처음 본 순간 출연자들은 방송에서 만난 배우자들이 이전에 마약 및 폭력 관련 전과가 있다는 것을不知했다고 말함\n• 해당 출연자들은 이러한 정보를不知하게 된 것에 대해 의문을 제기함\n• 방송 제작진은 이러한 정보를不知하게 한 이유에 대해 설명하지 않음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/clypy0ndvjlo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Elon Musk becomes world&#39;s first trillionaire as SpaceX soars in stock market debut</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;일론 머스크, 스페이스X 상장으로 세계 최초의 1조 달러 자산가 됨&#39;, &#39;summary&#39;: &#39;• 일론 머스크의 자산은 1.11조 달러에 달함\n• 스페이스X는 나스닥에 상장하며 2.2조 달러의 가치를 기록함\n• 일론 머스크는 세계 최초의 1조 달러 자산가가 됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c4gypy3wwl7o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Fans on concourses instead of in seats, claims Fifa</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;관중들이 자리에 앉지 않고 통로에 머물러 있음을 국제축구연맹이 주장함&#39;, &#39;summary&#39;: &#39;• 국제축구연맹은 한국과 체코 공화국 간의 경기에서 많은 빈 자리가 보였음\n• 이는 관중들이 자리에 앉지 않고 통로에 머물러 있었기 때문임\n• 해당 경기는 거의 매진 상태였음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/sport/football/articles/c14y0dp6vrdo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
