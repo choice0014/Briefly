@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-06-16 06:05:44</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Sundar Pichai faces boos, walkout at Stanford graduation ceremony over Google’s Israel, ICE ties</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;선더 피차이, 스탠퍼드 졸업식에서 부우와 퇴장에 직면함&#39;, &#39;summary&#39;: &#39;• 구글의 이스라엘과 ICE와의 관계로 인해 스탠퍼드 졸업식에서 선더 피차이에게 부우가 터짐\n• 구글의 국방 계약에서 기술의 사용이 문제가 됨\n• 졸업식에서 일부 학생들이 퇴장함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/15/sundar-pichai-faces-boos-walkout-at-stanford-graduation-ceremony-over-googles-israel-ice-ties/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>The US government’s Anthropic models ban was never about an AI jailbreak</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;미국 정부의 앤트로픽 모델 금지令은 인공지능 탈출과 관련이 없음&#39;, &#39;summary&#39;: &#39;• 미국 정부의 간섭으로 앤트로픽이 최신 사이버 보안 모델을 철수해야 했음\n• 트럼프 행정부의 결정은 반동적이거나 보복적이거나 둘 다 가능함\n• 미국 정부의 간섭으로 인해 인공지능 산업도 영향을 받음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/15/the-us-governments-anthropic-models-ban-was-never-about-an-ai-jailbreak/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Meta’s new ‘AI Mode’ on Facebook pulls from public info across its platforms</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;메타의 새로운 &#39;인공지능 모드&#39;가 페이스북에 적용됨&#34;, &#39;summary&#39;: &#39;• 메타는 페이스북에 새로운 인공지능 기능을 도입함\n• 새로운 기능은 메타의 플랫폼에 공개된 정보를 사용함\n• 메타는 인공지능 경쟁에서 뒤처지는 것을 방지하고 사용자를 더 많이 참여시키기 위해 노력함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/15/metas-new-ai-mode-on-facebook-pulls-from-public-info-across-its-platforms/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>SpaceX is public: Everything you need to know post-IPO</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스페이스X 상장: 상장 이후 알아야 할 모든 것&#39;, &#39;summary&#39;: &#39;• 스페이스X의 초기 시작과 어려움, 성공을 포함한 모든 과정을 기술 크런치가 추적함\n• 스페이스X의 상장 이후 누가 이익을 얻고 누가 손해를 볼 수 있는지에 대한 분석이 포함됨\n• 상장 이전 거래와 S-1 등록 문서에 포함된 내용을 포함한 상장 관련 보도가 포함됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/15/spacex-is-public-everything-you-need-to-know-post-ipo/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>These are the countries moving to ban social media for children</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;어린이에게 소셜 미디어를 금지하는 국가들&#39;, &#39;summary&#39;: &#39;• 어린이에게 소셜 미디어를 금지하는 국가들이 나타나고 있음\n• 호주가 2025년 말에 처음으로 금지 조치를 취했음\n• 사이버 폭력, 소셜 미디어 중독, 성인들의 위협 등으로부터 어린이들을 보호하려는 것이 목표임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/15/social-media-ban-children-countries-list/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Two men found guilty over Starmer-linked arson attacks</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스타머와 관련된 방화 사건에서 두 명의 남성이 유죄 판결을 받음&#39;, &#39;summary&#39;: &#39;• 스타머와 관련된 재산과 자동차가 작년 방화 공격의 대상이 됨\n• 방화 공격은 스타머와 관련된 여러 대상을 노렸음\n• 사건은 작년 발생했으며 두 명의 남성이 유죄 판결을 받음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c9v2yd8vk04o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Russia was behind arson attacks targeting PM, BBC reveals</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;러시아가 총리 대상 방화 테러를 조종했다고 BBC가 밝힘&#39;, &#39;summary&#39;: &#39;• 러시아가 음모를 지시하고 가짜 극우 및 무슬림 단체를 통해 긴장을 고조시킴\n• 가짜 단체를 이용해 테러를 은폐하려는 시도가 있었음\n• 러시아의 이러한 행동이 지역의 긴장을 더욱 높임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c8r2l352z2do?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Reform pledges new tax on hiring foreign workers</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;외국인 근로자를 고용할 때 새로운 세금 부과를 약속하는 개혁&#39;, &#39;summary&#39;: &#39;• 외국인 근로자를 고용할 때 새로운 세금을 부과함\n• 이 조치는 지난해 영국 근로자에게 부과된 국가 보험료 증가를 역전시키는 데 도움이 됨\n• 새로운 세금은 영국 근로자에게 부과된 국가 보험료 증가를 완화하는 데 사용됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/czx5ne278x8o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Assisted dying returns to Parliament as MP urges peers to &#39;finish the job&#39;</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;의원 의뢰로 의회에 다시 등장한 조력사망&#39;, &#39;summary&#39;: &#39;• 로렌 에드워즈 의원이 이전에 하원에서 통과되었지만 상원에서 시간이 부족해 통과하지 못한 동일한 법안을 다시 제출할 것임\n• 이 법안은 조력사망에 관한 것으로 이전에 하원에서 통과되었지만 상원에서 시간이 부족해 폐기됨\n• 로렌 에드워즈 의원은 상원에서 이전에 통과하지 못한 법안을 다시 제출하여 조력사망을 허용하기 위해 노력함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c4gyxgwkyxyo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Roy Hattersley, former Labour deputy leader, dies aged 93</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;노동당 전 부대표 로이 해터슬리, 93세로 사망함&#39;, &#39;summary&#39;: &#39;• 로이 해터슬리는 노동당의 거대한 인물임\n• 노동당 대표인 시어 스타머는 해터슬리에 대한 추모의 말을 남김\n• 해터슬리는 노동당의 역사에서 중요한 역할을 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cvgq1egykr9o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Trump may release US-Iran deal before Friday, Vance says</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;트럼프가 금요일 이전에 미국-이란 협약을 공개할 수 있음&#39;, &#39;summary&#39;: &#39;• 미국 부통령은 협약이 약 1.5ページ로 구성되어 있으며 매우 일반적임\n• 이는 많은 세부 사항이 나중에 결정될 것임\n• 협약은 금요일 이전에 공개될 가능성이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/ce8mv6l6eezo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Iran deal presents political nightmare for Netanyahu</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이란 협상, 네타냐후에게 정치적 악몽임&#39;, &#39;summary&#39;: &#39;• 이란과의 휴전 협상이 이스라엘 총리 네타냐후에게 새로운 정치적 딜레마를 가져옴\n• 네타냐후는 이란과의 휴전 협상으로 인해 새로운 안보 위기를 맞이함\n• 이란 협상은 네타냐후의 정치적 입지를 약화시키는 요인이 될 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cj4gnqw8j52o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Married at First Sight Australia allegations &#39;disturbing&#39;, says country&#39;s watchdog</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;호주 결혼 실제 시리즈에 대한 의혹은 &#39;걱정스럽다&#39;는 호주 감시 기관의 말&#34;, &#39;summary&#39;: &#39;• 호주 결혼 실제 시리즈에 대한 의혹이 제기됨\n• 영국 미디어 감시 기관인 오프콤도 이에 대해 깊이 우려스럽다고 말함\n• 이 사건은 호주와 영국에서 큰 관심을 끌고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c4gyp099vl7o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Japan raises interest rate to highest since 1995</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;일본, 1995년 이후 최고 수준의 금리 인상&#39;, &#39;summary&#39;: &#39;• 일본은행은 2024년부터 거의 0에 가까운 금리에서 금리를 인상해 왔음\n• 금리 인상은 경제 상황에 대한 대응임\n• 일본은행의 금리 결정은 경제에 영향을 미침&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cjdgl213dpzo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>California&#39;s Gavin Newsom alleges justice department is investigating his wife and ex-staff</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;캘리포니아 주지사 가빈 뉴섬, 아내와 전직员들이 조사대상임&#39;, &#39;summary&#39;: &#39;• 캘리포니아 주지사 가빈 뉴섬은 아내와 전직员들이 조사대상이라고 주장함\n• 조사에 익숙한 소식통에 따르면 이 사건은 대략 1년 전부터 진행중임\n• 뉴섬은 미국 법무부가 아내와 전직员들을 조사하고 있다고 밝힘&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c3vyw7021r0o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
