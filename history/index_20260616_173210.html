@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-06-16 11:41:19</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>India orders temporary ban on Telegram over exam fraud concerns</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;인도, 시험 부정 논란으로 텔레그램 사용 임시 금지령 내림&#39;, &#39;summary&#39;: &#39;• 인도 정부는 시험 부정 논란으로 텔레그램 사용을 임시로 금지함\n• 텔레그램 사용 금지 기간은 6월 22일까지임\n• 텔레그램 앱의 메시지 편집 기능을 비활성화해야 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/16/india-temporarily-blocks-access-to-telegram-over-exam-fraud-concerns/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>This startup’s super metals could soon be in military drones, luxury watches, and chef’s knives</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이 스타트업의 초고급 금속이 곧 군용 무인기, 고급 시계, 요리용 나이프에 사용될 수 있음&#39;, &#39;summary&#39;: &#39;• 이 스타트업은 금속을 가열하는 대신 강하게 두드려서 성형함\n• 이 스타트업은 금속의 대량 생산을 위해 2,200만 달러를 투자받음\n• 이 금속은 군용 무인기, 고급 시계, 요리용 나이프 등에 사용될 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/16/this-startups-super-metals-could-soon-be-in-military-drones-luxury-watches-and-chefs-knives/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>SpaceX to acquire Cursor for $60B in stock, days after blockbuster IPO</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스페이스엑스, 6천억 달러의 주식으로 커서 인수함&#39;, &#39;summary&#39;: &#39;• 스페이스엑스는 인수를 통해 어려움을 겪고 있는 인공지능 부문을 지원함\n• 스페이스엑스는 최근 IPO에서 투자자들에게 인공지능 시장의 규모가 260조 달러에 달할 것으로 전망함\n• 인수는 스페이스엑스의 인공지능 사업을 강화하는 데 도움이 될 것임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Threads adds new personalization and community features as it reaches 500M monthly users</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;쓰레드가 5억 명의 월간 사용자를 달성함에 따라 새로운 개인화 및 커뮤니티 기능 추가&#39;, &#39;summary&#39;: &#39;• 쓰레드는 새로운 기능을 출시하여 사용자가 피드에서 볼 수 있는 내용을 제어할 수 있는 &#34;유어 알고&#34; 도구를 제공함\n• 사용자들은 이제 자신의 알고리즘을 커스터마이징하여 더 관련性 있는 콘텐츠를 볼 수 있음\n• 새로운 기능은 쓰레드의 사용자 커뮤니티를 강화하고 사용자 참여를 높임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/16/threads-adds-new-personalization-and-community-features-as-it-reaches-500m-monthly-users/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>ChatGPT’s market share slips below 50% for first time</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;챗지피티의 시장 점유율이 처음으로 50% 아래로 떨어짐&#39;, &#39;summary&#39;: &#39;• 챗지피티는 여전히 월간 11억 명의 사용자를 보유한 세계에서 가장 인기 있는 인공지능 어시스턴트임\n• 제미니는 6억 6200만 명의 사용자로 두 번째임\n• 클라우드는 2억 4500만 명의 사용자로 세 번째임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/16/chatgpts-market-share-slips-below-50-for-first-time/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Thames Water moves step closer to nationalisation after government objects to rescue deal</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;테임즈 워터 국유화 한 걸음 더近해짐&#39;, &#39;summary&#39;: &#39;• 테임즈 워터의 구조 계획이 소비자와 환경에 충분한 혜택을 제공하지 않는다는 이유로 정부가 반대함\n• 환경부 장관은 이 계획이 환경과 소비자에게益을 주지 못한다고 밝힘\n• 테임즈 워터의 국유화 가능성이 높아짐&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cly089d0wl7o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Labour risks handing power to Reform without drastic change, says union leader</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;노동당은 급격한 변화 없이는 개혁당에 권력을 넘길 위험에 빠짐&#39;, &#39;summary&#39;: &#39;• 노동당은 기대에 부응하지 못함\n• 노동당 선거 결과는 회원들이 목소리를 내고 싶어하는 것을 보여줌\n• 노동당은 급격한 변화가 필요함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c2lyjey0zv0o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Sister of Jo Cox urges &#39;common ground&#39; 10 years after her murder</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;조 콕스 의원의 여동생, 살해 10년 만에 &#39;공통점 찾기&#39; 촉구함&#34;, &#39;summary&#39;: &#39;• 조 콕스의 여동생 김 리드비터는 살해 사건 발생 10년 후를 되돌아봄\n• 김 리드비터는 스펜 밸리 지역의 국회의원임\n• 조 콕스 의원은 10년 전 버스톨에서 살해당함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cgl34zep70go?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Under-16s will be banned from social media from early 2027</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;2027년 초부터 16세 미만은 소셜 미디어 사용 금지됨&#39;, &#39;summary&#39;: &#39;• 2027년 초부터 16세 미만의 어린이는 소셜 미디어를 사용할 수 없게 됨\n• 인스타그램, 유튜브, 틱톡 등이 어린이들에게 차단됨\n• 총리는 이 규제가 수백만 명의 어린이들에게 적용됨을 발표함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c2kydl0zqeko?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Two men found guilty over Starmer-linked arson attacks</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스타머와 관련된 방화 사건에서 두 명의 남성이 유죄 판결을 받음&#39;, &#39;summary&#39;: &#39;• 스타머와 관련된 재산과 자동차가 작년 방화 공격의 대상이 됨\n• 방화 공격은 스타머와 관련된 여러 대상을 노렸음\n• 사건은 스타머와 관련된 사람들을 위협하는 것으로 보임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c9v2yd8vk04o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Iran deal presents political nightmare for Netanyahu</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이란 협상이 네타냐후에게 정치적 악몽을 가져옴&#39;, &#39;summary&#39;: &#39;• 이란과의 휴전 협상이 이스라엘 총리에게 새로운 정치적 딜레마를 가져옴\n• 네타냐후는 이란과의 휴전 협상으로 인해 새로운 안보 위기를 맞이함\n• 이란과의 휴전 협상은 네타냐후에게 정치적 어려움을 가져옴&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cj4gnqw8j52o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Russian artist and Putin critic shot dead in Poland</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;푸틴 비판한 러시아 예술가 폴란드에서 총격 사망함&#39;, &#39;summary&#39;: &#39;• 러시아 예술가 로버트 쿠조프코프는 세묜 스เคร펫스키라는 가명으로 활동함\n• 그는 블라디미르 푸틴을 포함한 정치인들의 풍자화로 유명함\n• 쿠조프코프는 폴란드에서 총격으로 사망함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/clyrzd5g6k2o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Eight dead after US Air Force B-52 bomber crashes in California</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;미국 캘리포니아에서 미 공군 B-52 폭격기가 추락해 8명 사망함&#39;, &#39;summary&#39;: &#39;• 미국 캘리포니아에서 미 공군의 B-52 폭격기가 추락하여 8명이 사망함\n• 이 사고는 월요일 아침에 발생했음\n• 해당 비행기는 정기적인 시험 비행을 수행 중이었음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cqx10yql319o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>California&#39;s Gavin Newsom alleges justice department is investigating his wife and ex-staff</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;캘리포니아 주지사 개빈 뉴솜, 아내와 전 직원에 대한 조사 진행 중임&#39;, &#39;summary&#39;: &#39;• 캘리포니아 주지사 개빈 뉴솜은 아내와 전 직원에 대한 조사를 진행 중이라고 주장함\n• 조사에 익숙한 소식통에 따르면 조사는 대략 1년 전부터 시작됨\n• 뉴솜은 미국 법무부가 아내와 전 직원을 조사하고 있다고 밝힘&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c3vyw7021r0o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>&#39;Dancing girl&#39;s&#39; bare torso restored in Indian textbook after backlash</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;인도 교과서에 등장한 무용 소녀의 상반신 복원됨&#39;, &#39;summary&#39;: &#39;• 인도 교과서에 등장한 무용 소녀 상의 일부가 검은 색조로 가려져 있던 문제가 발생함\n• 이에 대한 반발이 거세지자 원래 모습으로 복원됨\n• 해당 문제는 인도 교과서의 검열과 관련된 논란을 불러일으킴&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c7vyzgl2142o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
