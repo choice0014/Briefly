@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-06-18 09:53:54</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>NASA picks Eric Schmidt’s rocket company for Mars mission, setting up a race with SpaceX</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;에릭 슈미트의 로켓 회사, NASA의 화성 임무를 맡음&#39;, &#39;summary&#39;: &#39;• 에릭 슈미트의 로켓 회사인 Relativity Space가 NASA의 화성 임무를 맡게 됨\n• 이 회사는 지난해 에릭 슈미트에 인수된 후 궤도에 도달하는 길에서 어려움을 겪었음\n• Relativity Space는 화성에 도달하는 경쟁에서 스페이스X를 앞질러 갈 가능성이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/17/nasa-picks-eric-schmidts-rocket-company-for-mars-mission-setting-up-a-race-with-spacex/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>How to turn off AI in your Google Docs</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;구글 독스에서 인공지능을 끄는 방법&#39;, &#39;summary&#39;: &#39;• 구글 독스에서 인공지능을 끄는 방법을 알아봄\n• Gemini로 작성하는 팝업을 끄는 방법을 제공함\n• 팝업을 끄면 사용자에게 더 편리한 문서 편집 환경을 제공함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/17/how-to-turn-off-ai-in-your-google-docs/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>AI is hurting Apple in more ways than one: it may force iPhone price increases</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;AI가 애플에 여러 가지 방식으로 손실을 끼치고 있음: 아이폰 가격 인상을 강요할 수 있음&#39;, &#39;summary&#39;: &#39;• 애플의 CEO 팀 쿡은 최근 인터뷰에서 상황이 지속 불가능함을 언급함\n• AI 기술의 발전이 애플의 비용 증가로 이어질 수 있음\n• 이는 아이폰 가격 인상으로 이어질 가능성이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/17/ai-is-hurting-apple-in-more-ways-than-one-it-may-force-iphone-price-increases/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Chi-Hua Chien saw Facebook coming — now he says the real AI winners won’t be selling AI</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;치화 첸은 페이스북의 부상을 예측했다 - 이제 그는 실제 AI 승자는 AI를 판매하지 않을 것이라고 말한다&#39;, &#39;summary&#39;: &#39;• 치화 첸은 20년 이상의 벤처 자본가로 활동했으며 문화 인류학者的 사고 방식을 가지고 있다.\n• 그는 기술과 문화의 교차점에서 비즈니스 기회를 찾는다.\n• 그는 실제 AI 승자는 AI를 판매하지 않고 다른 산업에서 AI를 활용하여 가치를 창출할 것이라고 주장한다.&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/17/chi-hua-chien-saw-facebook-coming-now-he-says-the-real-ai-winners-wont-be-selling-ai/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Roelof Botha joins SpaceX’s board of directors</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스페이스엑스의 이사회에 로엘로프 보타가 합류함&#39;, &#39;summary&#39;: &#39;• 스페이스엑스의 이사회에 로엘로프 보타가 합류함\n• 로엘로프 보타는 시퀘리아 캐피탈의 전 리더임\n• 스페이스엑스가 최대의 상장 후 며칠 만에 보타가 합류함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/17/roelof-botha-joins-spacexs-board-of-directors/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>New UK defence secretary meets Nato allies without investment plan in place</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;새로운 영국 국방 장관, 투자 계획 없이 나토 동맹국과 회동함&#39;, &#39;summary&#39;: &#39;• 나토 회원국들은 국방 지출을 늘리기 위한 명확하고 구체적이며 신뢰할 수 있는 계획을 제시하도록 촉구받음\n• 새로운 영국 국방 장관은 투자 계획 없이 나토 동맹국과 회동함\n• 나토 동맹국들은 국방 지출을 늘리기 위한 계획을 수립해야 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cn0vge2kj9zo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Voters head to the polls for Makerfield by-election</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;메이커필드 보궐선거 투표 시작&#39;, &#39;summary&#39;: &#39;• 메이커필드 보궐선거에서 14명의 후보자가 새 의원을 뽑기 위해 경쟁함\n• 그레이터 맨체스터 선거구의 새 의원 자리를 놓고 치열한 경쟁이 예상됨\n• 보궐선거 결과가 지역 정치에 미칠 영향이 관심을 끌음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c5yzgpe2ld3o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Interest rates expected to be held by Bank of England</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;영국 중앙은행, 금리 인하 없을 것으로 예상됨&#39;, &#39;summary&#39;: &#39;• 영국 중앙은행은 지난 12월에 금리를 마지막으로 인하했음\n• 중동의 혼란으로 인해 추가적인 금리 인하가 중단됨\n• 현재 금리 인하가 없을 것으로 예상됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c33yzm5mdjpo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Voters in Scotland head to the polls for Westminster by-elections</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스코틀랜드에서 웨스트민스터 보궐선거 투표 시작됨&#39;, &#39;summary&#39;: &#39;• 스코틀랜드의 아버딘 사우스와 아브로스 및 브로티 페리 지역 주민들이 새 의원을 선출함\n• 웨스트민스터 의회 보궐선거 투표가 진행됨\n• 지역 주민들이 투표를 통해 새로운 의원을 선택함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c4gy3z7n9gko?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Number of job vacancies hits five year-low</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;구인 자리 수가 5년 만에 최저치에 도달함&#39;, &#39;summary&#39;: &#39;• 최근 통계에 따르면 회사들이 새로운 직원을 채용하는 데 더 신중해지고 있음\n• 구인 자리 수가 5년 전보다 낮은 수준에 도달함\n• 회사들의 신중한 채용 태도는 경제 불안정성의 영향을 받고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cm203nn7lzro?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>What&#39;s in the US-Iran agreement?</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;미국-이란 협정 내용은 무엇인가?&#39;, &#39;summary&#39;: &#39;• 미국과 이란은 전투를 중단하기로 합의함\n• 이란은 핵무기를 개발하지 않기로 약속함\n• 이란은 3000억 달러의 재건 패키지를 받기로 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cvgmqzr6p9mo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Gunfire and explosions heard at Niger capital&#39;s airport</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;니제르 수도 공항에서 총격과 폭발음이 들림&#39;, &#39;summary&#39;: &#39;• 니제르에서는 지난 10년간 이슬람 극단주의 반군과 싸움\n• 1월에도 의심되는 지하디스트들이 같은 공항을 공격함\n• 니제르 수도 공항에서 총격과 폭발음이 들린 것으로 전함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cdx7krkdqeno?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Suspected gang leader shot dead in flower bouquet ambush at airport</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;공항에서 꽃다발에 숨긴 총으로 의심받는 갱단 두목이 사살됨&#39;, &#39;summary&#39;: &#39;• 의심받는 갱단 두목이 공항 밖에서 기다리던 총격단이 꽃과 인형 뒤에 총을 숨긴 채 공격을 준비함\n• 공격은 에콰도르의 과야킬 공항에서 발생함\n• 총격단은 꽃다발과 인형을 이용해 총을 숨긴 채 공격을 감추었음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c4gy2l30dd0o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Japan ramping up defence is &#39;critical&#39; to prevent war, Defence Minister Koizumi tells BBC</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;일본 국방 강화는 전쟁 방지를 위해 중요함&#39;, &#39;summary&#39;: &#39;• 일본은 제2차 세계 대전 이후로 유지해 온 평화주의적 입장을 재검토해야 함\n• 일본 국방상 코이즈미 신지로는 일본의 국방 강화가 중요함을 강조함\n• 일본의 국방 강화는 전쟁을 방지하는 데 중요한 역할을 할 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cly8qd4595eo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Status quo at Jerusalem&#39;s holiest site under threat as Israeli nationalists flout rules</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;예루살렘의 성지에서 현상 유지의 위협과 이스라엘 민족주의자들의 규칙 위반&#39;, &#39;summary&#39;: &#39;• 이스라엘 민족주의자들이 알악사 모스크 단지에서 종교를 공유하는 규칙을 위반하고 있음\n• 이스라엘 민족주의자들의 행동이 예루살렘의 성지에서 현상 유지의 위협이 되고 있음\n• 종교 간의 긴장이 고조되고 있는 상황에서 평화와 안정이 필요함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cwy0nlv90jno?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
