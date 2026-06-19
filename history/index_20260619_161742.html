@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-06-19 12:31:04</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>The US says ASML’s top chip tool may be in China. ASML says it isn’t</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;미국은 ASML의 최고 칩 도구가 중국에 있을 수 있다고 말합니다. ASML은 아니라고 말합니다&#39;, &#39;summary&#39;: &#39;• 미국은 ASML의 최고 칩 도구가 중국에 있을 수 있다고 주장합니다.\n• ASML은 미국의 주장을 부정하며 도구가 중국에 있지 않다고 말합니다.\n• ASML은 수출 허가증을 위험에 빠뜨릴 수 있는 중국 고객을 지원할 가능성이 낮습니다.&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/19/the-us-says-asmls-top-chip-tool-may-be-in-china-asml-says-it-isnt/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Telegram ban in India sparks a rush to VPNs, rival apps</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;인도에서 텔레그램 금지로 VPN과 경쟁 앱으로의 러시가 발생함&#39;, &#39;summary&#39;: &#39;• 인도에서 텔레그램이 금지되면서 사용자들이 VPN을 사용하여 접속함\n• 텔레그램은 인도에서 특정 콘텐츠를 차단해야 한다고 주장하며 전체 플랫폼을 차단하는 것은 부당함\n• 텔레그램의 금지로 인해 경쟁 앱들의 사용자 수가 증가하고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/18/telegram-ban-in-india-sparks-a-rush-to-vpns-rival-apps/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Source: Elastic agrees to buy CRV-backed DeductiveAI for up to $85M</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;엘라스틱, CRV 출자 데덕티브AI를 최대 8천500만 달러에 인수하기로 함&#39;, &#39;summary&#39;: &#39;• 엘라스틱은 인공지능을 이용해 소프트웨어의 버그를 잡고 해결하는 데덕티브AI를 인수하기로 함\n• 데덕티브AI는 3년 전 설립된 스타트업임\n• 엘라스틱은 데덕티브AI를 최대 8천500만 달러에 인수하기로 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/18/source-elastic-agrees-to-buy-crv-backed-deductiveai-for-up-to-85m/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>AI inference startup Baseten reportedly raising $1.5B months after its last mega-round</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;AI 추론 스타트업 Baseten, 최근 대규모 투자 후 15억 달러 추가 투자 유치임&#39;, &#39;summary&#39;: &#39;• Baseten은 추론 골드 러시가 계속됨에 따라 13억 달러의 기업 가치로 15억 달러의 투자 유치 작업을 마무리함\n• 최근 대규모 투자 후 추가 투자 유치로 빠른 성장임\n• AI 추론 기술에 대한 투자 열기가 지속됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Snap spins off AI video team into new company, Dotmo, due to costs</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스냅, 비용 문제로 인해 AI 비디오 팀을 독립 회사인 닷모로 분리함&#39;, &#39;summary&#39;: &#39;• 스냅은 내부 단위를 분리하여 새로운 회사인 닷모를 설립함\n• 닷모는 현재 스냅 직원들로 구성되며 AI 비디오 개발에 집중함\n• 스냅은 비용 문제로 인해 이 분리를 결정함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/18/snap-spins-off-ai-video-team-into-new-company-dotmo-due-to-costs/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Chris Mason: Burnham&#39;s emphatic win leaves Starmer and Labour MPs with big decision</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;크리스 메이슨: 번햄의 압도적인 승리, 스타머와 노동당 의원들에게 큰 결정을 요구함&#39;, &#39;summary&#39;: &#39;• 번햄의 승리는 총리에게 큰 영향을 미칠 것임\n• 총리는 최근 자주 표현한 자신의 대응 방식을 바꿀 것인지 주목됨\n• 스타머와 노동당 의원들은 번햄의 승리에 대한 대응을 결정해야 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cqx1eq5e71zo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Scottish Conservatives win first Westminster by-election in more than 50 years</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;50년 넘게 첫 서민당 의원 선출&#39;, &#39;summary&#39;: &#39;• 스코틀랜드 보수당이 50년 넘게 첫 웨스트민스터 보궐선거에서 승리함\n• 애버딘 사우스 지역에서 보수당이 승리함\n• 아브로스와 브로티 페리 지역에서는 스코틀랜드 국민당이 승리함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cpv3kk3nlj1o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Farage blames Makerfield defeat on anti-Starmer votes</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;파라지, 메이커필드 패배는 스타머 반대 투표 때문임&#39;, &#39;summary&#39;: &#39;• 파라지 영국 개혁당 대표는 중요한 보궐선거에서 자신의 당이 보여준 성적에 실망함\n• 보궐선거 결과에 대해 스타머 반대 투표가 영향을 미친 것으로 판단함\n• 영국 정치 상황에 대한 파라지의 분석이 주목됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cvgqvj8dkz7o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Burnham says Labour has final chance to change after Makerfield by-election win</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;번함, 노동당이 메이커필드 재보선 승리 후 마지막 기회를 잡아야 함&#39;, &#39;summary&#39;: &#39;• 번함은 노동당이 메이커필드 재보선에서 승리했음\n• 노동당은 메이커필드 재보선에서 9,000표 이상의 차이로 승리했음\n• 번함은 노동당이 마지막 기회를 잡아야 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c4gy72kmg1mo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Sir John Curtice: Burnham&#39;s win against Reform represents remarkable personal success</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;존 커티스 경: 번햄의 개혁당에 대한 승리는 놀라운 개인적 성공임&#39;, &#39;summary&#39;: &#39;• 앤디 번햄은 노동당이 2024년에 획득한 표의 일부를 유지했음\n• 번햄은 노동당의 표를 증가시킴\n• 번햄의 승리는 개인적으로 큰 성공임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/clyeg121g2zo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>US-Iran talks in Switzerland postponed as fighting in Lebanon intensifies</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스위스에서 열릴 예정이던 미국-이란 회담이 레바논의 격화된 상황으로 연기됨&#39;, &#39;summary&#39;: &#39;• 미국과 이란 간의 새로운 대화가 예정되어 있었지만 레바논의 상황이 격화되면서 연기됨\n• 미국 부통령 JD 밴스는 금요일 스위스행을 취소함\n• 레바논의 상황이 미국과 이란 간의 대화에 영향을 미침&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c8r2eme2n5do?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Lebanon says Israeli strikes kill 18 as Israel says four soldiers killed by Hezbollah</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이스라엘의 공습으로 18명 사망, 이스라엘은 헤즈볼라에 의해 4명의 군인 사망함&#39;, &#39;summary&#39;: &#39;• 이스라엘의 레바논 공습으로 18명이 사망함\n• 이스라엘은 헤즈볼라에 의해 4명의 군인이 사망함\n• 미국과 이란은 레바논의 분쟁을 포함한 갈등을 종료하기 위한 협정을 체결함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c23ymz1n9rmo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>What Iran and US get from deal and why both could struggle to keep it</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이란과 미국이 협약에서 무엇을 얻는지 그리고 왜 양측이 협약을 지키는 데 어려움을 겪을 수 있는지&#39;, &#39;summary&#39;: &#39;• 이란과 미국은 협약을 통해 전쟁을 끝내는 데 동의함\n• 양측은 협약에서 승리했다고 주장하지만 실제로 협약을 지키는 데 어려움을 겪을 수 있음\n• 협약의 성공은 양측의 신뢰와 협력에 달려 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c932yqz8lggo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Do it at home too, women tell Japanese fans who cleaned World Cup stadium</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;일본 팬들이 월드컵 경기장 청소를 한 것처럼 집에서도 그렇게 하라고 여성들이 말함&#39;, &#39;summary&#39;: &#39;• 일본 팬들이 월드컵 경기장에서 청소를 하는 것을 보고 일본 여성들이 집에서도 청소를 하라고 말함\n• 일부에서는 일본 남성이 공공 장소에서 청소를 하지만 집에서는 아내가 모든 집안 일을 한다는 이중 잣대를 보임\n• 일본 사회에서 남녀 간의 불平등한 가정 분담에 대한 문제가 제기됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/crel9xlp8r1o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Zimbabwe MPs pass bill to extend president&#39;s time in power</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;짐바브웨 의원들, 대통령任期 연장 법안 통과시킴&#39;, &#39;summary&#39;: &#39;• 짐바브웨 의원들은 대통령의 任期를 2년 연장하고 직접적인 대통령 선거를 폐지하는 법안을 통과시킴\n• 이 법안은 에머슨 음낭가과 대통령의 任期를 연장함\n• 직접적인 대통령 선거가 폐지되면 대통령의 권한이 강화됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c20y15m0337o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
