@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-06-22 15:04:53</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Instagram looks to take on streaming services with longer-form, episodic and live formats for its TV app</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;인스타그램, 스트리밍 서비스와 경쟁하기 위해 더 긴 형식과 에피소드 및 라이브 형식을 위한 TV 앱 개발함&#39;, &#39;summary&#39;: &#39;• 인스타그램이 넷플릭스와 아마존 프라임 비디오 같은 스트리밍 서비스와 경쟁하기 위해 거실 시청을 위한雄心을 가지고 있음\n• 인스타그램이 더 긴 형식과 에피소드 및 라이브 형식의 콘텐츠를 제공하여 사용자에게 다양한 시청 경험을 제공함\n• 인스타그램의 이러한 움직임은 스트리밍 서비스 시장에서 새로운 경쟁자가 등장함을 의미함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/22/instagram-looks-to-take-on-streaming-services-with-longer-form-episodic-and-live-formats-for-its-tv-app/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>The founder conference built for growth: TechCrunch Founder Summit pass rates increase June 26</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;성장 위한 창업자 회의: TechCrunch 창업자 정상회담 참가 비용 6월 26일까지 인하&#39;, &#39;summary&#39;: &#39;• 6월 26일까지 TechCrunch 창업자 정상회담 참가 비용을 최대 190달러까지 절약할 수 있음\n• 참가 비용을 절약하려면 6월 26일 11시 59분까지 등록해야 함\n• TechCrunch 창업자 정상회담은 11월 4일 보스턴에서 개최됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/22/the-founder-conference-built-for-growth-techcrunch-founder-summit-pass-rates-increase-june-26/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Lucid Motors’ new CEO cuts 18% of staff to ‘simplify the company’</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;루시드 모터스의 새로운 최고경영자가 직원 18%를 감원하여 회사 구조를 간소화함&#39;, &#39;summary&#39;: &#39;• 루시드 모터스는 직원 18%를 감원하여 회사 구조를 간소화함\n• 아리조나 공장의 생산 시프트를 하나 줄여 생산 계획을 예상 수요와 일치시킴\n• 이 조치는 회사 운영을 효율화하고 비용을 절감하기 위한 것으로 보임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/22/lucid-motors-new-ceo-cuts-18-of-staff-to-simplify-the-company/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Seedcamp raises $320M for its new fund to expand its US footprint</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;시드캠프, 미국 시장 확대 위해 3억 2천만 달러 규모의 신규 펀드 조성함&#39;, &#39;summary&#39;: &#39;• 시드캠프는 유럽에 집중해온 18년간의 활동을 바탕으로 신규 펀드를 조성함\n• 신규 펀드의 규모는 3억 2천만 달러임\n• 이 펀드를 통해 미국 시장에 더욱 확대함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/22/seedcamp-raises-320m-for-its-new-fund-to-expand-its-us-footprint/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Klue hack results in data breach at several cybersecurity firms</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;클루 해킹으로 인한 여러 사이버 보안 회사 데이터 유출 발생함&#39;, &#39;summary&#39;: &#39;• 클루 해킹으로 인해 헌트리스, 해커원, 잼프, 레코드드 퓨처, 타니엄 등의 사이버 보안 회사에서 데이터가 유출됨\n• 해당 회사들은 클루의 보안 위협으로 인해 데이터가 노출됨\n• 사이버 보안 회사들에서 중요한 정보가 유출되어 보안에 대한 우려가 높아짐&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/22/klue-hack-results-in-data-breach-at-several-cybersecurity-firms/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Starmer quits as Labour leader and paves way for contest for new prime minister</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스타머, 노동당 대표직 사임하고 새로운 총리 선출을 위한 길을 열어줌&#39;, &#39;summary&#39;: &#39;• 스타머는 대표직 사임을 발표하기 위해 성명을 발표함\n• 노동당은 새로운 대표를 선출하기 위해 경선에 돌입할 예정임\n• 새로운 대표는 영국의 다음 총리가 될 가능성이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cdxd00lg599o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Why did Keir Starmer resign and what could happen next?</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;키어 스타머가 사임한 이유와 이후에 일어날 수 있는 일은 무엇인가?&#39;, &#39;summary&#39;: &#39;• 키어 스타머는 후임자가 선출될 때까지 총리로 남아 있음\n• 노동당은 새로운 지도자를 선출하기 위한 과정을 시작함\n• 스타머의 사임은 영국 정치에 큰 영향을 미칠 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c0qyllvpkw8o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Who is Andy Burnham? Ex-Manchester mayor who wants to lead the country</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;앤디 번햄은 누구인가? 맨체스터 시장을 지낸 후 국가를 이끌고 싶어 하는 사람&#39;, &#39;summary&#39;: &#39;• 앤디 번햄은 맨체스터의 전 시장임\n• 그는 노동당 대표직을 맡기 위해 서민원에 돌아옴\n• 노동당 대표직을 맡기 위해 세 번째 도전을 준비함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cp8pml5z8p6o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Sir Keir Starmer: Top lawyer whose &#39;Mr Rules&#39; approach failed to connect with the public</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;키어 스타머: 법률 전문가로서의 &#39;규칙 지키기&#39; 접근법이 대중과 연결되지 못함&#34;, &#39;summary&#39;: &#39;• 키어 스타머는 2024년 총선에서 압도적인 다수당을 이끌었음에도 불구하고 2년이 되지 않아 물러나게 됨\n• 스타머의 리더십은 대중과 연결되지 못한 것으로 평가됨\n• 스타머의 퇴진은 영국 정치계에 큰 영향을 미칠 것으로 예상됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cwygj95xrp9o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Sturgeon and Gove to team up for reality TV &#39;wargame&#39;</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스터전과 고브, 현실 텔레비전 전쟁 게임에 팀을 이룸&#39;, &#39;summary&#39;: &#39;• 스터전은 영국에 대한 러시아의 공격을 시뮬레이션하는 게임에서 부수상으로 활동함\n• 이 게임은 현실 텔레비전 프로그램의 형식으로 진행됨\n• 스터전과 고브는 이 게임에서 함께 협력하여 영국의 방어 전략을 수립함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cq6188775g5o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>First round of US-Iran talks ends with encouraging progress, mediators say</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;미국-이란 첫 협상, 중재자들에 따르면 긍정적인 진전 보임&#39;, &#39;summary&#39;: &#39;• 미국과 이란의 협상은 지난주 합의에 따라 스위스에서 시작됨\n• 60일 이내에 최종 합의를 도출하기 위한 약속이 포함됨\n• 중재자들은 협상이 긍정적인 방향으로 진행되고 있다고 평가함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cwy0q41v1lzo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Vance says Iran will allow nuclear inspectors back into the country</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;밴스 미국 부통령, 이란이 핵 감시단을 다시 받아들이겠다고 밝혀&#39;, &#39;summary&#39;: &#39;• 미국과 이란의 첫 협상에서 많은 진전이 이루어졌음\n• 핵 감시단의 재입국이 결정됨\n• 미국과 이란의 협상이 진행 중임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c3vy3nr63gxo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Trump-backed political outsider wins Colombia election, initial count shows</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;트럼프 지지 정치 외곽 인사가 콜롬비아 선거에서 승리함&#39;, &#39;summary&#39;: &#39;• 트럼프의 지지를 받은 정치 외곽 인사인 아벨라르도 데 라 에스프리엘라가 콜롬비아 선거에서 승리함\n• 아벨라르도 데 라 에스프리엘라는 라이벌인 이반 세페다를 근소한 차이로 이김\n• 이반 세페다는 예비 투표 결과가 아직 공식적이거나 강제적이지 않다고 말함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/clye4ky2yzpo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Largest ever cocaine bust in Australia after police raid underground bunker</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;호주에서 가장 큰 코카인 적발, 경찰이 지하 벙커를 급습함&#39;, &#39;summary&#39;: &#39;• 시드니 서부의 한 부동산을 수색한 결과 2.7톤의 코카인이 발견됨\n• 발견된 코카인의 가치는 약 816만 오스트레일리아 달러임\n• 경찰의 지하 벙커 급습으로 코카인 밀반입을 차단함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c14ygjzr8j7o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Russian troop build-up threatens city seen as key to seizing Ukraine&#39;s Donbas</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;러시아군 증파로 우크라이나 동부 요지 탈환의 열쇠로 여겨지는 도시 위협받음&#39;, &#39;summary&#39;: &#39;• 러시아군이 코스탄티니우카를 점령하면 우크라이나 동부의 마지막 요지로 진격할 수 있음\n• 코스탄티니우카는 우크라이나 동부 지역인 도네츠크의 요지로 여겨짐\n• 러시아군의 증파는 우크라이나 동부 지역을 장악하기 위한 전략의 일환임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c9w2g0ewk95o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
