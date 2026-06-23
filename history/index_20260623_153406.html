@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-06-23 12:20:42</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>The running list: major tech layoffs in 2026 where employers cited AI</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;2026년 AI를 이유로 주요 기술 기업의 대규모 해고 목록&#39;, &#39;summary&#39;: &#39;• 2026년에 주요 기술 기업들이 AI를 이유로 대규모 해고를 발표한 목록을 역순으로 정리함\n• 주요 기술 기업들은 AI를 이유로 해고를 발표하면서 업계에 큰 영향을 미침\n• 해고된 직원들은 새로운 직업을 찾거나 재교육을 받음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>OpenAI launches new initiative to help find and patch open source bugs</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;오픈소스 버그를 찾고 수정하는 데 도움을 주는 새로운 이니셔티브를 오픈艾이 출시함&#39;, &#39;summary&#39;: &#39;• 오픈소스 커뮤니티가 스스로를 더 잘 보호할 수 있도록 도와줌\n• 인공지능을 사용하여 오픈소스 버그를 찾고 수정하는 데 도움을 줌\n• 오픈소스 보안을 강화하는 데 기여함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Tesla pushes back on Autopilot narrative after fatal Texas crash</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;테슬라, 텍사스에서 발생한 치명적인 사고 후 자율 주행 시스템에 대한 논란에 대해 반박함&#39;, &#39;summary&#39;: &#39;• 테슬라의 자율 주행 시스템이 실제로 작동했는지, 무시되었는지, 또는 고장 났는지는 조사자가 차량의 데이터 로그를 분석할 때까지 명확하지 않음\n• 조사 결과가 나올 때까지 자율 주행 시스템의 정확한 상황은 불명확함\n• 테슬라의 자율 주행 시스템에 대한 논란은 계속 진행 중임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Shareholders sue Uber’s board over sexual assaults, other incidents</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;우버 이사회를 상대로 성폭행 등 사건 관련 소송 제기함&#39;, &#39;summary&#39;: &#39;• 우버의 이사회와 경영진이 규정을 너무 많이 무시하여 수천 건의 소송이 발생함\n• 디트로이트 연금 기금이 주도하는 소송임\n• 우버의 경영진과 이사회의 부실한 관리가 문제임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>The AI world is getting ‘loopy’</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;인공지능 세계는 루프를 돌고 있음&#39;, &#39;summary&#39;: &#39;• 인공지능은 에이전트를 사용하여 작업을 수행함\n• 에이전트는 배경에서 끊임없이 작업을 수행함\n• 이러한 루프는 인공지능의 능력을 더욱 강화함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/22/the-ai-world-is-getting-loopy/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Minister supports Burnham as Labour MPs split over possible contest for leadership</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;노동당 지도부 경쟁에서 번햄 지지&#39;, &#39;summary&#39;: &#39;• 노동당 의원들 사이에서 지도부 경쟁 관련 분열이 발생함\n• 알 카恩스와 다렌 존스가 번햄에 대한 도전을 고려함\n• 노동당 지도부 경쟁에서 번햄의 지지 여론이 형성됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/ce8k38gjl66o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Chris Mason: Questions multiply for the man tipped to replace Starmer</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;크리스 메이슨: 스타머를 대체할 것으로 예상되는 사람에 대한 질문이 증가함&#39;, &#39;summary&#39;: &#39;• 크리스 메이슨은 스타머를 대체할 것으로 예상됨\n• 앤디 번햄은 그의 약속을 어떻게 실천할 것인지에 대해 명확히 설명해야 함\n• 약속을 실천하는 방안을 제시하지 않으면 그의 지지율에 부정적인 영향을 미칠 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cn8k4kyrdn5o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Farage says £5m gift spending details &#39;not public&#39;s business&#39;</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;파라지, 500만 파운드 선물 지출 내역은 대중의 관심사가 아님&#39;, &#39;summary&#39;: &#39;• 파라지는 영국 개혁당의 대표로서 선물에 대한 비용 지출 내역을 공개할 의무가 없다고 주장함\n• 파라지에게 받은 선물에 대한 비용은 500만 파운드임\n• 파라지의 선물 수수에 대한 비용 지출 내역 공개 여부는 논란의 대상임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cn0vx2edk0vo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Why did Keir Starmer resign and what could happen next?</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;키어 스타머가 사임한 이유와 이후 일어날 수 있는 일은 무엇인가?&#39;, &#39;summary&#39;: &#39;• 키어 스타머는 후임자가 선출될 때까지 총리를 맡음\n• 노동당은 새로운 지도자를 선출하기 위해 과정에 들어감\n• 스타머의 사임은 영국 정치에 큰 영향을 미칠 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c0qyllvpkw8o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Who is Andy Burnham? Ex-Manchester mayor who wants to lead the country</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;앤디 번햄은 누구인가? 영국을 이끌고 싶어 하는 전 맨체스터 시장&#39;, &#39;summary&#39;: &#39;• 앤디 번햄은 맨체스터의 전 시장임\n• 그는 노동당 대표가 되기 위해 세 번째 도전을 준비함\n• 그는 웨스트민스터로 돌아옴&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cp8pml5z8p6o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Drowning deaths soar in France as Europe buckles in peak of heatwave</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;프랑스에서 열파로 인한 익사 사망자가 급증함&#39;, &#39;summary&#39;: &#39;• 프랑스에서 지난 목요일부터 열파와 관련된 익사로 인해 40명이 사망함\n• 프랑스의 총리 세바스티앙 르코르뉴가 사망자 수를 발표함\n• 열파로 인한 사고가 증가하면서 프랑스 정부가 주민들에게 안전에 주의를 당부함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c79yvw3j114o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Iran says no new commitments on nuclear sites after Vance says inspectors to be invited back</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이란, 핵 시설에 대한 새로운 약속不存在함&#39;, &#39;summary&#39;: &#39;• 이란 외무부는 스위스에서 열린 협의 결과 새로운 핵 시설 검사 약속不存在함\n• 이란은 핵 시설에 대한 검사에 대한 새로운 약속을 하지 않았음\n• 스위스에서 열린 협의는 이란의 핵 시설 검사에 대한 새로운 합의不存在함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c3vy3nr63gxo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>UN commission of inquiry says Israel committing genocide in Gaza by deliberately targeting children</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;유엔 조사위원회, 이스라엘이 가자 지구에서 고의적으로 아이들을 표적으로 삼아 인종학살을 저지르고 있음&#39;, &#39;summary&#39;: &#39;• 이스라엘은 3인으로 구성된 전문가 패널의 새로운 보고서를 거부하며 그것을 &#34;모함하는 가짜&#34;라고 불렀음\n• 유엔 조사위원회는 이스라엘이 가자 지구에서 아이들을 고의적으로 표적으로 삼아 인종학살을 저지르고 있다고 밝혔음\n• 이스라엘의 이러한 행동은 국제법을 위반하는 것으로 간주됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c0jy96w6pw2o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Zambia ex-president&#39;s family wins latest legal battle over what should happen to his body</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;잠비아 전 대통령의 가족, 시신 처리에 관한 최근 법적 분쟁에서 승리함&#39;, &#39;summary&#39;: &#39;• 잠비아 전 대통령 에드거 룬구의 가족과 잠비아 정부는 그의 사망 12개월 후에도 여전히 분쟁임\n• 에드거 룬구의 시신 처리에 관한 문제로 법적 분쟁이 진행 중임\n• 에드거 룬구의 가족은 최근 법적 분쟁에서 승리하였으나, 분쟁은 아직 완전히 해결되지 않음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c8r2yryr5mvo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Trump anticipates better relationship with Colombia under new leader</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;트럼프, 새로운 지도자 아래 콜롬비아와의 관계 개선 기대함&#39;, &#39;summary&#39;: &#39;• 콜롬비아의 새 대통령으로 예상되는 아벨라르도 데 라 에스프리엘라는 트럼프의 지지를 받음\n• 트럼프는 콜롬비아와의 관계 개선에 대한 기대감을 나타냄\n• 새로운 지도자 아래 콜롬비아와의 협력 강화가 예상됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c9v278ny9meo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
