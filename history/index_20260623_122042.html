@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-06-23 08:42:39</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>The running list: major tech layoffs in 2026 where employers cited AI</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;2026년 AI를 이유로 주요 기술 기업의 대규모 해고 목록&#39;, &#39;summary&#39;: &#39;• 2026년에 주요 기술 기업들이 AI를 이유로 대규모 해고를 발표한 목록을 역순으로 정리함\n• 주요 기술 기업들은 AI를 이유로 해고를 발표하면서 업계에 큰 영향을 미침\n• 주요 기술 기업들의 해고는 AI의 발전과 기술의 변화로 인한 결과임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>OpenAI launches new initiative to help find and patch open source bugs</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;오픈소스 버그를 찾고 수정하는 데 도움을 주는 새로운 이니셔티브를 오픈艾이 출시함&#39;, &#39;summary&#39;: &#39;• 오픈소스 커뮤니티가 스스로를 더 잘 보호하도록 도와주는 것을 목표로 함\n• 인공지능을 사용하여 오픈소스 버그를 찾고 수정하는 데 도움을 주는 새로운 이니셔티브를 시작함\n• 오픈소스 보안을 강화하는 데 기여함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Tesla pushes back on Autopilot narrative after fatal Texas crash</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;테슬라, 텍사스에서 발생한 치명적인 사고 후 자율 주행 시스템에 대한 논란에 대해 반박함&#39;, &#39;summary&#39;: &#39;• 테슬라의 자율 주행 시스템이 실제로 작동했는지, 무시되었는지, 고장 났는지 여부는 조사관들이 차량의 데이터 로그를 분석할 때까지 명확하지 않음\n• 사고의 정확한 원인은 아직 밝혀지지 않았음\n• 조사 결과가 나올 때까지 자율 주행 시스템의 안전성에 대한 논란이 지속될 가능성이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/22/tesla-pushes-back-on-autopilot-narrative-after-fatal-texas-crash/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Shareholders sue Uber’s board over sexual assaults, other incidents</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;우버 이사회를 상대로 성폭행 등 사건으로 소송&#39;, &#39;summary&#39;: &#39;• 우버의 이사회와 경영진이 규정을 너무 많이 무시함으로써 수천 건의 소송이 발생했다는 주장이 제기됨\n• 디트로이트의 연금 기금이 주도하는 소송에서 우버의 경영진이 규정을 무시한 것이 문제임\n• 우버의 규정 위반으로 인해 발생한 사건들에 대한 책임을 묻고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/22/shareholders-sue-ubers-board-over-sexual-assaults-other-incidents/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>The AI world is getting ‘loopy’</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;인공지능 세계는 루프를 돌고 있음&#39;, &#39;summary&#39;: &#39;• 인공지능은 지속적으로 백그라운드에서 작동하는 에이전트 집단을 허용함\n• 이 에이전트들은 끊임없이 작업을 수행함\n• 지능형 인공지능은 이러한 루프를 통해 한 단계 더 발전함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/22/the-ai-world-is-getting-loopy/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Chris Mason: Questions multiply for the man tipped to replace Starmer</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;크리스 메이슨: 스타머를 대체할 것으로 예상되는 사람에 대한 질문이 증가함&#39;, &#39;summary&#39;: &#39;• 크리스 메이슨은 스타머를 대체할 것으로 예상됨\n• 앤디 번햄은 그의 약속을 어떻게 실천할 것인지에 대해 명확한 계획을 제시해야 함\n• 스타머의 후임자로 거론되는 인물에 대한 질문과 의문이 증가하고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cn8k4kyrdn5o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Why did Keir Starmer resign and what could happen next?</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;키어 스타머가 사임한 이유와 이후에 일어날 수 있는 일은 무엇인가?&#39;, &#39;summary&#39;: &#39;• 키어 스타머는 후임자가 선출될 때까지 총리로 남아 있음\n• 스타머의 사임은 영국 정치에 큰 영향을 미칠 수 있음\n• 노동당은 새로운 지도자를 선출하기 위해 과정을 시작함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c0qyllvpkw8o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Peter Murrell to be sentenced for embezzling SNP funds</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;피터 머럴, 스코틀랜드 국민당 자금 횡령으로 판결 받음&#39;, &#39;summary&#39;: &#39;• 피터 머럴은 12년 동안 40만 파운드 이상의 자금을 횡령한 사실을 인정함\n• 스코틀랜드 국민당의 전 당 사무 총장임\n• 피터 머럴의 횡령액은 40만 파운드 이상임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c5yzlqv4dyeo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Who is Andy Burnham? Ex-Manchester mayor who wants to lead the country</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;앤디 번햄은 누구인가? 맨체스터 시장을 지낸 사람이 국가를 이끌고 싶어 하는 사람&#39;, &#39;summary&#39;: &#39;• 앤디 번햄은 맨체스터의 전 시장임\n• 그는 노동당의 지도자 자리를 두 번 도전한 경험이 있음\n• 그는 서민당 의원으로서 웨스트민스터에 돌아옴&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cp8pml5z8p6o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Sir Keir Starmer: Top lawyer whose &#39;Mr Rules&#39; approach failed to connect with the public</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;키어 스타머: 법률 전문가로서의 엄격한 규칙을 지키는 접근법이 대중과 연결되지 못함&#39;, &#39;summary&#39;: &#39;• 키어 스타머는 2024년 총선에서 압도적인 승리를 거두었음에도 불구하고 2년이 되지 않아 물러나게 됨\n• 스타머의 엄격한 규칙을 지키는 접근법이 대중과 연결되지 못한 것으로 보임\n• 스타머의 퇴진은 그의 정치적 경력에 큰 영향을 미칠 것으로 예상됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cwygj95xrp9o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Iran says no new commitments on nuclear sites after Vance says inspectors to be invited back</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이란, 핵 시설에 대한 새로운 약속不存在&#39;, &#39;summary&#39;: &#39;• 이란 외무부는 스위스에서 열린 회담 후 핵 시설에 대한 새로운 약속이不存在함\n• 핵 시설에 대한 검사에 대한 새로운 합의는 이루어지지 않음\n• 이란은 핵 시설에 대한 검사에 대한 기존 약속을 재확인함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/c3vy3nr63gxo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>At least 13 killed and dozens injured after Qatar gas explosion</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;카타르 가스 폭발로 최소 13명 사망, 수십명 부상&#39;, &#39;summary&#39;: &#39;• 카타르의 주요 액화천연가스 처리 시설에서 기술적인 사고가 발생함\n• 사고는 라스라판 산업 지구에서 발생함\n• 최소 13명이 사망하고 수십명이 부상함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cwy05llpjpno?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Ransom note claims Nancy Guthrie died after abduction</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;납치 후 낸시 구스리 사망했다는 몸값 요구 메모&#39;, &#39;summary&#39;: &#39;• 납치범들은 메모에서 낸시 구스리가 사망한 것은 의도하지 않았다고 주장함\n• 메모에는 구스리 가족에게 사과하는 내용이 포함됨\n• 메모의 내용은 납치범들의 진의를 알 수 있게 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cvgm0mgzl33o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Inquiry ordered after building fire kills 15 in north India city</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;북인도 도시에서 건물 화재로 15명 사망, 조사 착수됨&#39;, &#39;summary&#39;: &#39;• 건물 화재로 15명이 사망함\n• 생존자를 구하기 위해 구조 팀이 벽을 뚫음\n• 사람들은 창문을 통해 탈출하기 위해 점프함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cwyde73w680o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Myanmar army killed over 700 civilians in six months, UN says</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;미얀마 군대, 6개월 동안 700명 이상의 민간인을 살해함&#39;, &#39;summary&#39;: &#39;• 미얀마 군대는 지난해 6개월 동안 702명의 민간인을 살해함\n• 사망자 중에는 153명의 어린이도 포함됨\n• 유엔은 이러한 상황에 대해 보고서를 작성함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.com/news/articles/cnv97e42r7yo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
