@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-06-30 11:58:11</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Crypto exchange OKX wants AI agents to hire and pay each other</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;암호화폐 거래소 OKX, 인공지능 에이전트끼리 고용하고 급여 지불시키고 싶어함&#39;, &#39;summary&#39;: &#39;• OKX는 지불, 신원, 평판을 인공지능 에이전트를 위한 시장으로 통합함\n• 이 시장에서 인공지능 에이전트끼리 상호작용하고 거래할 수 있게 함\n• 인공지능 에이전트가 서로 고용하고 급여를 지불하는 시스템을 구축하려 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/30/crypto-exchange-okx-wants-ai-agents-to-hire-and-pay-each-other/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>The AI jobs debate just got messier</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;인공지능 직업 논쟁이 더 복잡해짐&#39;, &#39;summary&#39;: &#39;• 인공지능을 많이 도입한 회사에서 직원 수는 10.2% 증가함\n• 이들 회사에서 신입사원 수는 12% 증가하여 인공지능이 주니어 직업을 없앤다 는 주장을 반증함\n• 인공지능 도입이 직업 시장에 미치는 영향에 대한 논쟁이 더 복잡해짐&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/29/the-ai-jobs-debate-just-got-messier/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Vibe coding platform Base44 launches own model as AI startups seek defensibility</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;바이브 코딩 플랫폼 베이스44, 자체 모델 출시하며 AI 스타트업의 방어 가능성 탐색&#39;, &#39;summary&#39;: &#39;• 베이스44는 자체 AI 모델을 출시하여 앞으로 더 나은 성능을 보여줄 것으로 기대함\n• 이 모델은 경쟁사 모델을 능가하는 성능을 보여줄 수 있을 것임\n• 베이스44의 이 움직임은 AI 스타트업이 자체 기술력으로 경쟁력을 확보하려는 시도임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/29/vibe-coding-platform-base44-launches-own-model-as-ai-startups-seek-defensibility/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Chamath Palihapitiya raises $135M Series A for his AI coding startup, takes CEO role</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;차마스 파리하피티야, 인공지능 코딩 스타트업에 1억3500만달러 투자 유치 및 최고경영자 역할 수행함&#39;, &#39;summary&#39;: &#39;• 차마스 파리하피티야가 설립한 인공지능 코딩 스타트업이 1억3500만달러의 시리즈 A 투자를 유치함\n• 투자 유치는 벤처 캐피탈의 인공지능 코딩 스타트업에 대한 투자 열기를 보여줌\n• 차마스 파리하피티야는 최고경영자 역할을 수행하며 스타트업의 성장을 이끌음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/29/chamath-palihapitiya-raises-135m-series-a-for-his-ai-coding-startup-takes-ceo-role/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Gemini’s personalized AI image generation is now free for US users</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;제미니의 개인화된 AI 이미지 생성이 미국 사용자에게 무료로 제공됨&#39;, &#39;summary&#39;: &#39;• 제미니의 개인화된 AI 이미지 생성 기능이 미국의 무료 사용자에게 확대됨\n• 이 기능은 사용자의 관심사와 연결된 구글 앱의 데이터를 기반으로 이미지 생성함\n• 미국의 사용자는 이제 무료로 제미니의 개인화된 이미지 생성을 이용할 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/29/geminis-personalized-ai-image-generation-is-now-free-for-u-s-users/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Refugees would be told to repay around £10,000 under new asylum bill</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;난민들이 새로운 난민법에 따라 약 1만 파운드의 비용을 상환해야 함&#39;, &#39;summary&#39;: &#39;• 새로운 난민법에 따라 홈 오피스는 성인 난민들에게 제공된 지원 비용을 회수할 수 있는 권한을 가지게 됨\n• 이 법안은 성인 난민들이 받은 지원 비용을 상환해야 하는 의무를 부과함\n• 약 1만 파운드의 비용 상환 의무는 난민들의 경제적 부담을 가중시킬 것으로 예상됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cddlgqlm7q2o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>New &#39;No 10 North&#39; plan will rebalance power in Britain, Burnham promises</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;새로운 &#39;노스 10&#39; 계획은 영국에서 권력을 재분배할 것임&#34;, &#39;summary&#39;: &#39;• 영국의 다음 총리가 될 가능성이 높은 사람이 지역 분권 계획을 발표함\n• 이 계획은 모든 지역에서 좋은 성장을 이끌어낼 것임\n• 지역 분권을 통해 영국의 권력을 재분배할 것임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cx2jw5q5pdzo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Henry Zeffman: Andy Burnham offers a blueprint for his premiership</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;헨리 제프만: 앤디 번햄, 총리직 청사진 제시&#39;, &#39;summary&#39;: &#39;• 앤디 번햄은 총리직에 오른 자신의 모습을 보여주었지만 구체적인 세부 사항은 밝히지 않음\n• 번햄의 총리직 청사진은 그의 정치 철학과 비전을 담고 있음\n• 구체적인 정책이나 계획은 아직 공개되지 않음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cpq3yy48zglo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Resident doctors in England accept pay deal and end strikes</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;영국의 주민 의사들이 임금 협상을 받아들여 파업을 종료함&#39;, &#39;summary&#39;: &#39;• 영국의 주민 의사들이 정부와의 3년간의 임금 분쟁을 해결함\n• 임금 협상 분쟁으로 여러 차례의 파업이 발생함\n• 주민 의사들이 임금 협상을 받아들여 파업을 종료함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cwy01n5z48qo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Ex-MP Craig Williams pleads guilty over general election betting offence</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;전 의원 크레이그 윌리엄스, 총선 도박 범죄 인정함&#39;, &#39;summary&#39;: &#39;• 크레이그 윌리엄스는 총선 이전에 리시 수낙 총리 보좌관과 몬고메리셔의 의원임\n• 크레이그 윌리엄스는 총선 관련 도박 범죄로 기소됨\n• 크레이그 윌리엄스는 자신의 도박 범죄를 인정함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c3ry1zr8nw2o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Angry Venezuelans accuse government of negligence over earthquake response</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;분노한 베네수엘라 국민들, 지진 대응에 정부의 태만을 비난함&#39;, &#39;summary&#39;: &#39;• 베네수엘라의 쌍둥이 지진으로 피해를 본 지역의 사람들은 정부로부터 더 많은 지원이 필요함\n• 정부의 지진 대응에 대한 태만이 비난을 받음\n• 지진으로 인한 피해 복구를 위한 정부의 추가적인 노력이 필요함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c5yzd18dxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Aftershock frays nerves as many Venezuelans left to fend for themselves</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;지진의 여진으로 신경이 곤두선 베네수엘라 사람들&#39;, &#39;summary&#39;: &#39;• 베네수엘라의 쌍둥이 지진으로 피해를 본 지역에서 사람들은 구원자들을 찾기 위해 쇠스랑과 곡괭이, 그리고 맨손을 사용하고 있음\n• 지진으로 인해 많은 베네수엘라 사람들이 스스로를 지키고 있음\n• 구조 작업이 진행 중이며 사람들은 생존자를 찾기 위해 노력함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cqj1210rj0yo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Founder of Asian super-app Gojek sentenced to years in jail for corruption</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;아시아 슈퍼 앱 고젝의 창립자, 부패로 수년간 징역에 처함&#39;, &#39;summary&#39;: &#39;• 고젝의 창립자 나디엠 마카림은 인도네시아 교육부 장관으로 재직 중에 체결한 랩탑 거래와 관련된 부패 사건으로 기소됨\n• 나디엠 마카림은 고젝의 성공으로 유명하지만, 현재 부패로 인해 수년간의 징역을 선고받음\n• 이 사건은 인도네시아의 부패 문제를 다시 한 번 조명함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c79yvw23yr9o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Heavy security in South Africa as anti-migrant protesters take to the streets</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;남아프리카 공화국에서 반이민 시위대가 거리로 나서며 엄중한 보안 대책 시행됨&#39;, &#39;summary&#39;: &#39;• 남아프리카 공화국에서 반이민 시위대가 거리로 나서며 보안이 강화됨\n• 반이민 단체가 설정한 마감일을 앞두고 수천 명의 사람들이 남아프리카 공화국을 떠남\n• 남아프리카 공화국에서 이민자에 대한 반대 시위가 거리에서 진행됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cy4eq1l184po?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Manhunt under way after bomb injures Ukrainian oligarch and others in Monaco</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;모나코에서 폭탄 테러로 우크라이나 재벌과 다른 사람들 부상&#39;, &#39;summary&#39;: &#39;• 모나코에서 폭탄 폭발로 우크라이나 재벌과 다른 사람들이 부상함\n• 폭발은 볼트와 사구가 들어있는 폭발물 때문에 발생함\n• 모나코 정부는 폭발 원인을 조사 중임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cpv37wx03v7o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
