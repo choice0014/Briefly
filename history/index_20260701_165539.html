@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-07-01 13:51:47</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Meta, like SpaceX, looks to turn excess AI compute into cash</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;메타, 스페이스X와 같이 남는 인공지능 컴퓨팅 능력을 돈으로 바꾸려 함&#39;, &#39;summary&#39;: &#39;• 메타는 인공지능 컴퓨팅 능력과 모델에 대한 접근권을 판매하는 클라우드 인프라스트럭처 사업을 개발 중임\n• 이 움직임은 메타를 아마존 웹 서비스, 구글 클라우드, 마이크로소프트 애저와 같은 큰 클라우드 제공업체와 경쟁하게 할 것임\n• 메타의 클라우드 인프라스트럭처 사업은 스페이스X의 사업 전략과 유사함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/01/meta-like-spacex-looks-to-turn-excess-ai-compute-into-cash/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>The ‘Father of the Internet’ is finally retiring</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;인터넷의 아버지가终于 은퇴함&#39;, &#39;summary&#39;: &#39;• 인터넷을 구성하는 규약을 만든 사람 중 하나인 빈턴 서프가 구글의 인터넷 전도사로 활동을 종료함\n• 빈턴 서프는 다음 주에 구글의 인터넷 전도사 직함을 내려놓음\n• 빈턴 서프의 은퇴는 인터넷 역사에 큰 의미를 가짐&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/30/the-father-of-the-internet-is-finally-retiring/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Trump drops restrictions on Anthropic’s Mythos and Fable models</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;트럼프, 앤โทร픽의 미토스와 페이블 모델에 대한 제한 해제함&#39;, &#39;summary&#39;: &#39;• 트럼프 행정부의 인공지능 정책 결정 방식이 불규칙하여 업계 회사들이 미래 모델 출시를 규정할 내용에 대해 명확한 이해를 하지 못함\n• 앤스로픽의 미토스와 페이블 모델에 대한 제한이 해제됨\n• 인공지능 정책 결정 방식의 불규칙성이 업계에 미치는 영향이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/30/trump-drops-restrictions-on-anthropics-mythos-and-fable-models/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Wayve launches $85M employee tender offer at $8.5B valuation</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;웨이브, 85억 달러 투자 유치 및 850억 달러 기업 가치 평가를 통해 직원 인수 제안 출시&#39;, &#39;summary&#39;: &#39;• 웨이브의 제안은 인재를 유치하고 유지하기 위한 전략적 수단으로 직원 인수 제안을 사용하는 인공지능 스타트업의 증가하는 추세의 일부임\n• 웨이브는 직원 인수 제안을 통해 직원들에게 기회를 제공함\n• 웨이브의 이 같은 움직임은 인공지능 산업에서 인재 전쟁을 예고함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/30/wayve-launches-85m-employee-tender-offer-at-8-5b-valuation/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Startup Battlefield Australia application closes in days: Apply before July 6</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스타트업 배틀필드 오스트레일리아 신청 마감 임박: 7월 6일까지 신청함&#39;, &#39;summary&#39;: &#39;• 스타트업 배틀필드 오스트레일리아에 신청할 수 있는 기회임\n• 한 번의 피치가 모든 것을 바꿀 수 있는 기회임\n• 7월 6일까지 신청서를 제출해야 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/06/30/last-chance-to-apply-startup-battlefield-australia-applications-close-july-6/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Badenoch accuses Starmer of leaving defence spending &#39;mess&#39; for Burnham</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;배덴诺크, 스타머가 버넘에게 방위 지출 &#39;혼란&#39;을 남겨둔 것으로 비판함&#34;, &#39;summary&#39;: &#39;• 배덴노크는 방위 투자 계획에서 50억 파운드가 누락되었다고 비판함\n• 스타머의 방위 지출 계획이 불분명하다고 주장함\n• 버넘에게 방위 지출 문제를 해결하라고 요구함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cy9rgg9ddw2o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Why Starmer&#39;s defence plan leaves next PM with £4.7bn headache</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스타머의 국방 계획이 차기 총리에 47억 파운드의 고민을 남김&#39;, &#39;summary&#39;: &#39;• 스타머는 추가 국방 지출을 발표했음\n• 차기 총리는 여전히 국방 문제를 해결해야 함\n• 국방 예산은 차기 총리에게 47억 파운드의 부담을 남김&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c9q250511neo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Chris Mason: Starmer&#39;s defence plan leaves crunching trade‑offs for Burnham to confront</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;크리스 메이슨: 스타머의 방위 계획은 번햄이 직면해야 할 어려운 선택을 남김&#39;, &#39;summary&#39;: &#39;• 크리스 메이슨은 방위 투자 계획의 여파에 대해 반영함\n• 스타머의 방위 계획은 번햄에게 어려운 선택을 남김\n• 방위 투자 계획은 영국의 방위 정책에 큰 영향을 미침&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c3vy7z35ve0o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Half of government should be female, Labour women tell Burnham</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;여성 의원들, 버넘에게 정부의 절반은 여성이어야 함을 전달&#39;, &#39;summary&#39;: &#39;• 노동당 여성 의원들이 버넘에게 노동당이 예를 들어야 한다고 말함\n• 노동당이 정부를 이끌 경우 여성과 남성의 비율을 같게 해야 한다고 주장함\n• 버넘에게 노동당이 여성과 남성의 평등을 실현하는 데 앞장서야 한다고 촉구함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cn07ew5n2jro?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Refugees would be told to repay around £10,000 under new asylum bill</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;난민들이 새로운 피난처 법안에 따라 약 1만 파운드를 상환해야 함&#39;, &#39;summary&#39;: &#39;• 새로운 법안에 따라 홈 오피스는 성인 난민들에게 제공된 지원 비용을 회수할 수 있는 권한을 가짐\n• 이 법안은 난민들이 받은 지원 금액을 상환해야 하는 의무를 지님\n• 상환해야 하는 금액은 약 1만 파운드임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cddlgqlm7q2o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Three die in Mexico City World Cup celebrations</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;멕시코 월드컵 승리 축하로 3명 사망&#39;, &#39;summary&#39;: &#39;• 멕시코 시티에서 100만 명 이상이 에콰도르전 승리를 축하하며 거리로 나섬\n• 멕시코 시티의 거리에서 대규모 축제가 열림\n• 축제 중 사고로 3명이 사망함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cx2xjwj8p39o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Trump made more than $1bn from crypto in first year back in office</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;트럼프, 재직 첫해에 암호화폐로부터 10억 달러 이상 벌어듦&#39;, &#39;summary&#39;: &#39;• 트럼프의 암호화폐 수입은 부동산과 트럼프 테마 상품 수입을 훨씬 초과함\n• 트럼프 테마 상품에는 시계 등이 포함됨\n• 암호화폐 수입은 트럼프의 총 수입에서 큰 비중을 차지함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cvgmv98ez3zo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Fire at Antwerp apartment block kills at least six</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;안트베르프 아파트에서 발생한 화재로 최소 6명 사망&#39;, &#39;summary&#39;: &#39;• 안트베르프 아파트에서 화재가 발생하여 최소 6명이 사망함\n• 약 200명이 거주하는 아파트에서 발생한 화재로 많은 사람이 피해를 봄\n• 화재로 인해 일부 주민이 창문을 통해 탈출함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c621dx0vl7xo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>A plane crashed into a tower in Beijing but China is not saying what happened</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;베이징에서 비행기가 건물에 충돌했지만 중국은 무슨 일이 일어났는지 말하지 않음&#39;, &#39;summary&#39;: &#39;• 베이징에서 비행기가 건물에 충돌하여 건물 측면에 구멍이 남음\n• 중국은 사고의 다른 가시적인 흔적을 지움\n• 사고의 정확한 원인과 상황에 대한 정보는 공개되지 않음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/crlwe28dz44o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Three-year-old rescued and taken to hospital six days after Venezuela quake</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;베네수엘라 지진 6일 만에 3세 아이 구조해 병원으로 옮김&#39;, &#39;summary&#39;: &#39;• 베네수엘라 지진으로 파괴된 건물의 잔해에서 3세 아이가 구조됨\n• 구조된 아이는 라과이라 주에서 구조대원들이 아이를 발견하고 환영하는 장면이 촬영됨\n• 구조된 아이는 병원으로 옮겨져 치료를 받음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c1jykwk8n18o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
