@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-07-06 14:06:55</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Station F ramps up as a launchpad for Europe’s hottest AI startups</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;유럽 최고의 AI 스타트업을 위한 발사대 역할을 강화하는 스테이션 F&#39;, &#39;summary&#39;: &#39;• 스테이션 F는 파리 기반의 스타트업 허브로서 프랑스의 억만 장자 자비에 니엘에 의해 설립됨\n• 스테이션 F는 유망한 AI 스타트업을 위한 발판 역할을 강화하기 위해 새로운 F/ai 액셀러레이터 프로그램을 준비함\n• 스테이션 F의 목표는 유럽의 가장 뜨거운 AI 스타트업을 지원하고 성장시키는 것임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/06/station-f-ramps-up-as-a-launchpad-for-europes-hottest-ai-startups/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Smart glasses maker Even Realities hits $1B valuation with $150M funding led by Meituan, Tencent</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스마트 글래스 제작사 이븐 리얼리티즈, 미투안과 텐센트의 투자로 15억 달러 투자 유치 및 10억 달러 기업 가치 평가됨&#39;, &#39;summary&#39;: &#39;• 이븐 리얼리티즈는 애플 출신 팀이 카메라가 없는 스마트 글래스를 개발하는 회사임\n• 미투안과 텐센트가 주도한 투자로 15억 달러를 유치함\n• 이븐 리얼리티즈의 기업 가치는 10억 달러로 평가됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/06/smart-glasses-maker-even-realities-hits-1b-valuation-with-150m-funding-led-by-meituan-tencent/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>This humanoid robotics company is going public, but its CEO isn’t promising a robot in your home anytime soon</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이 휴머노이드 로봇틱스 회사에 공공으로 나갈 것임&#39;, &#39;summary&#39;: &#39;• Agility Robotics는 다른 휴머노이드 스타트업들이 높은 평가를 추구하는 동안 실행과 SPAC에 미래를 걸고 있음\n• 이 회사는 높은 평가보다는 실질적인 성과에 집중함\n• Agility Robotics의 접근 방식은 로봇 기술의 실제 적용에 중점을 둠&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/05/this-humanoid-robotics-company-is-going-public-but-its-ceo-isnt-promising-a-robot-in-your-home-anytime-soon/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Uber’s European expansion plans may have hit a speed bump</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;우버의 유럽 확장 계획에 발목 잡힘&#39;, &#39;summary&#39;: &#39;• 우버는 2026년에 7개의 새로운 유럽 시장에 진출하겠다는 계획을 발표했음\n• 하지만 현재 5개의 시장 진출이 보류된 것으로 알려짐\n• 우버의 유럽 확장 계획에 차질이 생긴 것으로 보임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/05/ubers-european-expansion-plans-may-have-hit-a-speed-bump/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Trump memecoin investors lost $3.8 billion, analysis finds</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;트럼프 메모 코인 투자자 3.8억 달러 손실&#39;, &#39;summary&#39;: &#39;• 트럼프의 메모 코인에 투자한 약 100만 명의 투자자가 총 3.8억 달러의 손실을 보임\n• 트럼프는 메모 코인으로 6억 3천 6백만 달러의 수익을 얻음\n• 메모 코인 투자로 큰 손실을 본 투자자들이 증가하고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/05/trump-memecoin-investors-lost-3-8-billion-analysis-finds/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Farage says he&#39;s &#39;done no wrongdoing&#39; after benefits from ally not declared</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;파라지, 동맹국으로부터의 혜택을 신고하지 않은 후에도 잘못한 것이 없다고 말함&#39;, &#39;summary&#39;: &#39;• 파라지는 혜택을 받은 사실을 신고하지 않았음에도 불법이 아니라고 주장함\n• 자유민주당은 파라지에게 영국 국민에게 진실을 말할 것을 요구함\n• 파라지의 행동에 대한 논란이 일고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cql11kk90zgo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Chris Mason: Accusations around Farage leave him looking vulnerable to his rivals</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;크리스 메이슨: 파라지에 대한 의혹으로 라이벌들에게 취약해 보임&#39;, &#39;summary&#39;: &#39;• 크리스 메이슨은 뉴스에 등장하고 있으며 주요 헤드라인은 권력, 투명성, 그리고 돈에 관한 질문임\n• 의혹은 파라지의 리더십과 행동을 둘러쌈\n• 이러한 상황은 파라지의 라이벌들에게 기회를 제공함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c04yyx15xngo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Overseas voters moving to UK could face £100,000 donations cap for year</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;영국으로 이주하는 해외 유권자는 1년 동안 10만 파운드 기부 제한을 받음&#39;, &#39;summary&#39;: &#39;• 영국 정부는 정치 자금에 대한 검토에 대한 대응의 일환으로 계획된 변경 사항을 발표함\n•海外 유권자들이 영국으로 이주할 경우 1년 동안 기부금액이 10만 파운드까지 제한될 수 있음\n• 이 제한은 정치 자금에 대한 투명성과 공정성을 높이기 위한 조치임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c0jyyw59gpjo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>UK fighter jets intercept Russian plane over Norwegian Sea</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;영국 전투기, 노르웨이 해상에서 러시아 기함 요격함&#39;, &#39;summary&#39;: &#39;• 영국 전투기가 노르웨이 해상에서 러시아 기함을 요격함\n• 영국 국방부는 러시아의 행동을 불안정하고 비전문적이라고 평가함\n• 러시아의 행동이 지역 안정에 위협이 될 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c0jyy5w4q2no?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Police leadership needs fundamental overhaul, review finds</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;경찰 지도부는 근본적인 개혁이 필요하다&#39;, &#39;summary&#39;: &#39;• 경찰의 개발과 채용 과정은 개혁되어야 함\n• 독립적인 보고서에서 경찰 지도부의 근본적인 개혁 필요성을 강조함\n• 경찰의 내부 시스템과 구조적인 문제를 해결해야 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/crlwwkyg610o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Ukraine warns of interceptor missile shortage as 21 killed in Kyiv region</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;우크라이나, 인터셉터 미사일 부족 경고하며 키이우 지역에서 21명 사망&#39;, &#39;summary&#39;: &#39;• 우크라이나 대통령 젤렌스키는 일요일 러시아의 키이우에 대한 공격이 68개의 미사일과 351개의 공격 드론으로 구성되었다고 밝힘\n• 키이우 지역에서 21명이 사망함\n• 우크라이나는 인터셉터 미사일 부족으로 인한 취약성을 경고함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cewqqnd7zdwo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Huge crowds fill Tehran streets for Khamenei&#39;s funeral procession</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;테헤란 거리에는 카마네이의 장례 행진을 위해 큰 군중이 채워짐&#39;, &#39;summary&#39;: &#39;• 많은 사람이 이란 국기를 흔들고 전임 최고 지도자의 전사 사후 복수를 상징하는 빨간 깃발을 들었음\n• 카마네이의 장례 행진은 테헤란 거리를 가득 메웠음\n• 군중은 그의 죽음을 애도하며 복수를 요구함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cdejj44kl70o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Wildfire in southern France forces evacuation of 10,000 people</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;프랑스 남부에서 일어난 산불로 1만명 대피함&#39;, &#39;summary&#39;: &#39;• 프랑스 남부에서 일어난 산불로 1만명이 대피함\n• 산불이 발생한 지역은 피레네오리엔탈 지역임\n• 투르 드 프랑스 주최 측은 3번째 경기에서 관객 출입을 금지함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/crlwweye9glo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Red card system in disarray over Trump, Fifa and Balogun decision</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;트럼프, 피파, 발로군 판정으로 인한 레드 카드 시스템의 혼란&#39;, &#39;summary&#39;: &#39;• 미국 선수 폴라린 발로군에게 내린 레드 카드가 사실상 취소되면서 많은 의문점이 남음\n• 이 결정으로 인해 레드 카드 시스템의 혼란이 가중됨\n• 레드 카드 시스템의 운영과 관련된 문제점들이 다시 조명됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/sport/football/articles/cly99dxjkxxo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>&#39;I ate ketchup and cheese,&#39; says Venezuelan girl trapped under quake rubble for 32 hours</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;지진으로 무너진 건물의 잔해 아래 32시간 갇혔던 베네수엘라 소녀&#39;, &#39;summary&#39;: &#39;• 베네수엘라에서 발생한 지진으로 10층짜리 주거용 건물이 무너짐\n• 건물 잔해 아래 갇힌 소녀가 32시간 만에 구조됨\n• 소녀는 구조된 후 케첩과 치즈를 먹었다고 말함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c9922x87nj8o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
