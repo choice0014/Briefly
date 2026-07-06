@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-07-06 04:51:06</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Uber’s European expansion plans may have hit a speed bump</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;우버의 유럽 확장 계획에 발목 잡힘&#39;, &#39;summary&#39;: &#39;• 우버는 2026년에 7개의 새로운 유럽 시장에 진출하겠다는 계획을 발표했음\n• 하지만 현재 5개의 시장 진출이 보류된 것으로 알려짐\n• 우버의 유럽 확장 계획에 차질이 생긴 것으로 보임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/05/ubers-european-expansion-plans-may-have-hit-a-speed-bump/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Trump memecoin investors lost $3.8 billion, analysis finds</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;트럼프 메모 코인 투자자 3.8억 달러 손실&#39;, &#39;summary&#39;: &#39;• 트럼프의 메모 코인에 투자한 약 100만 명의 투자자가 총 3.8억 달러의 손실을 보임\n• 트럼프는 메모 코인으로 6억 3천 6백만 달러의 수익을 얻음\n• 메모 코인 투자로 인한巨額 손실이 발생함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/05/trump-memecoin-investors-lost-3-8-billion-analysis-finds/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Amazon will stop accepting new customers for Mechanical Turk</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;아마존, 메카니컬 터크에 새로운 고객 가입 중단함&#39;, &#39;summary&#39;: &#39;• 아마존이 메카니컬 터크에 새로운 고객 가입을 중단함\n• 메카니컬 터크의 마지막 시대가 될 가능성이 있음\n• 아마존의 결정으로 메카니컬 터크의 미래가 불투명해짐&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/05/amazon-will-stop-accepting-new-customers-for-mechanical-turk/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>5 desk gadgets that can make your workday better</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;업무를 더 효율적으로 만들어 줄 수 있는 5가지 데스크 가젯&#39;, &#39;summary&#39;: &#39;• 적절한 데스크 가젯을 사용하면 업무 공간의杂乱을 줄이고 집중력을 높일 수 있음\n• 데스크 가젯을 사용하면 일에 편리함을 더할 수 있음\n• 데스크 가젯은 업무 효율성을 높여 주는 도구임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/05/5-desk-gadgets-that-can-make-your-workday-better/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>What is Bending Spoons? The little-known AOL and Vimeo owner that’s now public</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;벤딩 스푼이란 무엇인가? 아울과 비메오의 소유주가 공개됨&#39;, &#39;summary&#39;: &#39;• 벤딩 스푼은 여전히 알려지지 않았음\n• 벤딩 스푼의 제품 포트폴리오는 10억 명 이상의 사람들에게 서비스함\n• 벤딩 스푼의 제품 포트폴리오에는 아울과 비메오가 포함됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/05/what-is-bending-spoons-everything-to-know-about-aols-acquirer/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Overseas voters moving to UK could face £100,000 donations cap for year</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;영국으로 이주하는 해외 유권자, 1년간 10만 파운드 기부 제한 규정에 직면함&#39;, &#39;summary&#39;: &#39;• 영국 정부는 정치 자금에 대한 검토 결과에 따라 계획된 변경 사항을 발표함\n• 해외 유권자들이 영국으로 이주하면 1년간 10만 파운드의 기부 제한 규정을 받을 수 있음\n• 이 규정은 정치 자금에 대한 투명성과 공정성을 강화하기 위한 조치임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c0jyyw59gpjo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Reform denies rules broken by Farage after benefits from ally not declared</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;개혁당, 파라지에게 이익을 제공한 동맹의 혜택을 신고하지 않아 규칙 위반을 부인함&#39;, &#39;summary&#39;: &#39;• 개혁당의 파라지 대표는 사기죄로 유죄 판결을 받은 암호화폐 사업가가 제공한 지원을 등록하지 않았음\n• 이 지원은 파라지에게 이익을 제공한 것으로 알려짐\n• 관련 규칙 위반 여부에 대한 조사 결과가 발표될 예정임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cy0424end7vo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>&#39;Posh George&#39;: Who is aristocrat and convicted criminal at heart of Farage controversy?</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;포시 جور지: 파라지 논란의 중심에 있는 귀족이자 유죄 판결을 받은 범죄자&#39;, &#39;summary&#39;: &#39;• 포시 جور지는 32세의 암호화폐 사업가로 알려져 있으며 미국에서 사기죄로 유죄 판결을 받은 적이 있음\n• 그는 파라지의 오랜 동맹국임\n• 포시 جور지의 과거 유죄 판결이 파라지와의 관계에서 논란의 여지가 있음을 알 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c5yzzw5vk8vo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Police leadership needs fundamental overhaul, review finds</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;경찰 지도부는 근본적인 개혁이 필요하다&#39;, &#39;summary&#39;: &#39;• 경찰의 개발과 채용 과정은 개혁이 필요함\n• 독립적인 보고서에서 경찰 지도부의 근본적인 문제를 지적함\n• 경찰의 개혁은 서비스의 질을 높이기 위해 필요함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/crlwwkyg610o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>The massive scramble behind the scenes before the new PM arrives</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;신임 총리가 도착하기 전에 뒤에서 일어나는 대규모 혼란&#39;, &#39;summary&#39;: &#39;• 신임 총리가 도착하기 전에 정부 요직을 차지하기 위한 경쟁이 치열함\n• 의회 의원은 이 상황을 요직을 차지하기 위한 격렬한 싸움으로 묘사함\n• 총리 교체로 인해 정부 내에서 큰 변동이 예상됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cj4g0n0p15xo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Iran&#39;s supreme leader absent as senior officials attend ayatollah&#39;s funeral</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이란 최고 지도자, 고위官员들이 아야톨라의 장례식에 참석함&#39;, &#39;summary&#39;: &#39;• 모하마드 하마네이의 아들 모지타바 하마네이의 아버지가 사망한 미국-이스라엘과의 이란 전쟁 초기 이후로 공개석상에 나타나지 않음\n• 모지타바 하마네이는 최근 아야톨라의 장례식에 고위 官员들이 참석한 가운데 모습을 드러내지 않음\n• 이란의 최고 지도자에 대한 최근 소식은 없지만 그의 부재가 이란 국내외적으로 어떤 영향을 미칠지 주목됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cevllyj9vv3o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Watch: Lyse Doucet on emotion and politics at Tehran funeral of former supreme leader</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이란 전 최고 지도자 장례식에서 감정과 정치를 보는 것&#39;, &#39;summary&#39;: &#39;• 이란의 전 지도자 아야톨라 알리 하메네이의 장례식이 테헤란에서 열리고 있음\n• BBC의 국제 통신원 리즈 두세가 테헤란에서 장례식 현장을 보고 있음\n• 장례식에서 감정과 정치가 어우러지는 모습을 보임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/videos/c4gyye3rplno?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Marine Le Pen appeal verdict: Why this moment matters for France</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;마린 르 펜 항소 판결: 프랑스에 중요한 이유&#39;, &#39;summary&#39;: &#39;• 마린 르 펜은 프랑스의 국민연합당 대표이며, 2027년 대통령 선거에서 여론 조사에서 선두를 지키고 있음\n• 마린 르 펜은 현재 항소 판결을 기다리고 있으며, 이를 통해 대통령 선거에 출마할 수 있는지 결정됨\n• 이 판결은 마린 르 펜의 정치적 미래와 프랑스의 정치 상황에 큰 영향을 미칠 것으로 예상됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/clyeele4leeo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>A global hub for fake luxury goods, Vietnam cracks down on its black market</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;가짜 명품의 세계적 허브, 베트남의 블랙 마켓에 대한 단속 강화&#39;, &#39;summary&#39;: &#39;• 베트남은 가짜 명품을 생산하고 판매하는 산업으로 인해 세계적 허브로 부상함\n• 트럼프 행정부는 베트남에 가짜 명품 산업을 근절하라고 요구함\n• 베트남 현지인들은 가짜 명품 산업에 대한 단속 강화에 대해 의견이 분분함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cdx7zzywz7wo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>From &#39;a beautiful night&#39; to &#39;world&#39;s greatest hangover&#39;, guests react to Taylor and Travis&#39;s wedding</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;테일러와 트래비스의 결혼식, 손님들은 멋진 밤에서 세계 최고의 숙취까지 반응함&#39;, &#39;summary&#39;: &#39;• 테일러와 트래비스의 결혼식에 참석한 유명한 손님들이 뉴욕에서의 그날에 대해 소셜 미디어에 게시물을 올림\n• 손님들은 테일러와 트래비스의 결혼식에 대한 반응을 공유함\n• 결혼식은 뉴욕에서 열렸으며 많은 유명 인사가 참석함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/clyxxr9n2kjo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
