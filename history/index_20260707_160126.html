@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-07-07 12:42:05</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Savi’s app aims to protect consumers from realistic AI scams like kidnappers demanding ransom</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;사비의 앱이 실제 납치범이 몸값을 요구하는 것과 같은 현실적인 인공지능 사기로부터 소비자를 보호하는 것을 목표로 함&#39;, &#39;summary&#39;: &#39;• 사비는 시드 펀딩으로 700만 달러를 조달함\n• 사비의 앱은 아이폰과 안드로이드에서 출시됨\n• 앱은 사용자들이 인공지능 사기로부터 보호받을 수 있도록 설계됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/07/savis-app-aims-to-protect-consumers-from-realistic-ai-scams-like-kidnappers-demanding-ransom/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>The first American autonomous ground vehicles are fighting in Ukraine</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;미국의 자율 주행 차량이 우크라이나에서 처음으로 전투에 참여함&#39;, &#39;summary&#39;: &#39;• 우크라이나의 전투 지역에서 자율 주행 차량을 처음으로 투입함\n• Forterra社가 우크라이나의 전투 지역에 100대 이상의 자율 주행 차량을 배치함\n• 우크라이나의 전투에서 자율 주행 차량의 효과를 검증함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/07/the-first-american-autonomous-ground-vehicles-are-fighting-in-ukraine/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Netflix invented binge-watching. Now it may have outgrown it.</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;넷플릭스가 발명한 몰아보기, 이제는 그것을 초월함&#39;, &#39;summary&#39;: &#39;• 넷플릭스 이용자들이 2번째 시즌까지 지속적으로 시청하지 않는다는 보고서가 나옴\n• 몰아보기 자체가 이전과 같은 강점을 더 이상 가지지 못하는 것이 큰 문제임\n• 넷플릭스의 성장에 따라 몰아보기의 중요성이 줄어드는 추세임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/06/netflix-invented-binge-watching-now-it-may-have-outgrown-it/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>The ‘first’ AI-run ransomware attack still needed a human</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;최초의 AI 주도 랜섬웨어 공격도 인간의 개입이 필요함&#39;, &#39;summary&#39;: &#39;• 랜섬웨어 공격의 기술적 실행은 최초로 인공지능 에이전트에 의해 수행됨\n• 하지만 공격의 대상 선택, 인프라 구축, 도난된 자격증명 정보 제공은 여전히 인간에 의해 수행됨\n• 따라서 완전히 자율적인 사이버 범죄의 시작은 아니었음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/06/the-first-ai-run-ransomware-attack-still-needed-a-human/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>US investors will soon get access to SK Hynix, another memory maker riding the AI boom</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;미국 투자자, AI 붐을 타고 성장하는 또 다른 메모리 제조사 SK하이닉스에 곧 접근할 것&#39;, &#39;summary&#39;: &#39;• SK하이닉스가 AI 붐을 타고 성장하고 있음\n• 미국에서 수십억 달러의 IPO를 통해 투자자에게 공개될 예정임\n• 이번 IPO는 금요일에 진행될 예정임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/06/us-investors-will-soon-get-access-to-sk-hynix-another-memory-maker-riding-the-ai-boom/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Farage to make statement on his &#39;future in public life&#39;</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;파라지, 공직 생활에 대한 입장 발표함&#39;, &#39;summary&#39;: &#39;• 파라지의 공직 생활에 대한 입장 발표가 예정됨\n• 파라지의 재정 지원에 대한 심한 비판이 있었음\n• 파라지가 의원 전 재정 지원에 대한 논란이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c0ly51kzdz3o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>PM intervened in row over Mexico-England kick-off time</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;멕시코-잉글랜드 경기 시간 논란에 총리 개입함&#39;, &#39;summary&#39;: &#39;• 멕시코와 잉글랜드의 경기 시간을 비로 인해 6시간 앞당길 계획임\n• 총리가 이 문제에 개입함\n• 경기 시간 변경은 천둥번개 예보로 인해 결정됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cjwgggp28dlo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Treasury sees defence as a drain not a driver for growth, says Healey</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;재무부는 국방을 성장의 동력으로 보지 않고 부담으로 본다, 헤일리 발언&#39;, &#39;summary&#39;: &#39;• 헤일리는 국방부 장관직을 사임함\n• 국방 예산 계획이 지연된 것이 사임 이유임\n• 헤일리는 재무부의 국방 부담 관점에 동의함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c6211j3q7l5o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Why is Farage facing renewed scrutiny over his finances?</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;파라지의 재정 문제가 다시 조명받는 이유는 무엇인가?&#39;, &#39;summary&#39;: &#39;• 파라지의 재정 문제가 다시 조명됨에 따라 그는 더 큰 압력을 받고 있음\n• 파라지의 재정 지원을 받았음에도 불구하고 그 사실을 공개하지 않은 것으로 알려짐\n• 파라지의 행동이 그의 리더십과誠實性에 대한 의문을 불러일으킴&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c1kyygjvz7go?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Chris Mason: Accusations around Farage leave him looking vulnerable to his rivals</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;크리스 메이슨: 파라지에 대한 비난은 그를 라이벌에게 취약하게 보이게 함&#39;, &#39;summary&#39;: &#39;• 크리스 메이슨은 뉴스에 등장하며 파워와 투명성, 그리고 돈에 관한 질문이 중심에 있음\n• 리폼 영국의 지도자는 비난을 받으며 그의 라이벌에게 취약함을 보임\n• 파라지에 대한 비난은 그의 지도력과 신뢰성에 대한 의문을 제기함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c04yyx15xngo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Zelensky to press Nato for air defence systems after intense Russian strikes</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;젤렌스키, 나토 회의에서 러시아의 집중 공격 이후 방어 시스템 제공 요구함&#39;, &#39;summary&#39;: &#39;• 우크라이나 대통령은 터키에서 열리는 나토 회의에서 더 많은 요격 미사일이 필요함\n• 젤렌스키는 러시아의 집중 공격 이후 방어 시스템 제공을 나토에 요구함\n• 나토 회의에서 우크라이나의 안보를 위한 지원을 논의함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c9d227e5zj6o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Woman suspected of Monaco bomb attack found dead in Ukraine</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;모나코 폭탄 테러 용의자 우크라이나에서 사망함&#39;, &#39;summary&#39;: &#39;• 모나코에서 일어난 폭탄 테러 사건의 용의자로 지목된 아나스타シア 베레조프스카가 우크라이나에서 사망함\n• 아나스타시아 베레조프스카는 우크라이나의 백만장자에게 폭탄 테러를 가해 부상을 입힌 혐의를 받음\n• 경찰은 아나스타시아 베레조프스카를 조사하기 위해 우크라이나에서 수사 중임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c5yz3770yg8o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Jailers and officials at Russia&#39;s &#39;torture prisons&#39; in Ukraine exposed by BBC</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;우크라이나의 러시아 &#39;고문 감옥&#39;의 간수와 관리들&#34;, &#39;summary&#39;: &#39;• 우크라이나의 러시아 감옥에서 고문과 학대를 받은 전 수감자들이 간수와 관리들을 고발함\n• 전 수감자들은 이들 간수와 관리들이 자신들을 학대하고 고문했다고 주장함\n• 이들 간수와 관리들을 재판에 세우고 책임을 물으려는 움직임이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cx2kkrx8jeno?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Explosions injure 18 in Damascus during Macron&#39;s visit</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;마크롱 방문 중 다마스커스에서 폭발물이 18명 부상시킴&#39;, &#39;summary&#39;: &#39;• 다마스커스에서 발생한 폭발물로 18명이 부상함\n• 마크롱의 방문을 맞아 시리아 대통령이 대통령 궁전에서 마크롱을 환영함\n• 폭발물에 대한 자세한 보고가 들어옴&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c2eylx1jj9ko?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Watch: Moment rare tornado lashes central Chinese cities</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;중국 중부 도시를 강타한 드문 토네이도 순간&#39;, &#39;summary&#39;: &#39;• 중국 후베이성 에저우와 황강시를 강한 토네이도가 강타함\n• 토네이도로 인해 공중으로 날아다니는 파편이 보임\n• 해당 지역에서 토네이도가 발생한 순간이 영상으로 기록됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/videos/cq61d22ved2o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
