@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-07-08 13:03:34</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Venus Williams-backed WeWard can now lock your apps until you hit your steps</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;비너스 윌리엄스가 후원하는 WeWard, 걸음 수 달성까지 앱 잠금 기능 제공&#39;, &#39;summary&#39;: &#39;• WeWard는 테니스 선수이자 천사 투자자 비너스 윌리엄스의 자금 지원을 받음\n• 이 애플리케이션은 사용자의 걸음 수를 거의 25% 증가시킴\n• 사용자가 목표 걸음 수에 도달할 때까지 앱을 잠금 상태로 유지함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/08/venus-williams-backed-weward-can-now-lock-your-apps-until-you-hit-your-steps/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Former OpenAI exec Kevin Weil is now on the board of Stoke Space</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;오픈艾아이의 전 임원 케빈 와일, 스토크 스페이스 이사회에 합류함&#39;, &#39;summary&#39;: &#39;• 케빈 와일이 스토크 스페이스에 합류한 것은 실리콘 밸리에서 재사용 로켓이 다음 뜨거운 트렌드임\n• 스토크 스페이스는 재사용 로켓 기술을 개발하는 회사임\n• 케빈 와일의 합류는 스토크 스페이스의 사업에 긍정적인 영향을 미칠 것으로 예상됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/08/former-openai-exec-kevin-weil-is-now-on-the-board-of-stoke-space/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Hot French startup ZML releases free product to speed inference across lots of AI chips</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;뜨거운 프랑스 스타트업 ZML, 많은 AI 칩에서 추론 속도를 높이는 무료 제품 출시&#39;, &#39;summary&#39;: &#39;• 프랑스의 유명한 AI 스타트업 ZML이 튜링 상 수상자 얀 르쿤의 지지를 받으며 ZML/LLMD를 출시함\n• ZML/LLMD는 소프트웨어로 AI를 실행하는 비용을 줄일 수 있음\n• ZML/LLMD를 통해 많은 AI 칩에서 추론 속도를 높일 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/08/hot-french-startup-zml-releases-free-product-to-speed-inference-across-lots-of-ai-chips/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>AI chip maker SambaNova raises $1B at $11B valuation, 5 months after last mega round</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;AI 칩 제조업체 샴바노바, 5개월 만에 11억 달러 평가로 10억 달러 투자 유치&#39;, &#39;summary&#39;: &#39;• 샴바노바는 인텔이 약 16억 달러에 인수하려던 시도 후 5개월 만에 투자 유치에 성공함\n• 샴바노바의 평가액은 11억 달러임\n• 인텔의 인수 시도보다 훨씬 높은 평가로 투자 유치에 성공함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/08/sambanova-draws-1b-at-11b-valuation-in-series-f-first-close/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Final extension: Startup Battlefield Australia applications now close July 20</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;최종 연장: 스타트업 배틀필드 오스트레일리아 신청 마감은 7월 20일임&#39;, &#39;summary&#39;: &#39;• 스타트업 배틀필드 오스트레일리아는 대담한 것을 구축하는 사람들에게 빠른 길을 제공함\n• 이 배틀필드는 스타트업을 앞으로 나아갈 수 있는 사람들과 연결해 줌\n• 7월 20일까지 신청을 마감함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/07/final-extension-startup-battlefield-australia-applications-now-close-july-20/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Farage&#39;s rivals rule out standing in Clacton by-election</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;파라지의 라이벌들이 클락턴 재보선에 출마하지 않음&#39;, &#39;summary&#39;: &#39;• 파라지의 리더는 정권과 국민의 대결을 원하지만 노동당은 이를 서커스라고 비판함\n• 클락턴 재보선은 파라지의 리더십과 정치적 영향력을 시험할 기회임\n• 파라지의 대립자들은 재보선에 출마하지 않기로 결정함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cjdg4y3g0z7o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Chris Mason: It&#39;s far from certain whether by-election will strengthen Farage</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;크리스 메이슨: 재보선이 파라지의 세력을 강화할지 확신할 수 없음&#39;, &#39;summary&#39;: &#39;• 크리스 메이슨은 재보선 결과 파라지의 세력이 강화될지 확신할 수 없음을 언급함\n• 리폼 유케이의 리더는 클랙턴에서 주요 정당이 출마를 거부하면서 카운트 빈페이스로부터 도전을 받음\n• 주요 정당이 출마를 거부한 상황에서 파라지의 입지는 불투명함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c9d2882jj3yo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Nato allies announce £37bn for new missile project</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;나토 동맹국, 새로운 미사일 프로젝트에 3,700억 원 투자 발표&#39;, &#39;summary&#39;: &#39;• 나토 동맹국은 새로운 미사일 프로젝트에 3,700억 원을 투자하기로 결정함\n• 이 프로젝트는 나토 동맹국의 안보를 강화하기 위해 진행됨\n• 영국의 스타머 총리는 안카라에서 열리는 회의에서 이 프로젝트에 대해 논의함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/ckg4e3lwzqzo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Why has Farage resigned and what happens next?</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;파라지의 사임 이유와 이후 상황은 무엇인가?&#39;, &#39;summary&#39;: &#39;• 파라지는 동맹으로부터의 지원을 선언하지 않은 보고서로 인해 증가하는 압력을 받음\n• 파라지의 사임은 그의 정당 내부에서 큰 영향을 미침\n• 그의 사임 이후 정당의 지도부는 새로운 방향을 모색함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c1kyygjvz7go?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>How the leasehold revolution could transform neighbourly relations</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;임대차 혁명이 이웃 관계를 어떻게 바꿀 수 있는가&#39;, &#39;summary&#39;: &#39;• 정부는 임대차 제도를 폐지하려 하지만, 이를 대체하는 것이 훨씬 더 복잡할 수 있음\n• 임대차 제도는 주택 소유자와 임차인 간의 관계를 정의하며, 이를 폐지하면 새로운 소유권 구조가 필요함\n• 임대차 제도 폐지로 인한 새로운 소유권 구조는 이웃 간의 관계를 바꿀 수 있으며, 더 나은 공동체를 형성할 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cp8llpp67l1o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Trump says ceasefire is &#39;over&#39; after US and Iran trade strikes</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;트럼프, 이란과 미국의 공격 교환 후 정전이 끝났다고 말함&#39;, &#39;summary&#39;: &#39;• 트럼프는 나토 정상 회의 전에 미국 협상가들이 이란과 계속 대화할 수 있다고 말함\n• 미국과 이란은 최근에 공격을 교환함\n• 트럼프는 이란과의 대화는 계속할 수 있지만 정전은 끝났다고 말함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/clyw8w1g409o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>US strikes target Iranian military boats</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;미국, 호르무즈 해협에서 이란 군함 공격에 대한 보복으로 이란에 공습 실시&#39;, &#39;summary&#39;: &#39;• 미국은 호르무즈 해협에서 발생한 세 대의 유조선 공격에 대한 대응으로 이란에 대한 공습을 실시함\n• 이란의 군함이 공격 대상임\n• 미국의 이란에 대한 공습은 유조선 공격에 대한 보복임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/videos/cn94nqzwpxwo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Will Le Pen rise again? French nationalist leader defiant after court&#39;s ruling</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;레팡, 다시 부상할 것인가? 法원 판결에도 불구하고 도전 의지 표명&#39;, &#39;summary&#39;: &#39;• 마린 레팡은 항소심에서 유죄 판결이 확정된 지 몇 시간 만에 대통령 선거 출마를 선언함\n• 레팡은 프랑스의 민족주의적 리더로 불리움\n• 레팡의 도전 의지는 프랑스 정치계에 큰 영향을 미칠 가능성이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cvgdlprp1r3o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Nato allies announce £37bn for new missile project</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;나토 동맹국, 새로운 미사일 프로젝트에 3,700억 원 투자 발표&#39;, &#39;summary&#39;: &#39;• 나토 동맹국은 새로운 미사일 프로젝트에 3,700억 원을 투자하기로 결정함\n• 이 프로젝트는 나토 동맹국의 안보를 강화하기 위한 것으로 예상됨\n• 영국의 스타머 총리는 안카라에서 열리는 회의에서 이 프로젝트에 대해 논의함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/ckg4e3lwzqzo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Russian fuel shortages bite – but will Putin change tack in Ukraine war?</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;러시아 연료 부족 현상이 나타남 – 푸틴은 우크라이나 전쟁에서 전략을 변경할 것임&#39;, &#39;summary&#39;: &#39;• 러시아의 연료 부족 현상은 심화하고 있어 모스크바에서도 연료 공급을 보장하지 못함\n• 경제적 압력이 우크라이나 전쟁에서 협상을 이끌어낼 것인지 아니면 상황을 더욱 악화시킬 것인지에 대한 우려가 있음\n• 푸틴의 다음 대응이 우크라이나 전쟁의 방향을 결정할 것임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cr7xk8j0j2do?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
