@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-07-08 10:35:14</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Hot French startup ZML releases free product to speed inference across lots of AI chips</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;뜨거운 프랑스 스타트업 ZML, 많은 AI 칩에서 추론 속도를 높이는 무료 제품 출시&#39;, &#39;summary&#39;: &#39;• 프랑스의 유명한 AI 스타트업 ZML이 튜링 상 수상자 얀 르쿤의 후원으로 ZML/LLMD를 출시함\n• ZML/LLMD는 소프트웨어로 AI를 실행하는 비용을 줄일 수 있음\n• ZML/LLMD를 통해 많은 AI 칩에서 추론 속도를 높일 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/08/hot-french-startup-zml-releases-free-product-to-speed-inference-across-lots-of-ai-chips/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>AI chip maker SambaNova raises $1B at $11B valuation, 5 months after last mega round</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;AI 칩 제조업체 샴바노바, 5개월 만에 11억 달러 투자 유치&#39;, &#39;summary&#39;: &#39;• 샴바노바는 인텔이 약 16억 달러에 인수하려던 시도 후 5개월 만에 11억 달러의 투자를 유치함\n• 샴바노바의 이번 투자 유치는 인텔의 인수 시도보다 훨씬 높은 가치임\n• 샴바노바의 가치는 11억 달러로 평가됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/08/sambanova-draws-1b-at-11b-valuation-in-series-f-first-close/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Final extension: Startup Battlefield Australia applications now close July 20</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;최종 연장: 스타트업 배틀필드 오스트레일리아 신청 마감은 7월 20일임&#39;, &#39;summary&#39;: &#39;• 스타트업 배틀필드 오스트레일리아는 대담한 프로젝트를 진행하는 사람들에게 빠른 길을 제공함\n• 이 프로그램은 스타트업을 발전시킬 수 있는 사람들과의 만남을 제공함\n• 7월 20일까지 신청서를 제출할 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/07/final-extension-startup-battlefield-australia-applications-now-close-july-20/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Meta just launched a new AI generator, Muse Image, and users are already pushing back over use of their photos</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;메타가 새로운 AI 이미지 생성기 뮤즈 이미지를 출시했으며 사용자들은 이미 사진 사용에 대해 반발하고 있음&#39;, &#39;summary&#39;: &#39;• 메타의 새로운 이미지 생성기는 광고와 장식 등 다양한 용도로 사용될 수 있음\n• 새로운 이미지 생성기는 크리에이터를 위한 기회를 제공함\n• 사용자들은 자신의 사진이 사용되는 것에 대해 반발하고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Why the rise of open source AI isn’t hurting Anthropic … yet</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;오픈 소스 AI의 부상이 안트로픽에 영향을 미치지 않는 이유&#39;, &#39;summary&#39;: &#39;• 오픈 소스 모델의 성공은 최전선 연구소의 손해로 이어지지 않음\n• 오픈 소스 모델과 최전선 연구소는 각기 생명 주기의 두 단계를 차지하는 것으로 보임\n• 오픈 소스 모델과 최전선 연구소는 상호 보완적인 역할을 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/07/why-the-rise-of-open-source-ai-isnt-hurting-anthropic-yet/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Farage&#39;s rivals rule out standing in Clacton by-election</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;파라지의 라이벌들이 클락턴 재보선에 출마하지 않음&#39;, &#39;summary&#39;: &#39;• 파라지의 리더는 정권과 국민 사이의 재보선을 원함\n• 노동당은 이를 서커스라고 비판함\n• 파라지는 리폼 영국의 리더임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cjdg4y3g0z7o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Nato allies announce £37bn for new missile project</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;나토 동맹국, 새로운 미사일 프로젝트에 3,700억 원 투자 발표&#39;, &#39;summary&#39;: &#39;• 나토 동맹국은 새로운 미사일 프로젝트에 3,700억 원을 투자하기로 결정함\n• 이 프로젝트는 나토 동맹국의 안보를 강화하기 위해 진행됨\n• 영국의 스타머 총리는 안카라에서 열리는 회의에서 이 프로젝트에 대해 논의함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/ckg4e3lwzqzo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Chris Mason: Farage attempts to seize back the agenda after finance row</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;크리스 메이슨: 파라지, 재무 관련 논란 이후 의제를 되찾으려 함&#39;, &#39;summary&#39;: &#39;• 크리스 메이슨은 앞으로의 선거 운동에서 이 재보선을 &#34;국민 대 기성 세력&#34;으로 명확히 정의하려고 함\n• 파라지는 기성 세력에 대한 반발을 이용하여 지지율을 높이려 함\n• 재무 관련 논란 이후 파라지는 자신의 의제를 되찾으려고 시도함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c1my1g29gk7o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Why has Farage resigned and what happens next?</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;파라지가 사임한 이유와 다음에는 무슨 일이 일어날까&#39;, &#39;summary&#39;: &#39;• 파라지는 동맹국에서 받은 지원을 신고하지 않은 것으로 알려지면서 압력을 받음\n• 파라지의 사임은 그의 정당 내에서 큰 변화가 될 수 있음\n• 그의 사임 이후에 어떤 사람이 새로운 리더가 될지에 대한 관심이 집중됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c1kyygjvz7go?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>How the leasehold revolution could transform neighbourly relations</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;임대지권 혁신이 이웃 관계를 어떻게 바꿀 수 있는가&#39;, &#39;summary&#39;: &#39;• 임대지권 제도를 폐지하려는 정부의 계획이 있으나, 이를 대체하는 새로운 제도가 등장할 수 있음\n• 새로운 제도는 이웃 간의 관계를 바꿀 수 있는 요인이 될 수 있음\n• 정부의 계획이 성공적으로 시행되면, 임대지권 제도에 따른 문제들이 해결될 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cp8llpp67l1o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Will Le Pen rise again? French nationalist leader defiant after court&#39;s ruling</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;Will Le Pen rise again? French nationalist leader defiant after court&#39;s ruling&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cvgdlprp1r3o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Nato allies announce £37bn for new missile project</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Nato allies announce £37bn for new missile project&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/ckg4e3lwzqzo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Russian fuel shortages bite – but will Putin change tack in Ukraine war?</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Russian fuel shortages bite – but will Putin change tack in Ukraine war?&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cr7xk8j0j2do?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>&#39;The water just came so fast&#39;: Typhoon triggers floods and rare tornadoes in China</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;&#39;The water just came so fast&#39;: Typhoon triggers floods and rare tornadoes in China&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c79ygnv9e93o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Suspect ate Chick-fil-A and interacted with Charlie Kirk staff before shooting, court hears</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Suspect ate Chick-fil-A and interacted with Charlie Kirk staff before shooting, court hears&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cr5j983p046o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
