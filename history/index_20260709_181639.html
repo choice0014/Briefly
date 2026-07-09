@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-07-09 15:40:54</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Block reaches $45M settlement with 46 states over Cash App fraud probe</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;블록, 캐시 앱 사기 조사와 관련해 46개 주와 4,500만 달러 합의함&#39;, &#39;summary&#39;: &#39;• 블록은 캐시 앱이 고급 사기 탐지 기능을 포함한 은행과 같은 보호 기능을 제공한다고 잘못 광고함\n• 이로 인해 사용자들이 사기에 노출될 수 있는 상황을 만들었음\n• 블록은 46개 주와의 합의로 4,500만 달러를 지불하기로 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/09/block-reaches-45m-settlement-with-46-states-over-cash-app-fraud-probe/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Anthropic’s new Claude feature is quietly selling you on AI</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;앤트로픽의 새로운 클라우드 기능은 조용히 당신에게 인공지능을 판매함&#39;, &#39;summary&#39;: &#39;• 앤트로픽의 클라우드 기능은 새로운 리플렉트 대시보드를 제공함\n• 리플렉트 대시보드는 사용자가 인공지능을 사용하는 방식을 시각화함\n• 클라우드 기능은 사용자의 일상 업무가 앤트로픽의 챗봇에 얼마나 의존하는지 강조함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/09/anthropics-new-claude-feature-is-quietly-selling-you-on-ai/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Anthropic, OpenAI, and SpaceX are bigger than the last 25 years of tech exits</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;앤트로픽, 오픈아이, 스페이스엑스 등이 지난 25년간의 기술 기업 매각보다 규모가 크다&#39;, &#39;summary&#39;: &#39;• 앤트로픽, 오픈아이, 스페이스엑스 등 3개의 큰 인공지능 기업의 상장으로 생성될 가치가 2000년 이후 미국의 벤처 캐피탈 지원을 받은 기업 매각의 총 가치보다 크다\n• 이 세 기업의 상장은 기술 산업에서 큰 영향을 미칠 것으로 예상된다\n• 이러한 기업들의 성장은 인공지능 기술의 발전과 함께 가속화될 것으로 보인다&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/09/anthropic-openai-and-spacex-are-bigger-than-the-last-25-years-of-tech-exits/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Popular open source AI developer tool Ollama raises $65M, grows to nearly 9M users</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;인기 있는 오픈 소스 AI 개발자 도구 Ollama, 6,500만 달러 투자 유치 및 사용자 수 900만 명으로 증가&#39;, &#39;summary&#39;: &#39;• Ollama는 개발자가 쉽게 PC에서 AI를 실행할 수 있도록 도와줌으로써 GitHub에서 17만 개의 별과 1만 7천 개의 포크를 얻음\n• Ollama는 Benchmark의 지원을 받음\n• Ollama의 사용자 수는 900만 명에 가까워짐&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/09/popular-open-source-ai-developer-tool-ollama-raises-65m-grows-to-nearly-9m-users/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Character.AI enters the microdrama arena with its own productions, but there’s a twist</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;캐릭터 인공지능이 자체 제작 작품으로 미니 드라마 장르에 진출했지만 새로운 전략이 있음&#39;, &#39;summary&#39;: &#39;• 캐릭터 인공지능은 자체 제작 미니 드라마를 출시함\n• 사용자는 드라마의 등장인물과 대화하고 질문을 할 수 있음\n• 사용자는 다양한 이야기를 재창조하며 등장인물과 역할을 나눠 연기할 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/09/character-ai-enters-the-microdrama-arena-with-its-own-productions-but-with-a-twist/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Burnham planning for No 10 for at least a year, key ally says</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;번햄, 1년 전부터 총리직 준비 중이라고 핵심 동맹이 밝힘&#39;, &#39;summary&#39;: &#39;• 번햄의 서민당 동맹은 번햄이 웨스트민스터에서 시간을 보낸 것이 정부 준비에 영향을 미치지 않는다고 말함\n• 번햄은 총리직 준비를 위해 충분한 시간을 가졌음\n• 번햄의 준비는 총리직에 도전할 준비가 되었음을 의미함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c0lyr660p8zo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Disability benefit not fit for purpose, minister leading review says</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;장애인 급여가 목적에 맞지 않다고 검토를 이끄는 장관이 말함&#39;, &#39;summary&#39;: &#39;• 잉글랜드와 웨일즈의 개인 독립 지불은 변경이 필요함\n• 장애인 급여 제도가 목적에 맞지 않다고 장관이 말함\n• 개인 독립 지불 제도는 현재 적절하지 않음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/czrxj5vvey0o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Burnham on course for No 10 as Labour nominations open</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;번햄, 노동당 총리 후보 지명 과정에서 앞서감&#39;, &#39;summary&#39;: &#39;• 번햄은 노동당 총리 후보 지명 과정에서 앞서감\n• 그는 기어 스타머의 후임을 위한 경쟁에서 무제한임\n• 노동당 지명 과정에서 번햄은 유일한 후보임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c77y0n7k801o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Farage&#39;s by-election in Clacton officially confirmed</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;클래큰의 파라지 보궐선거 공식 확인됨&#39;, &#39;summary&#39;: &#39;• 클래큰의 보궐선거가 공식적으로 확인됨\n• 리포름의 리 앤더슨이 하원에서 선거 공고서를 제출함\n• 보궐선거는 8월 13일에 열림&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cwylzxw7p52o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Restore Britain leader describes Dunblane tragedy as &#39;one murder&#39;</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;브리튼 회복당 대표, 던블레인 비극을 &#39;1건의 살인&#39;으로 묘사함&#34;, &#39;summary&#39;: &#34;• 브리튼 회복당 대표 루퍼트 로우는 영국의 권총 금지에 대해 비판하며, 던블레인에서 발생한 살인 사건 때문에 권총이 금지되었다고 말함\n• 루퍼트 로우는 던블레인 비극을 단순히 &#39;1건의 살인&#39;으로 묘사하며, 권총 금지 정책을 비판함\n• 던블레인 비극은 1996년 발생한 총기 난사 사건으로, 16명의 어린이가 사망함&#34;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cj3gdj300lyo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Iran launches more strikes after accusing US of striking near nuclear plant</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이란, 핵 시설 근처 미군 공격 의혹에 더 많은 공습 실시함&#39;, &#39;summary&#39;: &#39;• 이란은 미군이 핵 시설 근처를 공격했다는 의혹을 제기함\n• 미군은 이란의 90개 목표물을 공격했음\n• 이란 보건부는 화요일 이후 14명이 사망했음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cz75zjj5wp8o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Sharp drop in ships crossing Strait of Hormuz after US and Iran trade strikes</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;호르무즈 해협을 지나는 선박 수가 미국과 이란의 교전 이후 급격히 감소함&#39;, &#39;summary&#39;: &#39;• 호르무즈 해협을 지나는 선박 수가 감소함\n• 많은 선박이 유전과 가스를 운반하고 있음\n• 이번 주에 발생한 공격 이후 선박 수가 감소함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c621k5r8764o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Democrat Graham Platner suspends campaign for key US Senate race after assault allegation</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;민주당 그레이엄 플래트너, 성폭행 의혹으로 주요 미국 상원 선거 캠페인 중단함&#39;, &#39;summary&#39;: &#39;• 미국 상원 선거에서 중요한 역할을 하는 캠페인에서 그레이엄 플래트너가 중단함\n• 성폭행 의혹으로 인해 캠페인을 중단한 것으로 알려짐\n• 그레이엄 플래트너는 성폭행 의혹을 완전히 거짓이라고 주장함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c9v229434p2o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Ukraine strikes Russian ships near Crimea, escalating attacks on fuel supplies</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;우크라이나, 크림반도 근처 러시아 함대에 공격을 가해 연료 공급 공격 강화함&#39;, &#39;summary&#39;: &#39;• 우크라이나는 크림반도 근처에서 러시아 함대를 공격하여 연료 공급을 차단하는 공격을 강화함\n• 이 공격은 우크라이나가 점령된 크림반도에 대한 공급과 경로를 차단하려는 시도의 최신 단계임\n• 우크라이나의 공격은 러시아의 연료 공급을 위협하며 상황을 더욱 복잡하게 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c70yd1g67z5o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Factory fire kills at least 28 in China&#39;s &#39;shoe capital&#39;</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;중국의 신발 생산지에서 공장 화재로 최소 28명 사망함&#39;, &#39;summary&#39;: &#39;• 중국의 신발 생산지에서 공장이 화재로 인해 최소 28명이 사망함\n• 화재로 인해 건물에서 거대한 불꽃이 치솟고 검은 연기가 하늘로 치솟음\n• 화재의 정확한 원인은 아직 밝혀지지 않음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cx2vz51v2pjo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
