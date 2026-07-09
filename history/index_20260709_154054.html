@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-07-09 12:19:33</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Nandan Nilekani leaves GP role at Fundamentum as it launches $200M third fund</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;난단 닐레카니, 펀더멘텀의 GP 역할 떠나며 2억 달러 규모의 세 번째 펀드 출범&#39;, &#39;summary&#39;: &#39;• 난단 닐레카니는 펀더멘텀의 주도적인 투자자로 남아 있음\n• 펀더멘텀은 리더십 팀을 확대하고 인도에서 인공지능과 금융 기술 스타트업을 대상으로 함\n• 펀더멘텀은 2억 달러 규모의 세 번째 펀드를 출범함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/09/nandan-nilekani-leaves-gp-role-at-his-vc-firm-as-it-launches-third-200m-fund/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Truecaller clashes with India’s telecom regulator over anti-spam rules</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;트루콜러, 인도의 통신 규제 기관과 스팸 방지 규칙으로 충돌함&#39;, &#39;summary&#39;: &#39;• 트루콜러는 사용자가 인도의 전용 사업자 번호 시리즈에서 오는 전화 통화를 점점 더 무시하고 차단함\n• 인도의 통신 규제 기관은 스팸 방지 규칙을 강화하려 함\n• 트루콜러와 인도의 통신 규제 기관은 스팸 방지 규칙에 대한 의견 차이를 보임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/08/truecaller-clashes-with-indias-telecom-regulator-over-anti-spam-rules/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Despite ‘misgivings,’ judge approves Elon Musk’s $1.5M SEC settlement</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;엘론 머스크의 150만 달러 SEC 합의를 재판관이 승인함&#39;, &#39;summary&#39;: &#39;• 엘론 머스크와 SEC 사이의 트위터(현재 X) 지분 공개와 관련한 분쟁이 끝남\n• 엘론 머스크는 SEC와의 합의로 150만 달러를 지불함\n• 이 합의는 엘론 머스크의 트위터 지분 공개와 관련한 문제를 해결함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/08/despite-misgivings-judge-approves-elon-musks-1-5-million-sec-settlement/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Lovable reportedly in talks to double its valuation to $13.2B</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;러블러블, 기업 가치 13.2억 달러로 두 배 늘리기 위해 협상 중임&#39;, &#39;summary&#39;: &#39;• 러블러블은 새로운 투자 라운드를 통해 기업 가치를 두 배로 늘릴 계획임\n• 이번 투자 라운드는 멘로 벤처스가 주도할 것으로 알려짐\n• 투자 금액은 3억 달러로 예상됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/08/lovable-reportedly-in-talks-to-double-its-valuation-to-13-2b/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Feds demand autonomous vehicle companies stop interfering with first responders</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;연방정부, 자율주행차 기업에 응급대응 방해 중단 요구함&#39;, &#39;summary&#39;: &#39;• 미국 연방정부는 자율주행차 기업에 응급 상황에서 구조대원의 활동을 방해하는 것을 중단하라고 요구함\n• 미국 국도교통안전청은 응급 현장에서 구조대원의 활동을 방해하면 안 된다고 밝힘\n• 자율주행차 기업은 응급 상황에서 구조대원의 활동을 방해하지 않도록 시스템을 개선해야 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/08/feds-demand-autonomous-vehicle-companies-stop-interfering-with-first-responders/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Burnham on course for No 10 as Labour nominations open</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;번함, 노동당 대표로 노10 진출할 수 있음&#39;, &#39;summary&#39;: &#39;• 번함은 노동당 대표 경선에서 경쟁자가 없음\n• 그레이터 맨체스터 전 시장인 번함이 노동당 대표로 선출될 가능성이 높음\n• 노동당 대표 경선에서 번함의 승리가 유력함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c77y0n7k801o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Disability benefit not fit for purpose, minister leading review says</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;장애인 급여는 목적에 맞지 않음, 검토를 이끄는 장관은 말함&#39;, &#39;summary&#39;: &#39;• 잉글랜드와 웨일즈의 개인 독립 지불금은 변경이 필요함\n• 장관은 현재의 제도가 적절하지 않다고 말함\n• 개인 독립 지불금 제도는 장애인에게 더好的 지원을 제공해야 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/czrxj5vvey0o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Farage&#39;s by-election in Clacton officially confirmed</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;클래큰의 파라지 보궐선거 공식 확인됨&#39;, &#39;summary&#39;: &#39;• 클래큰의 보궐선거가 공식적으로 확인됨\n• 리포름의 리 앤더슨이 하원에서 선거 공고서를 제출함\n• 보궐선거는 8월 13일에 실시될 가능성이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cwylzxw7p52o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Met investigates donation to Jenrick&#39;s Tory leadership campaign</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;제니릭의 보수당 지도부 선거 운동에 대한 기부금 조사&#39;, &#39;summary&#39;: &#39;• 영국 경찰이 제니릭의 보수당 지도부 선거 운동에 대한 기부금을 조사함\n• 관련 의원은 의혹을 완전히 거짓이라고 주장함\n• 조사 결과가 향후 정치계에 미칠 영향이 관심사임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cgev4jq4jngo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Starmer to keep in touch with Trump after No 10</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스타머, 영국 총리직 후에도 트럼프와 연락함&#39;, &#39;summary&#39;: &#39;• 스타머는 나토 지도자 회의에서 트럼프 대통령이 자신에게 잘 지내라고 말함\n• 트럼프와의 만남은 터키에서 열린 나토 회의에서 이루어짐\n• 스타머는 트럼프와의 관계를 유지하려 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/crel4gzg94eo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>US and Iran trade strikes for second night in a row after Trump declares ceasefire &#39;over&#39;</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;미국과 이란, 트럼프가 정전 종료 선언한 후 두 번째 밤에 공격을 교환함&#39;, &#39;summary&#39;: &#39;• 호르무즈 해협을 통한 교통량이 최근 공격이 시작된 이후 크게 감소함\n• 미국과 이란의 긴장이 고조됨에 따라 지역의 안정성이 위협받음\n• 공격이 계속되면 글로벌 유가에 영향을 미칠 가능성이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cz75zjj5wp8o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Democrat Graham Platner suspends campaign for key US Senate race after assault allegation</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;민주당 그레이엄 플래트너, 성폭행 의혹으로 주요 미국 상원 선거 캠페인 중단함&#39;, &#39;summary&#39;: &#39;• 미국 상원 선거에서 중요한 역할을 하는 민주당 후보 그레이엄 플래트너가 성폭행 의혹으로 캠페인을 중단함\n• 그레이엄 플래트너는 한 여성이 자신을 성폭행했다는 의혹을 제기한 이후 이 quyết정을 내림\n• 그레이엄 플래트너는 이 의혹을 완전히 거짓이라고 주장함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c9v229434p2o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Platner&#39;s disastrous candidacy exposes rifts that could dampen Democrats&#39; Senate hopes</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;플래트너의 참혹한 출마가 민주당의 상원 희망을 약화시킬 수 있는 균열을 노출함&#39;, &#39;summary&#39;: &#39;• 플래트너의 출마는 민주당이 반드시 이겨야 하는 선거에서 혼란을 일으킴\n• 민주당 내부의 분열이 드러나고 있음\n• 이 분열은 민주당의 상원 선거 희망을 약화시킬 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c20ylnn8wqgo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>It was &#39;love at first sight&#39; with their adopted baby. Then they were told he may have been trafficked</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;입양한 아기와의 첫 만남은 사랑이었다. 그러나 아기가 인신매매의 피해자일 수 있다는 사실이 알려졌다&#39;, &#39;summary&#39;: &#39;• 데이비드와 앨리는 입양한 아기 마커스와의 첫 만남이 사랑이었다고 한다.\n• 그러나 그들은 마커스가 인신매매의 피해자일 수 있다는 사실을 알게 되었다.\n• 이 사실이 알려지면서 데이비드와 앨리는 마커스를 잃을지도 모른다는 두려움에 사로잡혔다.&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/czxq4ge246wo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Watch: We&#39;re a step closer to finding out if bees have feelings, here&#39;s why</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;벌이 감정을 가졌는지 알기 위해 한 걸음 더 나아감&#39;, &#39;summary&#39;: &#39;• 연구에 따르면 쇠똥벌레가 포유류에서만 관찰된 감정과 유사한 행동을 보임\n• 이러한 행동은 감정과 관련된 것으로 여겨짐\n• 이는 벌이 감정을 가졌을 가능성을 시사함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/videos/cpq309jrve4o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
