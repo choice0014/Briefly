@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-07-14 18:38:51</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Google faces another AI training lawsuit from major publishers</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;구글, 주요 출판사로부터 또 다른 AI 훈련 소송에 직면함&#39;, &#39;summary&#39;: &#39;• 주요 출판사인 Hachette, Cengage, Elsevier 등이 구글이 필요한 허가 없이 저작권이 있는 작품으로 AI를 훈련시켰다고 주장함\n• 해당 출판사들은 구글의 행동이 저작권을 침해한다고 주장함\n• 이 소송은 구글의 AI 훈련 방법에 대한 또 다른 법적 도전임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>DeepMind CEO calls for an independent standards body to regulate frontier AI</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;디프마인드 최고경영자가 제안한 인공지능 규제를 위한 독립 표준 기관&#39;, &#39;summary&#39;: &#39;• 디프마인드의 최고경영자 데미스 하사비스는 인공지능 규제를 위한 독립 표준 기관을 제안함\n• 이 기관은 FINRA와 유사한 형태로 운영되어 새로운 인공지능 모델을 테스트하고 공개를 위한 최선의 방법을 개발함\n• 이러한 독립 표준 기관은 인공지능 기술의 발전에 따른 규제와 안전을 확보하기 위해 필요함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>DeepSeek reportedly in talks to raise $1.5B, then IPO</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;디프시크, 71억 달러 평가로 15억 달러 투자 유치 후 2027년 상장임&#39;, &#39;summary&#39;: &#39;• 디프시크는 중국의 대형 언어 모델 개발업체임\n• 71억 달러의 기업 가치로 15억 달러의 신규 자금을 유치하려 함\n• 2027년 상장 계획을 세우고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/14/deepseek-reportedly-in-talks-to-raise-1-5b-then-ipo/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Meta’s Adam Mosseri says AI token budgets could soon be capped per engineer</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;메타의 아담 모세리, 인공지능 토큰 예산이 곧 엔지니어당 제한될 수 있음&#39;, &#39;summary&#39;: &#39;• 아담 모세리는 인공지능 토큰 지출을 급여나 운영 비용과 같은 방식으로 관리해야 할 필요가 있다고 믿음\n• 엔지니어들은 곧 인공지능 도구를 사용할 때 지출할 수 있는 금액에 제한을 받을 수 있음\n• 이는 인공지능 토큰 예산을 효율적으로 관리하고 비용을 통제하기 위한 조치임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/14/metas-adam-mosseri-says-ai-token-budgets-could-soon-be-capped-per-engineer/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Google Images gets a Pinterest-like redesign focused on discovery</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;구글 이미지, 사용자 맞춤형 이미지 갤러리 기능 추가&#39;, &#39;summary&#39;: &#39;• 구글 이미지에 접속하면 사용자의 관심사와 브라우징 기록에 따라 맞춤형 이미지 갤러리가 표시됨\n• 사용자 맞춤형 갤러리는 사용자의 관심사를 반영하여 이미지 검색 결과를 제공함\n• 새로운 디자인은 사용자가 새로운 이미지를 발견하고 탐색할 수 있도록 설계됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/14/google-images-gets-a-pinterest-like-redesign-focused-on-discovery/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Government failing Farage over security, says Jenrick</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;정부가 패라지의 안전을 위해 실패했다고 제닉은 말함&#39;, &#39;summary&#39;: &#39;• 제닉은 정부가 패라지의 안전을 보장하지 못했다고 말함\n• 안 위드컴의 죽음에 대한 경찰 수사로 정치인들의 안전에 대한 논란이 재점화됨\n• 정치인들의 안전 문제는 계속 논의되고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c4gyg9452qlo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Chris Mason: Investigation into Widdecombe&#39;s death rekindles debate over how to protect politicians</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;크리스 메이슨: 위드콤의 죽음에 대한 조사로 정치인 보호 방안에 대한 논쟁이 재점화됨&#39;, &#39;summary&#39;: &#39;• 크리스 메이슨은 정치 편집장으로서 위드콤의 죽음에 대한 조사가 정치인들을 보호하는 방안에 대한 논쟁을 재점화시킴\n• 많은 의원들은 폭력적인 언어와 학대를 정상화하는 데 사회 미디어를 비난함\n• 위드콤의 죽음은 정치인들을 보호하기 위한 더 강력한 조치가 필요함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cvgdgx01y98o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>MPs expected to approve long-delayed Hillsborough Law</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;MPs expected to approve long-delayed Hillsborough Law&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c9q2qwnvd75o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Public to be told how to prepare for cyber-attack and weather emergencies</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Public to be told how to prepare for cyber-attack and weather emergencies&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cp3x37lw1ndo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Row after Tory bid to make Burnham face MPs before autumn fails</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Row after Tory bid to make Burnham face MPs before autumn fails&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cj6g61y6lpro?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Trump scraps threat of 20% fee on Hormuz cargo as US prepares to resume blockade of Iran ports</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Trump scraps threat of 20% fee on Hormuz cargo as US prepares to resume blockade of Iran ports&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cy0608wy8pro?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>How US commerce secretary&#39;s Epstein links were uncovered by British whistleblower</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;How US commerce secretary&#39;s Epstein links were uncovered by British whistleblower&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c9q28dlyxrzo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Israeli strike on police post in north Gaza kills seven, officials say</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Israeli strike on police post in north Gaza kills seven, officials say&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cqj1jqeyl5ro?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Diamond giant De Beers halts work at flagship South African mine as demand plummets</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Diamond giant De Beers halts work at flagship South African mine as demand plummets&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cjrgr7lr1ejo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>&#39;If we die, we die together&#39;: Wife of man nearly sucked out of Ryanair plane speaks of ordeal</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;&#39;If we die, we die together&#39;: Wife of man nearly sucked out of Ryanair plane speaks of ordeal&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cly8yjnw822o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
