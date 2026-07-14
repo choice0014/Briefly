@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-07-14 12:47:26</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Pinwheel launches a retro-inspired landline phone for kids</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;핀휠, 아이들을 위한 레트로风 랜드라인 전화 출시함&#39;, &#39;summary&#39;: &#39;• 핀휠은 아이들이 스마트폰의 방해 없이 연결되어 있을 수 있도록 설계된 새로운 랜드라인 전화의 출시를 발표함\n• 이 전화는 아이들이 안전하고 간단하게 통신할 수 있도록 설계됨\n• 레트로风 디자인으로 아이들에게 매력적인 제품임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/14/pinwheel-launches-a-retro-inspired-landline-phone-for-kids/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Already rich, already successful, why the last wave of tech winners is grinding again</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이미 부자이고 성공했지만 왜 최근 기술 분야의 승자들은 다시 노력하는가&#39;, &#39;summary&#39;: &#39;• 기술 분야의 최근 승자들은 인공지능의 결정적인 순간을 놓치지 않으려는 두려움과 더 많은 돈을 벌고 싶은 끌림에 다시 노력하고 있음\n• 이미 부자이고 성공했지만 더 많은 돈을 벌기 위해 다시 노력하는 이유는 인공지능의 기회를 잡으려는 것임\n• 인공지능의 기회를 잡기 위해 다시 노력하는 최근 기술 분야의 승자들은 더 많은 돈을 벌고 싶은 마음에驱動됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/13/already-rich-already-successful-why-the-last-wave-of-tech-winners-is-grinding-again/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Uber’s product chief on hotels, robotaxis, and why the company doesn’t want to be ‘everything for everyone’</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;우버의 제품 책임자, 호텔과 로보택시, 그리고 모든 것을 다 하려는 것이 아님을 말함&#39;, &#39;summary&#39;: &#39;• 우버의 제품 책임자는 우버의 금융 서비스 계획과 웨이모와의 복잡한 관계에 대해 설명함\n• 우버는 새로운 자율 주행 연구소 데이터 운영을 시작함\n• 인공지능은 乗客과 운전기사에게 실제로 영향을 미치는 방식으로 나타나기 시작함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/13/ubers-product-chief-on-hotels-robotaxis-and-why-the-company-doesnt-want-to-be-everything-for-everyone/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Video-generation startup PixVerse raises $439M, valuation soars past $2B</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;비디오 생성 스타트업 픽스버스, 439만 달러 투자 유치로 기업 가치 20억 달러 넘어&#39;, &#39;summary&#39;: &#39;• 픽스버스는 투자 유치한 자금으로 세계 모델 제공 확대할 계획임\n• 지리적 제한 없이 고객에게 다가갈 수 있는 방안을 강구함\n• 기업 가치가 20억 달러를 넘어서게 됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>X just tweaked its algorithm to make it more friendly, less battleground</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;X가 알고리즘을 조정하여 더 친절하고 덜 충돌하게 함&#39;, &#39;summary&#39;: &#39;• 사용자의 상호 팔로워가 작성한 게시물을 증폭하여 피드를 더 공동체적인 느낌으로 만듦\n• 사용자 간의 상호작용을 증가시키고 더 따뜻한 분위기를 조성함\n• 사용자 경험을 개선하고 더 긍정적인 커뮤니티를 구축하기 위한 시도임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/13/x-just-tweaked-its-algorithm-to-make-it-more-friendly-less-battleground/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Government failing Farage over security, says Jenrick</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;정부가 패라지의 안전을 위해 실패했다고 제닉은 말함&#39;, &#39;summary&#39;: &#39;• 제닉은 정부가 패라지의 안전을 보장하지 못했다고 말함\n• 안 위드콤의 사망에 대한 경찰 수사로 정치인들의 안전에 대한 논란이 재점화됨\n• 정치인들의 안전 문제는 계속해서 논의되고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c4gyg9452qlo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Chris Mason: Investigation into Widdecombe&#39;s death rekindles debate over how to protect politicians</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;Chris Mason: Investigation into Widdecombe&#39;s death rekindles debate over how to protect politicians&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cvgdgx01y98o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Burnham cements Labour leadership with backing of 349 MPs</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Burnham cements Labour leadership with backing of 349 MPs&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c05y3rj09qqo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>UK bans support for Iran&#39;s Islamic Revolutionary Guard Corps</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;영국, 이란 이슬람 혁명 수비대에 대한 지원 금지&#39;, &#39;summary&#39;: &#39;• 영국은 이슬람 혁명 수비대에 대한 지원을 금지함\n• 이슬람 혁명 수비대는 영국 영내에서 발생한 살인 위협과 협박과 관련됨\n• 새 권한을 사용해 이슬람 혁명 수비대에 대한 지원을 금지함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cz0jkj7e87go?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Mahmood says law will be changed to help deport grooming gang leader</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Mahmood says law will be changed to help deport grooming gang leader&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/ce8m9615dqlo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Bangkok fire investigation finds locked doors and flammable decor as deaths climb to 30</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Bangkok fire investigation finds locked doors and flammable decor as deaths climb to 30&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/clyxyzlp9p2o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>&#39;If we die, we die together&#39;: Wife of man nearly sucked out of Ryanair plane speaks of ordeal</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;&#39;If we die, we die together&#39;: Wife of man nearly sucked out of Ryanair plane speaks of ordeal&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cly8yjnw822o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Yemen&#39;s Houthis launch missiles at Saudi Arabia after strikes on Sanaa airport</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;Yemen&#39;s Houthis launch missiles at Saudi Arabia after strikes on Sanaa airport&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cp9ldle3d3xo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Australian police reveal unseen photos 25 years after British backpacker murder</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Australian police reveal unseen photos 25 years after British backpacker murder&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/crlwln0gkzlo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Hungary parliament votes to remove president from office</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Hungary parliament votes to remove president from office&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cp8r002gdevo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
