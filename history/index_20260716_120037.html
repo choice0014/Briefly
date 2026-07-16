@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-07-16 09:34:34</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Lululemon backs nylon-recycling startup Syntetica in $30M Series A</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;루루레몬, 나일론 재활용 스타트업 신테티카에 3천만 달러 투자&#39;, &#39;summary&#39;: &#39;• 루루레몬은 나일론 재활용 기술을 개발한 프랑스 스타트업 신테티카에 3천만 달러를 투자함\n• 신테티카는 나일론 재활용에 새로운 접근 방식을 개발하여 큰 이름의 파트너와 투자자를 이미 확보함\n• 신테티카의 기술은 나일론 재활용을 더 효율적이고 환경적으로 친화적임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/15/lululemon-backs-nylon-recycling-startup-syntetica-in-30m-series-a/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Applied Computing wants to give oil and gas operators an AI model for the entire plant</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;적용 컴퓨팅, 석유 및 가스 운영업체에 전체 공장용 AI 모델 제공하려 함&#39;, &#39;summary&#39;: &#39;• 적용 컴퓨팅은 석유, 가스, 석유화학 산업을 위한 기초 AI 모델을 구축하기 위해 2,000만 달러의 시리즈 A 자금을 조달함\n• 이 자금은 전체 공장용 AI 모델 개발에 사용될 예정임\n• 이를 통해 석유 및 가스 운영업체의 효율성과 생산성을 높일 수 있을 것임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/15/applied-computing-wants-to-give-oil-and-gas-operators-an-ai-model-for-the-entire-plant/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Why Greylock capped its new fund at $1.5B when it says it could have raised more</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;그레이록이 신규 펀드를 15억 달러로 제한한 이유&#39;, &#39;summary&#39;: &#39;• 그레이록은 신규 펀드를 15억 달러로 제한함\n• 펀드당 투자 수를 약 25개로 유지하여 창립자들에게 가장 중요한 파트너로 남고 있음\n• 그레이록은 더 많은 자금을 조달할 수 있었음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/15/why-greylock-capped-its-new-fund-at-1-5b-when-it-says-it-could-have-raised-more/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Microsoft is reportedly training salespeople to talk down OpenAI and Anthropic</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;마이크로소프트, 오픈아이와 앤트로픽을 낮추는 판매 전략을 훈련함&#39;, &#39;summary&#39;: &#39;• 마이크로소프트는 자체 개발한 인공지능 모델을 경쟁사 모델보다 효율적이고 비용 효율적인 것으로 판매하려 함\n• 이를 위해 판매 인력을 교육하여 경쟁사 모델의 약점을 강조하려 함\n• 마이크로소프트의 목표는 자체 인공지능 모델의 판매를 늘리고 시장 점유율을 높임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/15/microsoft-is-reportedly-training-salespeople-to-talk-down-openai-and-anthropic/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Tesla driver in fatal Texas crash pressed accelerator 100%, NTSB confirms</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;테슬라 운전자가 가속 페달을 100% 밟아 테็กซ스에서 발생한 사고 관련 조사 결과&#39;, &#39;summary&#39;: &#39;• 테슬라의 사고 설명이 안전 위원회의 조사 결과와 일치함\n• 사고 당시 운전자가 가속 페달을 100% 밟은 것으로 확인됨\n• 테슬라의 초기 설명이 사실로 밝혀짐&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/15/tesla-driver-in-fatal-texas-crash-pressed-accelerator-100-ntsb-confirms/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Burnham faces crucial choice for chancellor as battle for No 11 continues</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;번햄, 재무장관 임명에서 중요한 선택에 직면함&#39;, &#39;summary&#39;: &#39;• 번햄이 임명하는 재무장관은 그의 의도에 대한 신호를 보냄\n• 번햄의 선택은 그의 정치적 방향을 결정함\n• 번햄의 재무장관 임명은 그의 정부의 경제정책에 영향을 미침&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/ceqe55d0q9po?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Starmer pledges &#39;cast-iron support&#39; for Ukraine on final visit as PM</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스타머, 우크라이나 최종 방문에서 우크라이나에 대한 철저한 지지 약속함&#39;, &#39;summary&#39;: &#39;• 스타머 영국 총리는 우크라이나의 젤렌스키 대통령과 키이우에서 회동함\n• 회동에서 우크라이나에 대한 지지와 협력을 논의함\n• 스타머의 우크라이나 방문은 우크라이나와의 관계 강화에 중점을 둠&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cx2myl1erj8o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Pakistan resisting UK attempts to deport grooming gang leader</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;파키스탄, 성범죄조직 리더의 강제 추방에 대한 영국의 시도에 저항함&#39;, &#39;summary&#39;: &#39;• 파키스탄 정부는 성범죄조직 리더인 샤비르 아흐메드의 사건과는 아무런 관련이 없음을 밝힘\n• 파키스탄은 영국의 추방 시도에 저항하는 중임\n• 샤비르 아흐메드의 추방 문제는 파키스탄과 영국 간의 외교적 긴장으로 이어질 가능성이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/clyxnvjy706o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>British Steel taken into public ownership to protect &#39;vital&#39; UK supply</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;영국 철강 산업을 보호하기 위해 영국 철강을 공공 소유로 이전함&#39;, &#39;summary&#39;: &#39;• 영국 정부는 새로운 권한을 행사하여 스컨소프 철강 공장을 공식적으로 국유화함\n• 이 결정은 영국 철강 산업을 보호하고 공급을 유지하기 위한 조치임\n• 스컨소프 철강 공장은 영국 철강 산업에서 중요한 역할을 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c5y680w62wno?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>UK economy returns to growth in May</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;영국 경제, 5월에 성장으로 돌아옴&#39;, &#39;summary&#39;: &#39;• 영국 경제는 이전 달에 나타났던 약간의 수축을 뒤집고 성장으로 돌아옴\n• 5월의 성장은 이전 달에 비해 약간의 개선임\n• 이 성장은 영국 경제에 긍정적인 영향을 미침&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c8xnllq944go?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Iran targets military bases as US launches wave of strikes</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이란이 군사 기지를 공격함&#39;, &#39;summary&#39;: &#39;• 이란은 미국의 공격에 대응하여 군사 기지를 공격함\n• 이란과 인접한 걸프 국가에서 공격이 보고됨\n• 밤새 이란 전역에서 폭발음이 들림&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c2lq1ed28jxo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Argentina face action over Falklands banner</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;아르헨티나, 포클랜드 제도 배너로 인해 제재 받을 수 있음&#39;, &#39;summary&#39;: &#39;• 아르헨티나 선수들이 잉글랜드와의 월드컵 4강전 승리 후 포클랜드 제도 영유권 주장 지지 배너를 내건 것으로 알려짐\n• 이에 따라 아르헨티나가 FIFA로부터 제재를 받을 가능성이 있음\n• 아르헨티나의 행동이 정치적 메시지를 전달한 것으로 간주될 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/sport/football/articles/c935pgr4dklo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Families of 43 victims await verdict in Genoa bridge disaster</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;제노바 대교 참사 43명 피해자 가족们, 판결을 기다림&#39;, &#39;summary&#39;: &#39;• 제노바 대교의 큰 부분이 무너져 철도 선로 아래로 떨어짐\n• 이 사고로 43명이 사망함\n• 사고의 원인과 책임에 대한 판결이 임박함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c20y00712ezo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>US military to start screening for testosterone deficiency, Hegseth says</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;미국 軍, 테스토스테론 결핍증 검사 시작&#39;, &#39;summary&#39;: &#39;• 미국 軍은 테스토스테론 결핍증을 검사하기 시작함\n• 이는 미국 군인들이 최상의 상태로 작전을 수행하도록 하기 위함임\n• 헤크세스는 호르몬 검사를 통해 軍인들이 최고의 능력을 발휘할 수 있도록 하겠다고 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cn0nlx18rz0o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Actor Sam Neill died from pneumonia, agent confirms</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;배우 샘 닐, 폐렴으로 사망 확인됨&#39;, &#39;summary&#39;: &#39;• 샘 닐은 월요일 시드니에서 사망함\n• 그의 가족은 그의 사망이 갑자기 발생했음\n• 샘 닐의 사망은 예상치 못한 사건임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cddj7e8v767o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
