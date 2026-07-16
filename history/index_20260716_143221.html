@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-07-16 12:00:37</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Ultrahuman’s former hardware VP raises $5.5M for devices that control AI agents, not just record you</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;전 울트라휴먼 하드웨어 부사장이 인공지능 에이전트를 제어하는 장치를 위해 550만 달러를 모금함&#39;, &#39;summary&#39;: &#39;• 전 울트라휴먼 하드웨어 부사장이 새로운 스타트업을 설립하고 자금을 모금함\n• 새로운 장치는 인공지능 에이전트를 제어하는 기능을 가짐\n• 아이나는 다가오는 주에 새로운 장치를 테스트할 예정임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/16/ultrahumans-former-hardware-vp-raises-5-5m-for-devices-that-control-ai-agents-not-just-record-you/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Meta now alerts parents if their teen discussed suicide or self-harm with its AI chatbot</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;메타, 청소년 자해 또는 자살에 대한 AI 챗봇 대화 시 부모에게 알림함&#39;, &#39;summary&#39;: &#39;• 메타는 청소년이 자살이나 자해와 관련된 대화를 AI 챗봇과 나눈 경우 부모에게 알림함\n• 이 업데이트는 메타와 다른 기술 회사들이 청소년을 포함한 위기 상황에 있는 사용자에게 AI 챗봇이 어떻게 반응하는지에 대한 규제와 부모의 관심을 받고 있음\n• 메타의 업데이트는 이러한 문제에 대한 우려를 해결하기 위한 노력의 일환임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/16/meta-now-alerts-parents-if-their-teen-discussed-suicide-or-self-harm-with-its-ai-chatbot/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Phone maker OnePlus says it won’t release new phones in the U.S. and Europe</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;원플러스, 미국과 유럽에서 새로운 휴대폰 출시 중단함&#39;, &#39;summary&#39;: &#39;• 원플러스가 미국과 유럽 시장에서 새로운 휴대폰을 출시하지 않음\n• 이 결정으로 원플러스가 미국과 유럽 시장에서 철수할 가능성이 있음\n• 원플러스가 2027년까지 인도 시장에서도 운영을 축소할 계획임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/16/phone-maker-oneplus-reportedly-plans-to-wind-down-us-and-europe-operations/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Lululemon backs nylon-recycling startup Syntetica in $30M Series A</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;루루레몬, 나일론 재활용 스타트업 신테티카에 3천만 달러 투자&#39;, &#39;summary&#39;: &#39;• 루루레몬은 나일론 재활용 기술을 개발한 프랑스 스타트업 신테티카에 3천만 달러를 투자함\n• 신테티카는 나일론 재활용에 새로운 접근 방식을 개발하여 큰 성과를 거둠\n• 신테티카는 이미 유명한 파트너와 투자자를 확보함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/15/lululemon-backs-nylon-recycling-startup-syntetica-in-30m-series-a/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Applied Computing wants to give oil and gas operators an AI model for the entire plant</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;적용 컴퓨팅, 석유 및 가스 운영업체에 전체 공장용 AI 모델 제공하려 함&#39;, &#39;summary&#39;: &#39;• 적용 컴퓨팅은 석유, 가스, 석유화학 산업을 위한 기초 AI 모델을 구축하기 위해 2,000만 달러의 시리즈 A 자금을 조달함\n• 이 자금은 전체 공장용 AI 모델 개발에 사용될 예정임\n• 석유 및 가스 운영업체의 효율성을 높이는 데 도움이 될 것임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/15/applied-computing-wants-to-give-oil-and-gas-operators-an-ai-model-for-the-entire-plant/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Who is the frontrunner to be the UK&#39;s next chancellor?</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;영국의 다음 재무장관 후보는 누구일까?&#39;, &#39;summary&#39;: &#39;• 앤디 번햄이 다음 주에 다우닝가에 입주할 예정임\n• 앤디 번햄의 이웃이 될 사람에 대한 물음이 남아있음\n• 앤디 번햄의 이웃은 영국의 다음 재무장관이 될 가능성이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c36yj4pn7jdo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Starmer pledges &#39;cast-iron support&#39; for Ukraine on final visit as PM</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스타머, 우크라이나 최종 방문에서 우크라이나에 대한 철저한 지지 약속함&#39;, &#39;summary&#39;: &#39;• 스타머 영국 총리는 우크라이나의 젤렌스키 대통령과 회동함\n• 회동은 키이우에서 열림\n• 스타머는 우크라이나에 대한 지지 의사를 재확인함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cx2myl1erj8o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Pakistan resisting UK attempts to deport grooming gang leader</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;파키스탄, 성범죄조직 리더의 영국 강제 추방에 저항함&#39;, &#39;summary&#39;: &#39;• 파키스탄 정부는 성범죄조직 리더인 샤비르 아흐메드의 사건과는 아무런 관련이 없음을 밝힘\n• 파키스탄은 영국의 추방 시도에 저항하는 중임\n• 샤비르 아흐메드의 추방 문제는 파키스탄과 영국 간의 외교적 긴장으로 이어질 가능성이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/clyxnvjy706o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>British Steel taken into public ownership to protect &#39;vital&#39; UK supply</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;영국 철강 산업을 보호하기 위해 영국 철강을 공공 소유로 이전함&#39;, &#39;summary&#39;: &#39;• 영국 정부는 새로운 권한을 행사하여 스컨소프 철강 공장을 공식적으로 국유화함\n• 이 결정은 영국 철강 산업의 안정성을 유지하기 위해 필요한 조치임\n• 스컨소프 철강 공장은 영국 철강 산업에서 중요한 역할을 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c5y680w62wno?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>UK economy returns to growth in May</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;영국 경제, 5월에 성장으로 돌아옴&#39;, &#39;summary&#39;: &#39;• 영국 경제가 이전 달에 나타났던 약간의 수축을 뒤집고 성장으로 돌아옴\n• 5월에 나타난 성장은 미미한 수준임\n• 이전 달에 비해 경제 성장률이 개선됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c8xnllq944go?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Protests in Ukraine&#39;s cities against Zelensky&#39;s removal of defence minister</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;Protests in Ukraine&#39;s cities against Zelensky&#39;s removal of defence minister&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cdx76069n3do?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Iran targets military bases as US launches wave of strikes</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Iran targets military bases as US launches wave of strikes&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c2lq1ed28jxo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Argentina face action over Falklands banner</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Argentina face action over Falklands banner&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/sport/football/articles/c935pgr4dklo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>&#39;Moment of joy&#39; as Uganda discharges last Ebola patient</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;&#39;Moment of joy&#39; as Uganda discharges last Ebola patient&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cx2myxjv172o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Eleven people die in fire at Algerian children&#39;s care home</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;Eleven people die in fire at Algerian children&#39;s care home&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cvgwd4nz344o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
