@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-07-20 13:25:54</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Hugging Face confirms breach affected internal datasets and credentials, urges users to take action</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;허깅페이스, 내부 데이터셋과 자격 증명 정보 유출 확인, 사용자에게 조치 요구함&#39;, &#39;summary&#39;: &#39;• 허깅페이스는 사용자들에게 플랫폼에 저장된 모든 접근 토큰을 갱신할 것을 촉구함\n• 사용자들은 계정 활동을 검토해야 함\n• 허깅페이스 내부 데이터셋과 자격 증명 정보가 침해를 받은 것으로 확인됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/20/hugging-face-confirms-breach-affected-internal-datasets-and-credentials-urges-users-to-take-action/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>StrictlyVC returns to New York City September 10 to celebrate a huge year for the city’s startup community</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스트릭트리 비씨, 9월 10일 뉴욕에서 도시의 스타트업 커뮤니티의 엄청난 한 해를 축하함&#39;, &#39;summary&#39;: &#39;• 스트릭트리 비씨는 2024년 이후 처음으로 뉴욕으로 돌아옴\n• 뉴욕의 스타트업, 벤처 캐피탈, 거래 커뮤니티 전체에 접근할 수 있는 기회를 제공함\n• 9월 10일 뉴욕에서 스타트업 커뮤니티의 엄청난 한 해를 축하함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/20/strictlyvc-returns-to-new-york-city-september-10-to-celebrate-a-huge-year-for-the-citys-startup-community/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Netflix paid $587M for Ben Affleck’s AI filmmaking startup</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;넷플릭스가 벤 애플렉의 AI 영화 제작 스타트업을 587만 달러에 인수함&#39;, &#39;summary&#39;: &#39;• 넷플릭스는 벤 애플렉이 공동 창립한 인터포지티브를 587만 달러에 인수함\n• 인수 금액은 모두 현금으로 지불됨\n• 인터포지티브는 AI 기술을 활용한 영화 제작 스타트업임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/19/netflix-paid-587m-for-ben-afflecks-ai-filmmaking-startup/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>What to watch for after Jensen Huang’s Japan visit</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;젠슨 황의 일본 방문 후 주목할 점&#39;, &#39;summary&#39;: &#39;• 젠슨 황이 일본 기술 생태계 전반에 걸친 협약을 체결함\n• 일본 방문에서 젠슨 황이 얻은 성과를 분석함\n• 젠슨 황의 일본 방문이 미치는 영향과 향후 전망을 살펴봄&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/19/what-to-watch-for-after-jensen-huangs-japan-visit/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Can an Apple lawsuit derail OpenAI’s hardware plans?</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;애플의 소송이 오픈AI의 하드웨어 계획을 방해할 수 있나&#39;, &#39;summary&#39;: &#39;• 애플의 소송이 오픈AI의 하드웨어 시장 진출 계획에 영향을 미칠 수 있음\n• 오픈AI의 하드웨어 사업과 상장 계획에 대한 논의가 진행 중임\n• 애플의 소송이 오픈AI의 계획을 어떻게 변화시킬지에 대한 분석이 필요함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/19/can-an-apple-lawsuit-derail-openais-hardware-plans/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Burnham makes ending rough sleeping his first policy pledge as prime minister</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;번민을 해결하는 것을 첫 번째 정책으로 하는 버넘&#39;, &#39;summary&#39;: &#39;• 버넘은 그레이터 맨체스터 시장이 되면서도 비슷한 약속을 했지만 이룰 수 없었음\n• 버넘은 노동당 대표로서 첫 번째 정책 약속을 함\n• 버넘은 첫 번째 정책 약속으로 거리 무상주거 문제를 해결하려 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c0jl839j6z3o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Watch: Starmer resigns, Burnham becomes PM... the day so far</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스타머가 사임하고 번햄이 총리가 된 오늘 하루&#39;, &#39;summary&#39;: &#39;• 앤디 번햄이 버킹엄 궁전에서 국왕으로부터 임명되어 영국의 총리가 됨\n• 앤디 번햄은 새로운 총리로서의 역할을 수행함\n• 영국의 새로운 총리 임명은 정치적 변화를 가져옴&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/videos/cd0xgxgz135o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>&#39;A circuit-breaker moment&#39; - Watch Andy Burnham&#39;s first speech as PM in full</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;&#39;전환의 순간&#39; - 앤디 번햄의 첫 총리 연설 전면 보기&#34;, &#39;summary&#39;: &#39;• 앤디 번햄은 총리와 노동당 대표로 키어 스타머를 대신한 후 다우닝가 밖에서 연설함\n• 앤디 번햄은 노동당의 새로운 대표이자 총리로서의 첫 연설을 함\n• 키어 스타머의 후임으로 앤디 번햄이 총리와 노동당 대표로 임함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/videos/c934q2kkkvxo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>He&#39;ll be the first Andy in No 10 - but his rise to power has been decades in the making</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;그는 10번지에서 첫 번째 앤디가 될 것임&#39;, &#39;summary&#39;: &#39;• 앤디는 그레이터 맨체스터의 시장직을 떠나 웨스트민스터로 돌아옴\n• 그는 노동당 대표직을 위해 세 번째 도전을 준비중임\n• 그의 권력 상승은 수십 년 동안 준비되어 옴&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cp8pml5z8p6o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Prisons minister Lord Timpson quits government</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Prisons minister Lord Timpson quits government&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cvg0xlrvv4mo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Trump says US strikes hit Iran in &#39;honour&#39; of American soldiers killed</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;Trump says US strikes hit Iran in &#39;honour&#39; of American soldiers killed&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cly52xzjd3qo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Boy, 13, dies during World Cup celebrations in Spain</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Boy, 13, dies during World Cup celebrations in Spain&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c0qvdy0jv05o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Food delivery rider wins China&#39;s top literary prize</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;Food delivery rider wins China&#39;s top literary prize&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c5ydr3xd0kvo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Scores feared dead after passenger ferry capsizes off Guyana</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Scores feared dead after passenger ferry capsizes off Guyana&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cm2gm99nrm7o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>JD Vance says wife Usha and son &#39;happy and healthy&#39; after birth of fourth child</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;JD Vance says wife Usha and son &#39;happy and healthy&#39; after birth of fourth child&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cj63kngxpxpo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
