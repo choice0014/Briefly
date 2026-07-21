@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-07-21 16:55:01</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Instagram now lets you swap out the music in your old posts</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;인스타그램에서 이제 구 게시글의 음악을 교체할 수 있음&#39;, &#39;summary&#39;: &#39;• 인스타그램은 새로운 오디오 교체 기능을 제공함\n• 사용자는 기존 게시글의 음악을 언제든지 교체할 수 있음\n• 교체 후에도 기존의 좋아요, 댓글, 공유, 도달 수치가 유지됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/21/instagram-now-lets-you-swap-out-the-music-in-your-old-posts/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Threads rolls out parental supervision tools</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스레드에서 부모 감시 도구를 출시함&#39;, &#39;summary&#39;: &#39;• 스레드에서 부모와 보호자는 청소년의 스레드 사용 시간을 확인할 수 있음\n• 일일 사용 시간 제한을 설정하고 수면 모드를 조정할 수 있음\n• 개인 정보 설정을 관리할 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/21/threads-rolls-out-parental-supervision-tools/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>US threatens sanctions against Chinese AI models over IP theft</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;미국, 지적재산권 침해로 중국 AI 모델에 제재할 수 있음&#39;, &#39;summary&#39;: &#39;• 미국 재무부는 중국의 공개 AI 모델에 대한 제재를 고려하고 있음\n• 이는 중국의 AI 발전에 제동을 걸기 위한 트럼프 행정부의 캠페인 확대임\n• 미국은 중국의 지적재산권 침해에 대한 대응으로 제재를 시행할 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Light made a flip phone — it’s colorful and it’s cheap</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;라이트가 플립 폰을 만들었음 — 색상이 다양하고 저렴함&#39;, &#39;summary&#39;: &#39;• 라이트의 공동 창립자인 카이웨이 탕은 모토로라 레이저를 만들었음\n• 탕은 20년이 넘은 지금 플립 폰이 다시 관련이 있음에 놀라움\n• 탕은 플립 폰의 부활에 대해 의외라는 생각임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/21/light-is-modernizing-the-flip-phone-with-light-flip/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>After TikTok, Snap settles social media addiction case</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;틱톡 이후 스냅, 소셜 미디어 중독 소송 합의함&#39;, &#39;summary&#39;: &#39;• 틱톡은 최근 로스앤젤레스에서 열리는 배심원 재판 이전에 원고와 합의함\n• 유튜브도 합의를 이룸\n• 메타는 현재 유일한 피고임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/21/after-tiktok-snap-settles-social-media-addiction-case/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Starmer ally takes swipe at Burnham&#39;s first big policy</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스타머의 동맹이 번햄의 첫 정책에 비판함&#39;, &#39;summary&#39;: &#39;• 스타머의 전 우한인 다렌 존스는 번햄의 부가가치세 인하가 재정적으로 지원되지 않음을 비판함\n• 번햄의 부가가치세 인하는 재정적 지원이 없다는 비판이 제기됨\n• 스타머의 동맹은 번햄의 정책에 대한 비판을 계속함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c62xzn3j1p2o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Who&#39;s in Andy Burnham&#39;s cabinet?</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;앤디 번햄의 내각은 누구인가?&#39;, &#39;summary&#39;: &#39;• 앤디 번햄 총리가 임명한 노동당 의원들에 대한 심층 분석임\n• 노동당 의원들이 맡은 각료 역할에 대한 내용임\n• 앤디 번햄 총리의 내각 구성에 대한 정보임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/ckg4we9g58do?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>VAT to be cut from household electricity bills in October</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;10월에 가구용 전기 요금에서 부가세 削減&#39;, &#39;summary&#39;: &#39;• 10월에 가구용 전기 요금에서 부가세 削減함\n• 이 削減으로 인해 가구당 연간 약 45파운드 절약함\n• 앤디 번햄 총리의 첫 번째 공식 업무일에 削減이 발표됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cjwxll8jyz8o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>AI minister role boosted but tech department axed in Burnham shake-up</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;버넘의 개편으로 인해 AI 장관 역할 강화되나 기술 부서 폐지됨&#39;, &#39;summary&#39;: &#39;• 버넘의 정부 조직 개편으로 인해 AI 장관의 역할이 강화됨\n• 기술 부서가 폐지되며 기술 장관의 역할이 축소됨\n• 카니шка 나라얀은 내각에 참석하지만 더 이상 기술 부서의 책임을 지지 않음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cz97x8k4zqzo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Angela Rayner: Cabinet comeback for one of Labour&#39;s biggest names</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;앵글라 레이너: 노동당의 대표적인 인물의 내각 복귀&#39;, &#39;summary&#39;: &#39;• 앵글라 레이너는 키어 스타머의 후임 가능성이 있는 인물임\n• 앤디 번햄의 내각에서 복귀함\n• 노동당의 주요 인물 중 하나임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cqlz3p0ryylo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Trump slaps 50% tariffs on Canada and Carney vows to &#39;intensify&#39; trade talks</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;Trump slaps 50% tariffs on Canada and Carney vows to &#39;intensify&#39; trade talks&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cg4dzq3x3e1o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Row escalates in Ukraine over army chief&#39;s future</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;Row escalates in Ukraine over army chief&#39;s future&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c7vgel8374yo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>US launches fresh strikes on Iran, as Trump warns of retaliation for deaths of soldiers</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;US launches fresh strikes on Iran, as Trump warns of retaliation for deaths of soldiers&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cx25wg2x26do?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Lebanese army says troops deploying in &#39;pilot zone&#39; after Israeli withdrawal</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;Lebanese army says troops deploying in &#39;pilot zone&#39; after Israeli withdrawal&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cy8mynlmn55o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Dozens hurt in Bologna protests after man dies while being restrained by police</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Dozens hurt in Bologna protests after man dies while being restrained by police&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c86nwgw148xo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
