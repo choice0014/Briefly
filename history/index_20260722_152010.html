@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-07-22 12:57:20</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Glow emerges from stealth at $1.2B valuation to challenge endpoint security in the AI era</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;글로우, AI 시대 엔드포인트 보안 도전을 위해 12억 달러 평가로 출사표&#39;, &#39;summary&#39;: &#39;• 글로우는 기업 내에서 빠르게 채택되는 AI 에이전트와 개발자 도구로 인해 생성되는 새로운 엔드포인트 위험을 목표로 함\n• 엔드포인트 보안을 강화하기 위해 새로운 기술을 개발 중임\n• 글로우의 기술은 기업의 보안을 강화하고 위험을 줄임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/22/glow-emerges-from-stealth-at-1-2b-valuation-to-challenge-endpoint-security-in-the-ai-era/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Synthesia’s AI training platform is moving beyond videos into live coaching</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;신테시아의 AI 교육 플랫폼이 비디오를 넘어 라이브 코칭으로 확장함&#39;, &#39;summary&#39;: &#39;• 신테시아는 AI 역할 연기 세션을 출시함\n• 이 플랫폼은 직원들이 AI 아바타와 함께 직장 대화 연습을 하고 피드백과 점수를 받을 수 있음\n• 회사는 이 플랫폼을 통해 교육의 효과를 측정할 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/22/synthesias-ai-training-platform-is-moving-beyond-videos-into-live-coaching/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>The Anthropic-Physical Intelligence rumor roiling AI Twitter</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;인류지적 인공지능 소문이 트위터를 들끓게 함&#39;, &#39;summary&#39;: &#39;• 앤โทร픽과 오픈艾의 공격적인 2026년 인수 열풍이 주말 소문을 일으킴\n• 인공지능 업계에서 큰 관심을 끌고 있음\n• 앤โทร픽과 오픈艾의 경쟁이 인공지능 기술 발전에 영향을 미침&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/21/the-anthropic-physical-intelligence-rumor-roiling-ai-twitter/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Dimension Capital’s $800M third fund shows the intersection of science and compute is booming</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;디멘션 캐피탈의 8억 달러 규모 제3펀드, 과학과 컴퓨팅의 교차점이 번창함&#39;, &#39;summary&#39;: &#39;• 디멘션 캐피탈의 제3펀드는 18개월 전 발표된 두번째 펀드보다 60% 더 큰 규모임\n• 이 펀드는 과학과 컴퓨팅의 교차점에서 번창하는 투자 기회를 찾는 것을 목표로 함\n• 디멘션 캐피탈은 4년 전 설립된 회사로 과학과 기술 분야에 투자하는 펀드 관리 회사임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/21/dimension-capitals-800m-third-fund-shows-the-intersection-of-science-and-compute-is-booming/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Meta is testing an AI bedtime story app for people with no imagination</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;메타, 상상력이 없는 사람들을 위한 인공지능 자서전 어플리케이션을 테스트함&#39;, &#39;summary&#39;: &#39;• 메타는 상상력이 없는 사람들을 위한 인공지능 자서전 어플리케이션을 개발함\n• 이 어플리케이션은 사용자의 상상력을 대신하여 자서전을 생성함\n• 이 기술은 인간의 가장 오래된 여가 활동인 상상을 대체함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/21/meta-is-testing-an-ai-bedtime-story-app-for-people-with-no-imagination/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Burnham says he will review early prisoner release scheme</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;번햄 총리는 조기 석방 제도를 검토할 것임&#39;, &#39;summary&#39;: &#39;• 번햄 총리는 정책을 변경하는 것에 대해 확신을 줄 수 없지만 자세히 살펴볼 것임\n• 조기 석방 제도에 대한 검토는 앞으로 더 나아가기 전에 진행될 것임\n• 번햄 총리는 정책을 변경할지 여부에 대해 확신을 주지 않음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c0ejwedl1gno?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Streeting apologises after early prisoner release comments heard on mic</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스트리팅, 조건부 형기 단축 관련 발언으로 사과함&#39;, &#39;summary&#39;: &#39;• 스트리팅은 조건부 형기 단축 관련 발언으로 사과함\n• 스트리팅과 마흐무드는 새 법무부 장관에 대한 농담도 함\n• 발언은 마이크에 잡혀 방송됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cgk4x44mm50o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>No immediate change to income tax allowance, says Burnham</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;소득세 면제 한도에 즉각적인 변화는 없다고 번암이 말함&#39;, &#39;summary&#39;: &#39;• 번암은 이전에 총리가 된 후에 유권자들이 비과세 개인 소득 허가에 대한 동결에 대해 불만을 느끼고 있다고 말함\n• 소득세 면제 한도에 대한 즉각적인 변화는 없다고 함\n• 번암은 총리로서의 입장에서 세금 정책에 대한 입장을 밝힘&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c935g67wyvgo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Chris Mason: Sarwar ministerial role sees promotion of another Starmer critic</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;크리스 메이슨: 사르와르의 장관 역할은 스타머의 또 다른 비판자를 승진시킴&#39;, &#39;summary&#39;: &#39;• 스코틀랜드 노동당 대표인 사르와르는 몇 개월 전 케어 스타머의 사임을 요구한 바 있음\n• 사르와르는 버넘 정부에서 장관직을 맡게 될 것으로 보임\n• 이는 스타머의 또 다른 비판자가 승진하는 것으로 평가됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cx2rv14em3jo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Boost youth jobs by cutting employers&#39; national insurance, MPs urge</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;고용주 국民 보험료 절감으로 청년 일자리 늘리라고 의원들이 촉구함&#39;, &#39;summary&#39;: &#39;• 청년 일자리 창출을 위해 고용주 국民 보험료를 줄여야 함\n• 고용 비용이 증가하면 훈련과 일자리 공급이 줄어듬\n• 의원들은 고용 비용 증가로 인한 일자리 감소에 대한 압倒적인 증거를 들음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cy45p77l3zwo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Ukrainian drones hit more sites of Russian online retailer Wildberries</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Ukrainian drones hit more sites of Russian online retailer Wildberries&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c36de9n4pxpo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Zelensky sacks Ukraine&#39;s top army commander after days of protests</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;Zelensky sacks Ukraine&#39;s top army commander after days of protests&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cyvl35z3917o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Iran war has cost US $37.5bn so far, Hegseth says, as Pentagon seeks billions more</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Iran war has cost US $37.5bn so far, Hegseth says, as Pentagon seeks billions more&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c70gek2kqyno?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>India&#39;s Modi government under growing pressure as &#39;cockroach&#39; protests intensify</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;India&#39;s Modi government under growing pressure as &#39;cockroach&#39; protests intensify&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c9d8p88lyjdo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Modelling scout linked to Epstein found dead in Paris suburbs</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Modelling scout linked to Epstein found dead in Paris suburbs&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cp8en38vpd3o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
