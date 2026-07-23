@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-07-23 12:58:29</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Experts say exploiting Anthropic’s Fable isn’t how Kimi K3 got so good</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;전문가들은 Kimi K3가 Anthropic의 Fable을 악용해서 강해진 것이 아님을 말함&#39;, &#39;summary&#39;: &#39;• 전문가들은 Kimi K3가 Anthropic의 Fable을 악용해서 강해진 것이 아니라고 말함\n• Fable의 기술을 엄격하게 사용해서 이런 강력한 모델을 빠르게 개발할 수 없음\n• Kimi K3의 성능은 다른 요인에 의해 결정됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/23/experts-say-exploiting-anthropics-fable-isnt-how-kimi-k3-got-so-good/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>ServiceNow bets $40 million on Indian banking software specialist to expand its financial services push</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;서비스노우, 금융 서비스 확장 위해 인도 은행 소프트웨어 전문업체에 4천만 달러 투자함&#39;, &#39;summary&#39;: &#39;• 서비스노우의 투자는 비즈니스넥스트에게 글로벌 시장에서 인공지능 기반 은행 소프트웨어를 확장할 수 있는 전략적 파트너를 제공함\n• 이 투자는 서비스노우의 금융 서비스 확장 전략의 일환임\n• 비즈니스넥스트의 기술과 서비스노우의 글로벌 네트워크가 결합하여 금융 서비스 시장에서 경쟁력을 높임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/22/servicenow-bets-40m-on-indian-firm-businessnext-at-700m-valuation-to-deepen-banking-ai-push/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>After shocking quarter, IBM insists that AI isn’t killing the mainframe</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;충격적인 분기 결과에도 불구하고 IBM은 인공지능이 메인프레임을 죽이지 않는다고 주장함&#39;, &#39;summary&#39;: &#39;• IBM의 주가가 메인프레임 판매 부진으로 급락한 후 CEO는 인공지능이 기업의 하드웨어 예산을 일시적으로 파괴했다고 설명함\n• 메인프레임 판매 부진은 인공지능의 영향 때문임\n• IBM은 메인프레임이 인공지능에 의해 죽지 않는다고 주장함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/22/after-shocking-quarter-ibm-insists-that-ai-isnt-killing-the-mainframe/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Google justifies its massive AI spending with a booming cloud business</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;구글, 거대한 AI 투자에 대한 정당성을 갖춘 클라우드 사업의 호황&#39;, &#39;summary&#39;: &#39;• 구글의 클라우드 사업이 번창함에 따라 회사 수익이 기록적인 수준에 달함\n• 기업들이 구글의 AI 및 AI 인프라 서비스를 채택하면서 클라우드 사업이 호황을 이루고 있음\n• 구글의 거대한 AI 투자가 클라우드 사업의 성장으로 정당화됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/22/google-justifies-its-massive-ai-spending-with-a-booming-cloud-business/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Treasury threatens sanctions after White House claims Moonshot distilled Anthropic’s Fable</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;재무부, 화이트하우스의 문샷이 앤트로픽의 페이블을 추출했다는 주장 이후 제재 위협함&#39;, &#39;summary&#39;: &#39;• 재무부는 화이트하우스의 주장 이후 제재를 위협함\n• 이는 중국 오픈 모델의 유입에 대한 워싱턴의 논쟁을 더욱 격화시킴\n• 워싱턴의 논쟁은 중국 오픈 모델의 영향력에 대한 우려를 중심으로 진행됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Andy Burnham&#39;s plan to collaborate with social media creators</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;Andy Burnham&#39;s plan to collaborate with social media creators&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cy4k74xj9lyo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Gary Lineker among millionaires asking Andy Burnham to tax them more</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;개리 리네커 포함한 부호들이 앤디 번햄에게 더 많은 세금을 부과해줄 것을 요청함&#39;, &#39;summary&#39;: &#39;• 개리 리네커를 포함한 부호들이 앤디 번햄에게 더 많은 세금을 부과해줄 것을 요청함\n• 그들은 앤디 번햄에게 자신들이 더 많은 세금을 부담할 수 있음을 전함\n• 앤디 번햄에게 더 많은 세금을 부과해줄 것을 요청하는 내용의 서한을 보냄&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cvgjp79m42go?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>PC Harper&#39;s widow criticises early prisoner release plan as Burnham to review scheme</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;하퍼 경관의 아내, 조기 출소 계획에 비판&#39;, &#39;summary&#39;: &#39;• 하퍼 경관의 아내는 조기 출소 계획이 비난받을 만하다고 말함\n• 하퍼 경관의 살인범 2명이 조기 출소할 가능성이 있어 비판이 일고 있음\n• 아내는 이 계획에 강한 반대 의견을 나타냄&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c0ejwedl1gno?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Former defence minister Al Carns turns down ministerial offer</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;전 국방부 장관 알 카恩스, 장관직 제의를 거절함&#39;, &#39;summary&#39;: &#39;• 알 카恩스는 군사 자금에 대한 논쟁으로 국방부 장관 존 힐리의 사임 이후 사임함\n• 카恩스는 이전에 국방부 장관직을 맡았음\n• 카恩스의 사임은 군사 자금 문제로 인한 정부 내부의 불안정함을 보여줌&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c74geex0k82o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Ann Widdecombe public memorial to be held later this year, family says</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;앤 위드콤의 공개 추도식이 올해 말에 열림&#39;, &#39;summary&#39;: &#39;• 앤 위드콤의 가족과 가까운 친구들을 위한 사적 장례식이 곧 열림\n• 공개 추도식은 사적 장례식 이후에 열림\n• 공개 추도식의 정확한 날짜는 아직 발표되지 않음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cddj9edj76eo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>US signs landmark nuclear deal with Saudi Arabia</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;US signs landmark nuclear deal with Saudi Arabia&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cj03r59z73po?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Houthis claim attack on oil tankers as US launches more strikes on Iran</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;Houthis claim attack on oil tankers as US launches more strikes on Iran&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cpw9xzx9r4ko?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>France evacuates 20,000 as wildfires spread in south-west</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;France evacuates 20,000 as wildfires spread in south-west&#39;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cy4kmr82n44o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>&#39;I am still alive&#39;: Indian activist on hunger strike for 26 days loses 11kg</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;&#39;I am still alive&#39;: Indian activist on hunger strike for 26 days loses 11kg&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/ce34n7kqr5ko?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Canada&#39;s &#39;powerful&#39; dairy sector is in Trump&#39;s trade crosshairs</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#34;Canada&#39;s &#39;powerful&#39; dairy sector is in Trump&#39;s trade crosshairs&#34;, &#39;summary&#39;: &#39;요약 생성 불가&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/ce8kvm84lxmo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
