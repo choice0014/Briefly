@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-07-27 17:17:32</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Threads users can now chat with Meta AI in their DMs</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스레드 사용자들은 이제 개인 메시지에서 메타 AI와 채팅할 수 있음&#39;, &#39;summary&#39;: &#39;• 메타는 스레드의 개인 메시지에서 메타 AI 채팅봇을 출시함\n• 사용자들은 이제 개인 메시지에서 메타 AI와 채팅할 수 있음\n• 메타 AI 채팅봇은 사용자들에게 도움을 줄 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/27/threads-users-can-now-chat-with-meta-ai-in-their-dms/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Google’s AI search is rapidly becoming the default, new data shows</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;구글의 인공지능 검색이 빠르게 기본으로 바뀌고 있음&#39;, &#39;summary&#39;: &#39;• 구글의 인공지능 요약이 검색 결과에 43%로 나타남\n• 인공지능 생성 답변은 온라인에서 정보를 발견하는 기본 방법으로 빠르게 바뀌고 있음\n• 구글의 인공지능 기술은 검색 결과에 큰 영향을 미치고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/27/googles-ai-search-is-rapidly-becoming-the-default-new-data-shows/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Power up your AI infrastructure! A first look at the Smart Systems Stage agenda at TechCrunch Disrupt 2026</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;인공지능 인프라를 강화하세요! 테크크런치 디스럽트 2026의 스마트 시스템 스테이지 일정 첫 번째 살펴보기&#39;, &#39;summary&#39;: &#39;• 테크크런치 디스럽트 2026의 스마트 시스템 스테이지에서는 에너지, 인프라, 기술이 만나는 장소임\n• 융합 기술의 돌파구부터 인공지능이 경제 전체에 미치는 전력망의 부담까지 다양한 주제를 다룸\n• 인공지능이 경제에 미치는 영향과 관련된 다양한 논의가 진행됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/27/power-up-your-ai-infrastructure-a-first-look-at-the-smart-systems-stage-agenda-at-techcrunch-disrupt-2026/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>This $9 key physically locks your most addictive apps</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;9달러짜리 키로 가장 중독성 있는 앱을 물리적으로 잠그다&#39;, &#39;summary&#39;: &#39;• 9달러짜리 NFC 키는 사용자가 중독성 있는 앱을 사용하기 위해 키를 스캔해야 함\n• 이 키는 사용자가 스마트폰에서 특정 앱을 사용하기 전에 물리적인 동작을 해야 함\n• 중독성 있는 앱을 사용하기 전에 의식적으로 키를 스캔해야 하므로 사용자의 의식적인 선택을 유도함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/27/this-9-key-physically-locks-your-most-addictive-apps/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Ilya Sutskever’s Safe Superintelligence partners with Nvidia to scale its AI research</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;일리야 수츠케버의 안전한 초지능이 엔비디아와 제휴하여 인공지능 연구를 확대함&#39;, &#39;summary&#39;: &#39;• 일리야 수츠케버의 안전한 초지능은 2년간의 비공개 개발을 마치고 엔비디아와 장기 제휴를 발표함\n• 이 제휴는 안전한 초지능이 인공지능 연구를 확대하고 다음 단계로 나아가기 위한 준비의 일환임\n• 엔비디아와의 제휴를 통해 안전한 초지능은 인공지능 기술의 발전에 기여할 예정임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/27/ilya-sutskevers-safe-superintelligence-partners-with-nvidia-to-scale-its-ai-research/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>NHS &#39;will collapse&#39; without social care reform, PM tells BBC</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;NHS가 무너질 수 있음, 사회 복지 개혁 필요함&#39;, &#39;summary&#39;: &#39;• 영국 총리는 사회 복지 시스템에 큰 변화를 가져오지 않으면 사임할 수 없음을 말함\n• 사회 복지 시스템의 개혁이 필요함\n• 총리는 사회 복지 시스템의 개혁을 통해 NHS를 지킬 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cn0n5xpzlz2o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Laura Kuenssberg: Our exclusive behind-the-scenes access at No 10 as Andy Burnham became PM</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;로라 쿤스버그: 앤디 번햄 총리가 된 후 10번지에서의 우리의 독점적인 현장 접근&#39;, &#39;summary&#39;: &#39;• 로라 쿤스버그는 새로운 총리의 첫 번째 업무 일에 대한 접근을 허용받음\n• 앤디 번햄 총리가 된 후의 상황을 담은 내용임\n• 총리 업무의 초기 상황을 담은 내용임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c79gdjlv78wo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Burnham says he is prepared to call out Trump &#39;if right for Britain&#39;</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;번함은 영국에 좋을 경우 트럼프를 비판할 준비가 됨&#39;, &#39;summary&#39;: &#39;• 번함은 BBC와의 독점 인터뷰에서 미국 대통령과의 첫 대화를 잘 마쳤다고 말함\n• 그는 각국이 자국의 국익을 지켜야 함을 강조함\n• 번함은 영국의 이익을 위해 트럼프를 비판할 준비가 됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/clye651yzdjo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Andy Burnham rules out early election in exclusive BBC interview</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;앤디 번햄, 조기 총선 가능성 배제&#39;, &#39;summary&#39;: &#39;• 앤디 번햄은 조기 총선이 없을 것임\n• 그는 사람들은 자신이 지지하는 선거 공약을 지키겠다고 말함\n• 총선 관련 질문에 대해 그는 사람들은 선거 공약을 지지했다고 말함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/videos/c935kzyq6r4o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Badenoch says PM must rule out tax rises to fund social care reform</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;보수당 대표, 총리에게 사회 복지 개혁을 위한 세금 인상을 배제해야 함&#39;, &#39;summary&#39;: &#39;• 보수당 대표는 총리에게 성인 사회 복지 개혁에 협력할 의향을 밝힘\n• 총리에게 성인 사회 복지 개혁을 위한 세금 인상을 배제해야 한다고 주장함\n• 보수당 대표는 총리와의 협력을 통해 사회 복지 개혁을 추진하고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c0jlzqe9z9vo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Devastating European wildfires in maps - and how they&#39;re being tackled</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;유럽의 파괴적인 산불 지도 - 그리고 그 대처 방안&#39;, &#39;summary&#39;: &#39;• 보르도 근처의 화재는 4일 미만으로 420제곱킬로미터 이상의 지역을 파괴함\n• 마드리드 지역은 역대 최악의 산불을 경험함\n• 유럽의 산불은 빠르게 확산되어 대규모 피해를 입힘&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cj638jx0l53o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Ukraine dismisses Iranian threats as Caspian Sea strike directly links wars</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;우크라이나, 카스피해 공격으로 전쟁 연계되자 이란의 위협을 무시함&#39;, &#39;summary&#39;: &#39;• 우크라이나는 이란의 위협을 무시하고 카스피해 공격이 두 나라의 전쟁을 직접적으로 연결지음\n• 이란은 공격에 대해 격노하며ตอบ답할 수 없음\n• 이란 외무장관은 이 공격에 대해 답변할 수 없다고 말함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cwyj7yl0xndo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>More than 600 US military service members injured since Iran War began in February</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이란 전쟁이 2월에 시작된 이후 600명 이상의 미국 군인들이 부상당함&#39;, &#39;summary&#39;: &#39;• 2월에 시작된 이란 전쟁으로 인해 600명 이상의 미국 군인들이 부상당함\n• 부상자 수에는 Operation Fury와 새로운 카테고리인 &#34;Overseas Operations&#34;의 사상자가 포함됨\n• 미국 군대의 사상자 수는 지속적으로 증가하고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c998pzd1e8xo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Anger as Berlin Pride attacker revealed to have been freed weeks earlier</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;분노가 이는 베를린 프라이드 공격자의 과거&#39;, &#39;summary&#39;: &#39;• 베를린 프라이드 공격 용의자의 과거가 밝혀지면서 많은 사람이 왜 그가 감옥에 있지 않았는지 질문함\n• 공격 용의자는 공격 이전에 몇 주 전에 석방됨\n• 그의 석방과 공격 사이에 어떤 조치가 취해졌는지에 대한 의문이 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cy9wv74qje9o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Shots fired at US consulate in Toronto for a second time this year</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;토론토 미국 영사관에 올해 두 번째 총격 사건 발생&#39;, &#39;summary&#39;: &#39;• 토론토 미국 영사관에서 올해 두 번째 총격 사건이 발생함\n• 경찰은 고속 차량 추격전을 벌였지만 용의자는 아직도 도주 중임\n• 6월에 비슷한 사건으로 3명이 체포됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/ckgvnw44rz9o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
