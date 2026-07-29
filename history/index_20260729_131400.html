@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-07-29 11:02:23</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>As AI content floods the internet, Pangram raises $9M to detect it</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;인공지능 콘텐츠가 인터넷을 메우자 파ング램, 인공지능 콘텐츠 탐지 기술 개발에 900만 달러 투자 유치&#39;, &#39;summary&#39;: &#39;• 파ング램은 인공지능 탐지 소프트웨어 확장에 900만 달러를 투자 받음\n• 새로운 인공지능 텍스트 탐지 모델인 파ング램 4를 출시함\n• 인공지능 이미지 탐지 모델을 연구용 미리 보기로 공개함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/29/as-ai-content-floods-the-internet-pangram-raises-9m-to-detect-it/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Cyera agrees to acquire Oasis Security for $1B to safeguard proliferating AI agents</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;사이어라, 인공지능 에이전트 보안 강화를 위해 오에시스 시큐리티 인수에 10억 달러 동의함&#39;, &#39;summary&#39;: &#39;• 사이어라는 오에시스 시큐리티를 인수하기로 동의함\n• 인수 금액은 10억 달러임\n• 사이어라의 연간 세 번째 인수임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/28/cyera-agrees-to-acquire-oasis-security-for-1b-to-safeguard-proliferating-ai-agents/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Bot-detection startup Spur nabs $200M from Insight</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;봇 탐지 스타트업 스퍼, 인사이트 파트너스로부터 2억 달러 투자 유치&#39;, &#39;summary&#39;: &#39;• 스퍼 인텔리전스는 봇과 실제 사용자를 구분할 수 있는 기술을 개발함\n• 인사이트 파트너스로부터 2억 달러의 투자를 유치함\n• 이 기술은 실제 사용자와 봇을 구분하여 보안을 강화함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/28/bot-detection-startup-spur-nabs-200m-from-insight/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>MCP startup Runlayer accuses Rippling of stealing its product idea</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스타트업 런레이어, 리플링이 제품 아이디어를 도용했다고 주장함&#39;, &#39;summary&#39;: &#39;• 런레이어는 리플링이 자사 MCP 게이트웨이 제품을 평가한 후 자체적으로 개발을 결정함\n• 런레이어는 리플링의 결정이 제품 아이디어를 도용한 것으로 판단함\n• 런레이어는 리플링을 상대로 소송을 제기함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/28/mcp-startup-runlayer-accuses-rippling-of-stealing-its-product-idea/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Sam Altman is ready to decelerate</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;샘 올트먼이 속도를 늦추기 준비함&#39;, &#39;summary&#39;: &#39;• 샘 올트먼이 자신의 위치를 변경하기 시작함\n• 이는 첫 보안 사고 이후에 발생함\n• 샘 올트먼은 이 사고를 매우 생생하게 느꼈음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/07/28/sam-altman-is-ready-to-decelerate/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Polanski says guillotine re-post was mistake but refuses to apologise</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;폴란스키, 기차단 도구 재게시는 실수였지만 사과를 거부함&#39;, &#39;summary&#39;: &#39;• 폴란스키는 기차단 도구를 재게시한 것이 실수였다고 말함\n• 재게시된 사진에는 기차단 도구가 새겨진 티셔츠를 입은 남자의 모습과 이름 나이젤이 담겨 있음\n• 폴란스키는 사과를 거부함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c89np278qwvo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Burnham to hold social care talks with Tories and Lib Dems</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;버넘, 사회 복지 개혁 논의를 위해 보수당과 자유민주당과 회담함&#39;, &#39;summary&#39;: &#39;• 버넘 총리는 사회 복지 개혁 방안을 설명함\n• 독립적 검토의 책임자는 현재 시스템이 거의 무너졌음을 경고함\n• 보수당과 자유민주당은 버넘 총리와 회담을 통해 사회 복지 개혁 방안을 논의함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c1k1vgx08gko?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Burnham has no scope to increase borrowing, think tank warns</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;번함은 대출을 늘릴 여유가 없다, 싱크탱크가 경고함&#39;, &#39;summary&#39;: &#39;• 번함 총리는 취임 이후 생활비 관련 조치를 발표했지만 그에 대한 자금 조달 방법에 대한 질문에 직면함\n• 총리는 생활비 관련 문제 해결을 위해 다양한 방안을 모색 중임\n• 자금 조달 방법에 대한 명확한 계획이 없으면 경제에 부정적인 영향을 미칠 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c62ev62381mo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Powell says student loan system at top of in-tray</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;파월, 학생 대출 제도 개선이 우선 과제임&#39;, &#39;summary&#39;: &#39;• 파월은 과거에 플랜 2 대출의 이자율이 매우 높은 것을 지적함\n• 학생 대출 제도 개선이 그녀의 주요 업무임\n• 대출 제도 개선을 통해 학생들의 부담을 줄일 계획임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/ce8l064xe52o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Schools to offer technical subjects to pupils from age 14 in England, Burnham says</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;14세부터 기술과목 교육 제공한다는 영국 교육부 장관의 발언&#39;, &#39;summary&#39;: &#39;• 영국 교육부는 14세부터 학생들이 지역에서 일할 수 있는 직업과 관련된 과목을 제공할 계획임\n• 제공할 과목에는 인공지능과 제조업 등이 포함됨\n• 지역의 일자리와 관련된 과목을 제공함으로써 학생들이 미래의 직업을 준비할 수 있도록 함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cj4k2djd5qpo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Japan in a ‘race against time’ to rescue people trapped beneath rubble after quake</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;지진으로 잔해 아래 갇힌 사람들을 구조하기 위해 시간과의 경쟁에 빠진 일본&#39;, &#39;summary&#39;: &#39;• 일본 규슈 섬에서 화요일에 지진이 발생하여 최소 13명이 사망함\n• 구조 작업이 진행 중이며 시간이 지날수록 생존 가능성이 낮아짐\n• 일본 정부는 지진 피해를 최소화하기 위해 모든 노력을 다하고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/videos/c3r0pg0dgrgo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Saudi Arabia joins US in strikes on Iran-backed militias in Iraq</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;사우디아라비아, 이란 지원 민병대에 대한 미국의 이라크 공습에 동참함&#39;, &#39;summary&#39;: &#39;• 미국 중부 사령부는 이라크의 미국 기지와 사우디아라비아의 에너지 인프라에 대한 공격을 시작한 이란 지원 민병대에 대한 공격임\n• 사우디아라비아는 미국의 이라크 공습에 동참하여 이란 지원 민병대를 공격함\n• 미국과 사우디아라비아는 이란 지원 민병대의 공격에 공동으로 대응함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c70g6y24d76o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Russia charges Telegram founder Durov with facilitating terrorism</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;러시아, 텔레그램 창립자 두로프에게 테러 조장 방조 혐의 적용&#39;, &#39;summary&#39;: &#39;• 러시아 정보기관 FSB는 텔레그램이 우크라이나 정보기관의 모집에 사용된 계정과 채널을 삭제하지 않았다고 주장함\n• 텔레그램은 파벨 두로프가 만든 메신저 앱임\n• 러시아는 두로프에게 테러 조장 방조 혐의를 적용함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cj4kexqkpzno?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Four women accuse Jared Leto of criminal sexual conduct</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;제레드 레토, 4명의 여성으로부터 성범죄 의혹 받음&#39;, &#39;summary&#39;: &#39;• 제레드 레토는 10명의 여성으로부터 청소년 시절에 학대했다는 의혹을 받고 있음\n• 이 중 4명의 여성은 제레드 레토에게 성범죄 의혹을 제기함\n• 제레드 레토는 배우이자 음악가로 활동하고 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cd7lg2nz2x2o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Trump&#39;s new spy chief Jay Clayton confirmed by US Senate</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;트럼프의 새로운 정보국장 제이 클레이턴이 미국 상원에서 확정됨&#39;, &#39;summary&#39;: &#39;• 제이 클레이턴의 확정은 미국 대통령이 처음으로 선택한 후보자가 관련 경험 부족으로 의원들에 의해 거부된 이후에 이루어짐\n• 제이 클레이턴은 미국의 새로운 정보국장이 됨\n• 미국 상원은 제이 클레이턴의 임명을 확정함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c0rd1kl1825o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
