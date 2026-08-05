@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-08-05 11:00:04</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Wispr Flow launches a Granola-styled meeting notetaker</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;위스프 플로우, 그라노라 스타일 미팅 노트 작성기 출시&#39;, &#39;summary&#39;: &#39;• 위스프 플로우는 새로운 서비스 약관을 발표함\n• 새로운 서비스 약관에 따르면 미팅 요약과 행동 항목을 생성하는 노트 작성기 기능을 도입함\n• 위스프 플로우의 노트 작성기는 그라노라 스타일로 디자인됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/08/05/wispr-flow-is-preparing-to-launch-a-meeting-notetaker-updated-terms-suggest/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Elon Musk repeatedly one-upped his execs on SpaceX’s first earnings call</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;일론 머스크, 스페이스엑스의 첫 수익 발표 회의에서 경영진을 능가함&#39;, &#39;summary&#39;: &#39;• 일론 머스크는 스페이스엑스의 첫 수익 발표 회의에서 경영진의 발표를 능가하는 발언을 함\n• 스페이스엑스 최고재무책임자 브렛 존슨과 최고운용책임자 귀네 샷웰의 발표를 능가함\n• 일론 머스크의 발언은 이미 큰 기대를 모으고 있던 스페이스엑스의 계획을 더욱 확대함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/08/04/elon-musk-repeatedly-one-upped-his-execs-on-spacexs-first-earnings-call/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Lucid’s turnaround plan hinges on $1.4B in cash savings, robotaxis</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;루시드의 전환 계획은 14억 달러의 비용 절감과 로보택시에 달림&#39;, &#39;summary&#39;: &#39;• 루시드의 새로운 최고경영자는 중형 전기차의 성공적인 출시를 포함한 4가지 필수 우선순위를 열거함\n• 사우디아라비아에 공장을 완성하는 것이 우선순위임\n• 비용 절감과 로보택시 개발이 중요함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/08/04/lucids-turnaround-plan-hinges-on-1-4b-in-cash-savings-robotaxis/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>How to get the best hotel deals for TechCrunch Disrupt 2026</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;테크크런치 디스럽트 2026을 위한 최고의 호텔 거래를 얻는 방법&#39;, &#39;summary&#39;: &#39;• 테크크런치 디스럽트 2026 참석자를 위해 모스콘 웨스트 주변 호텔과 협력함\n• 10월 13일부터 15일까지 최고의 호텔 가격을 확보함\n• 참석자에게 최상의 호텔 거래를 제공함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/08/04/how-to-get-the-best-hotel-deals-for-techcrunch-disrupt-2026/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>SpaceX has bought $329M worth of Tesla Megapacks so far this year</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스페이스X, 올해까지 테슬라 메가팩 구매額 329억 달러에 달함&#39;, &#39;summary&#39;: &#39;• 스페이스X는 테슬라의 메가팩을 구매함\n• 구매 금액은 329억 달러에 달함\n• 이 구매는 엘론 머스크의 회사들이 서로密接적으로 연결되어 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/08/04/spacex-has-bought-329m-worth-of-tesla-megapacks-so-far-this-year/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Ex-MP urges Tories to block council candidate jailed for antisemitic abuse against her</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;전 의원이 보수당에 유대인 비방으로 투옥된 의회 후보 자격 제거를 촉구함&#39;, &#39;summary&#39;: &#39;• 전 의원은 보수당에 유대인 비방으로 투옥된 후보의 자격을 제거할 것을 촉구함\n• 조슈아 본힐 페인은 네오 나치 활동으로 투옥되었음\n• 조슈아 본힐 페인은 2027년 새로 생긴 서머싯 의회 의원 후보로 선출됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c1l1q6167d3o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Burnham not actively considering Epstein inquiry, No 10 says</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;번햄, 엡스타인 사건 조사 활발히 고려하지 않음&#39;, &#39;summary&#39;: &#39;• 번햄은 엡스타인 사건에 대한 조사에 대해 활발히 고려하지 않고 있음\n• 이는 피해자 담당 장관이 재임용 시 총리와 조사에 대해 논의했다고 밝힌 이후에 알려짐\n• 총리실은 번햄이 엡스타인 사건 조사에 대해 활발히 고려하지 않고 있다고 밝힘&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cx2jpqzwzj1o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Restrict sale of pet flea treatments, government urged</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;애완동물 벼룩 치료제 판매 제한해야 함&#39;, &#39;summary&#39;: &#39;• 애완동물 벼룩 치료제의 광범위한 사용이 환경에 잠재적인 위험을 초래할 수 있음\n• 정부는 이러한 치료제의 판매를 제한해야 함\n• 환경에 미치는 영향에 대한 우려가 제기됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c1m1xdyk0j0o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Justice secretary apologises to families affected by early release scheme</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;법무부 장관, 조기 석방 제도에 영향을 받은 가족들에게 사과함&#39;, &#39;summary&#39;: &#39;• 법무부 장관은 조기 석방 제도에 영향을 받은 가족들에게 사과함\n• 일부 범죄자는 조기 석방 제도에서 제외될 것임\n• 피해자 가족들은 조기 석방 제도가 피해자들의 권리를 침해함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c20e15d0z6zo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Government to function as normal while Burnham on holiday, No 10 says</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;번함이 휴가 중에도 정부는 정상적으로 기능함&#39;, &#39;summary&#39;: &#39;• 번함이 휴가 중에도 공무원들과 연락을 유지하고 있음\n• 다우닝가에서는 번함이 휴가 중에도 업무를 수행할 수 있도록 준비되어 있음\n• 개혁당은 번함이 휴가를 가는 것을 비난하며 휴가를 떠난 것이라고 주장함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/czjlp0vrpk9o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Russian strike kills at least 17 as Zelensky says interceptors could have saved lives</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;러시아의 공격으로 최소 17명 사망, 젤렌스키는 요격기가 생명을 구할 수 있었다고 말함&#39;, &#39;summary&#39;: &#39;• 러시아 국방부는 키이우와 주변 지역의 물류 허브와 공급 센터를 공격했다고 밝힘\n• 젤렌스키는 요격기가 생명을 구할 수 있었다고 말함\n• 공격으로 최소 17명이 사망함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c330pxyvzzyo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Trump says Iran will be &#39;hit very hard&#39; if Hormuz Strait not open soon as oil prices fall</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;트럼프, 호르무즈 해협이 곧 열리지 않으면 이란을 강하게 공격할 것임&#39;, &#39;summary&#39;: &#39;• 트럼프는 호르무즈 해협이 곧 열리지 않으면 이란을 강하게 공격할 것임\n• 미국의 마코 루비오 국무장관과 스콧 베슨 재무장관은 협의가 진행되어 선적이 재개될 수 있을 것임\n• 유가가 하락함에 따라 미국은 이란에 대한 강경한 태도를 취할 것임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cpw9v0gnzxwo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Perez Hilton recovering in hospital after reports he self-harmed during livestream</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;페레즈 힐튼, 생방송 중 자해했다는 보도 후 병원에서 회복중임&#39;, &#39;summary&#39;: &#39;• 페레즈 힐튼은 자해했다는 보도 후 마이애미 경찰이 그의 집에서 그를 안전하게 구조함\n• 마이애미 경찰은 미국 언론에 힐튼이 그의 집에서 구조되었다고 밝힘\n• 페레즈 힐튼은 현재 병원에서 치료를 받고 회복중임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cly5kvdkyjro?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Police raid Starbucks Korea headquarters over &#39;Tank Day&#39; fiasco</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;경찰, 광주 민주화 운동을 경시했다는 논란으로 스타벅스 한국 본사 압수수색임&#39;, &#39;summary&#39;: &#34;• 스타벅스 한국 본사에서 &#39;탱크의 날&#39; 관련 논란으로 경찰이 압수수색함\n• 스타벅스 측에서 광주 민주화 운동을 경시했다는 의혹을 받음\n• 관련된 사람들로부터 스타벅스에 대한 민원이 접수됨&#34;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c0kmd4xpr46o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Armed man arrested near Trump&#39;s golf course ahead of president&#39;s visit</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;트럼프 골프장 근처에서 무장한 男 체포&#39;, &#39;summary&#39;: &#39;• 무장한 남성이 체포됨\n• 체포는 트럼프 대통령의 캘리포니아 골프장 방문을 앞두고 일어남\n• 트럼프 대통령은 골프장에서 자금 모금 만찬을 주최할 예정임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c20jp3mp7lyo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
