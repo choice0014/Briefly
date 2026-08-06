@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 뉴스 요약 대시보드</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+            --secondary-text: #b0b0b0;
+            --tech-color: #03dac6;
+            --politics-color: #cf6679;
+            --intl-color: #3700b3;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        header p {
+            color: var(--secondary-text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .Tech .category-title { border-color: var(--tech-color); }
+        .Politics .category-title { border-color: var(--politics-color); }
+        .International .category-title { border-color: var(--intl-color); }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        .summary-content {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            white-space: pre-line;
+            margin-bottom: 15px;
+        }
+
+        .news-meta {
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--secondary-text);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-meta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .news-meta a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Daily News Summary</h1>
+            <p>생성 일시: 2026-08-06 11:00:16</p>
+        </header>
+
+        
+        <section class="category-section Tech">
+            <h2 class="category-title">Tech</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Get up to $400 off your TechCrunch Disrupt 2026 pass until Friday</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;테크크런치 디스럽트 2026 패스 구매 시 최대 400달러 할인 받음&#39;, &#39;summary&#39;: &#39;• 테크크런치 디스럽트 2026 패스 구매 시 추가 할인 적용됨\n• 창업자, 투자자, 참석자 패스에 최대 400달러 할인 받을 수 있음\n• 금주의 마지막 날까지 할인 혜택을 받을 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/08/05/get-up-to-400-off-your-techcrunch-disrupt-2026-pass-until-friday/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Nikita Bier steps down as X’s head of product</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;니키타 비어가 X의 제품 책임자에서 물러남&#39;, &#39;summary&#39;: &#39;• 니키타 비어는 X의 제품 책임자직을 맡은 지 약 1년 만에 물러남\n• 니키타 비어는 X의 제품 책임자직을 &#34;24시간 7일&#34;의 일이라고 표현함\n• 니키타 비어의 물러남은 그의 경력에 새로운 변화를 가져올 것으로 보임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/08/05/nikita-bier-steps-down-as-xs-head-of-product/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Travis Kalanick’s robotics startup Atoms taps former Uber finance chief as CFO</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;트래비스 칼라닉의 로봇틱스 스타트업 아톰스, 전 우버 재무 총책임자 임명&#39;, &#39;summary&#39;: &#39;• 트래비스 칼라닉의 로봇틱스 스타트업 아톰스에서 전 우버 재무 총책임자를 임명함\n• 아톰스는 안토니 레반도프스의 자율 주행 스타트업을 인수함\n• 우버로부터 투자 유치함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/08/05/travis-kalanicks-robotics-startup-atoms-taps-former-uber-finance-chief-as-cfo/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Meta launches Muse Code, an AI agent for large code bases</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;메타, 대규모 코드 베이스용 AI 에이전트 뮤즈 코드 출시&#39;, &#39;summary&#39;: &#39;• 메타는 복잡한 소프트웨어와 관련된 복잡한 작업을 처리할 수 있는 새로운 에이전트를 출시함\n• 이 에이전트는 메타의 AI 코딩 기능을 확장함\n• 대규모 코드 베이스에서 복잡한 작업을 처리할 수 있는 능력을 제공함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Trump’s DOJ gains oversight of OpenAI’s green-card employee sponsorships</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;트럼프 정권의 법무부, 오픈아이의 영주권 지원에 대한 감시권 획득&#39;, &#39;summary&#39;: &#39;• 오픈아이의 영주권 지원에 대한 감시권을 트럼프 정권의 법무부가 획득함\n• 오픈아이가 미국 시민권자 채용을 제대로 시도하지 않고 비자 소지자 직원들의 영주권을 지원한 것으로 의심됨\n• 법무부는 오픈아이가 미국 시민권자 채용을 우선하지 않고 비자 소지자 직원들의 영주권을 지원한 것에 대해 조사함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: TechCrunch</span>
+                        <a href="https://techcrunch.com/2026/08/05/trumps-doj-gains-oversight-of-openais-green-card-employee-sponsorships/" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section Politics">
+            <h2 class="category-title">Politics</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>Sir Keir Starmer made misleading defence spending claim, watchdog says</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;스타머 경, 방위 지출 관련 오도된 주장 함&#39;, &#39;summary&#39;: &#39;• 스타머 경이 방위 지출 관련 오도된 주장을 함\n• 웨일스 사무소와 국방부도 2700억 파운드가 더 방위에 지출되고 있다고 주장함\n• 이 주장은 사실과 다름&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c77g38mxxdyo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Ex neo-Nazi activist withdraws as Tory election candidate</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;전 나치 활동가, 보수당 선거 후보 자격 포기&#39;, &#39;summary&#39;: &#39;• 전 나치 활동가인 조슈아 보네힐 페인이 보수당 선거 후보 자격을 포기함\n• 보수당의 케미 바덴诺치가 조슈아 보네힐 페인이 극단주의 대책을 위한 자문 역할을 맡을 것임\n• 보수당은 극단주의와의 전쟁을 위한 새로운 전략을 수립 중임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cy4kx8n2vwxo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Reform UK pledges to jail bosses employing illegal workers</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;불법 노동자 고용한 사업주를 감옥에 보내겠다는 영국 개혁당&#39;, &#39;summary&#39;: &#39;• 영국 개혁당은 불법 노동자 고용으로 이익을 얻는 기업에 대해 무제재 상태를 종료시키겠다는 목표를 세움\n• 불법 노동자 고용으로 이익을 얻는 것을 막기 위해 사업주를 처벌하겠다는 계획임\n• 불법 노동자 고용에 따른 처벌 강화로 기업의 책임을 강조함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cvgv864z0rvo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Walk-in mental health centres to open in banks and libraries across England</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;영국 전역의 은행과 도서관에 정신 건강 상담 센터 개설 예정&#39;, &#39;summary&#39;: &#39;• 영국 정부는 정신 건강 위기를 겪는 사람들을 돕기 위해 약 200개의 전문 정신 건강 상담 센터를 개설할 계획임\n• 이 센터는 은행과 도서관 등에서 운영될 예정임\n• 정신 건강 상담 센터는 정신 건강 위기를 겪는 사람들에게 즉시 도움을 제공하기 위해 설립됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cpd76e737ljo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Miliband says reopening Strait of Hormuz &#39;essential&#39; as he meets Rubio</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;밀리밴드, 호르무즈 해협 재개방은 필수임&#39;, &#39;summary&#39;: &#39;• 밀리밴드가 워싱턴에서 미국 대응자와 회동함\n• 호르무즈 해협 재개방은 생활비 부담 완화에 필요함\n• 밀리밴드가 미국 대응자와 회동에서 호르무즈 해협 재개방 필요성을 강조함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c1e14zn0pxeo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="category-section International">
+            <h2 class="category-title">International</h2>
+            <div class="news-grid">
+                
+                <div class="news-card">
+                    <h3>In Odesa, no-one is safe from Russia&#39;s new Black Sea strikes</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;오데사에서 러시아의 새로운 흑해 공격으로부터 아무도 안전하지 않음&#39;, &#39;summary&#39;: &#39;• 러시아의 공격으로 우크라이나 연안의 선박이 검게 타고 도크가 파괴됨\n• 러시아의 흑해 공격이 최근 우크라이나에 큰 피해를 입힘\n• 우크라이나의 해안 지역이 러시아의 공격으로 위험에 빠짐&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cy8ev4y172yo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Iran says deal with Oman on Strait of Hormuz is in final stages</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;이란, 오만과 호르무즈 해협 관련 협정 최종 단계임&#39;, &#39;summary&#39;: &#39;• 이란은 오만과 호르무즈 해협 관련 협정을 최종 단계에 임함\n• 미국과 오만은 아직 이 협정에 대해 yorum을 하지 않음\n• 호르무즈 해협은 중요한 해상 통로로 이란과 오만의 협정이 지역 안정에 영향을 줄 수 있음&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/ckg9d3eyeggo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Indian journalist Tarun Tejpal sentenced to 10 years in jail for rape</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;인도 기자 타룬 테즈팔, 강간 혐의로 10년 징역 선고됨&#39;, &#39;summary&#39;: &#39;• 타룬 테즈팔은 혐의를 부인했음\n• 타룬 테즈팔은 인도 대법원에서 판결에 대해 항소할 수 있음\n• 타룬 테즈팔은 10년 동안 감옥에서 복역함&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cx2v551w9v8o?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Iranian footballers who defied Tehran become Australian citizens</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;테헤란에 저항한 이란 축구 선수들이 호주 시민이 됨&#39;, &#39;summary&#39;: &#39;• 테헤란에 저항한 이란 축구 선수들이 호주에서 인도주의 비자를 받음\n• 7명의 선수가 비자를 받았지만 5명은 마음을 바꿔 이란으로 돌아감\n• 2명의 선수만이 호주에 남아 시민이 됨&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/cn5nlgxv6vdo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <h3>Rihanna is &#39;in the studio&#39;, says partner A$AP Rocky</h3>
+                    <div class="summary-content">
+                        {&#39;translated_title&#39;: &#39;리한나의 파트너 A$AP 록키, 리한나가 스튜디오에 있다고 말함&#39;, &#39;summary&#39;: &#39;• 리한나는 2016년 이후 정규 앨범을 발표하지 않음\n• 리한나의 파트너 A$AP 록키는 리한나가 스튜디오에 있다고 말함\n• 리한나는 새로운 음악을 작업 중임&#39;}
+                    </div>
+                    <div class="news-meta">
+                        <span>출처: BBC News</span>
+                        <a href="https://www.bbc.co.uk/news/articles/c4gwvvw9k1xo?at_medium=RSS&amp;at_campaign=rss" target="_blank">원문 보기</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
