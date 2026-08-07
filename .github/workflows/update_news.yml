@@ -2,7 +2,8 @@ name: Daily AI News Update
 
 on:
   schedule:
-    - cron: '30 * * * *' # 매시 30분에 실행 (정각 Actions 부하를 피해 러너 대기 최소화)
+    - cron: '15 * * * *' # 매시 15분에 실행
+    - cron: '45 * * * *' # 매시 45분에 실행 (15/45분 오프셋: 30분 간격, 정각 부하 회피)
   push:
     branches:
       - main
