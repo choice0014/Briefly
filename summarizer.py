@@ -99,7 +99,7 @@ Title: [번역된 제목]
                 'summary': summary
             }
 
-        with ThreadPoolExecutor(max_workers=5) as executor:
+        with ThreadPoolExecutor(max_workers=4) as executor:
             results = list(executor.map(process_article, articles))
         return results
 
