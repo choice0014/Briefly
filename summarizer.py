@@ -3,7 +3,7 @@ import logging
 import time
 import re
 from concurrent.futures import ThreadPoolExecutor
-from groq import Groq
+from groq import Groq, RateLimitError
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -25,7 +25,7 @@ class NewsSummarizer:
         self.model_name = model_name
         logger.info(f"Groq 모델 초기화 완료: {model_name}")
 
-    def summarize(self, title, content, retries=2):
+    def summarize(self, title, content, retries=4):
         """
         Groq API를 사용하여 제목 번역 및 3줄 요약을 수행합니다.
         """
@@ -73,9 +73,18 @@ Title: [번역된 제목]
                     summary_text = '\n'.join(summaries) if summaries else response.strip()
                     
                     return translated_title, summary_text
+            except RateLimitError as e:
+                # 무료 티어 RPM/TPM 한도: Retry-After 헤더 존중 후 재시도
+                retry_after = 15
+                try:
+                    retry_after = float(e.response.headers.get('retry-after', 15))
+                except Exception:
+                    pass
+                logger.error(f"Groq 요약 시도 {attempt+1} 실패 (Rate Limit): {e}")
+                time.sleep(retry_after)
             except Exception as e:
                 logger.error(f"Groq 요약 시도 {attempt+1} 실패: {e}")
-                time.sleep(1)
+                time.sleep(2 ** attempt)
         
         return title, "요약 생성 불가"
 
