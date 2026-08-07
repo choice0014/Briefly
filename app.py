@@ -39,13 +39,12 @@ def main():
             continue
 
         logger.info(f"{category} 요약 중...")
-        summarized_results = summarizer.summarize_batch(articles)
+        ai_results = summarizer.summarize_batch(articles)
         
         for i, article in enumerate(articles):
-            if i < len(summarized_results):
-                result = summarized_results[i]
-                article['title'] = result['translated_title']
-                article['ai_summary'] = result['summary']
+            if i < len(ai_results):
+                article['title'] = ai_results[i]['translated_title']
+                article['ai_summary'] = ai_results[i]['summary']
             else:
                 article['ai_summary'] = "요약 생성 중 오류 발생"
             
