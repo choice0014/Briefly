@@ -2,8 +2,7 @@ name: Daily AI News Update
 
 on:
   schedule:
-    - cron: '15 * * * *' # 매시 15분에 실행
-    - cron: '45 * * * *' # 매시 45분에 실행 (15/45분 오프셋: 30분 간격, 정각 부하 회피)
+    - cron: '15 * * * *' # 매시 15분에 실행 (정각 부하 회피)
   push:
     branches:
       - main
@@ -48,7 +47,7 @@ jobs:
       - name: Run Crawler and Summarizer
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          NEWS_LIMIT: 5
+          NEWS_LIMIT: 6
         run: python app.py
 
       - name: Commit and Push changes

@@ -16,12 +16,10 @@ def main():
     # 1. 설정 로드
     FEEDS = {
         'Tech': os.getenv("TECH_FEEDS", "https://techcrunch.com/feed/").split(','),
-        'Politics': os.getenv("POLITICS_FEEDS", "https://feeds.bbci.co.uk/news/politics/rss.xml").split(','),
-        'International': os.getenv("INTL_FEEDS", "https://feeds.bbci.co.uk/news/world/rss.xml").split(',')
     }
     
     # GitHub Actions 환경인지 확인 (CI 환경이면 더 많은 기사 수집 가능)
-    limit = int(os.getenv("NEWS_LIMIT", 5))
+    limit = int(os.getenv("NEWS_LIMIT", 6))
 
     # 2. 뉴스 수집
     logger.info("뉴스 수집 시작...")
